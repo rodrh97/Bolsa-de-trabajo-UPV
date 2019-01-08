@@ -63,7 +63,7 @@
       <div class="container"> <a href="#" class="logo"><img src="images/UP_Victoria.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
         <nav class="nav">
           <ul class="sf-menu">
-            <li class="active"><a href="index.html"><i class="fa  fa-home"></i></a></li>
+            <li class="active"><a href="/"><i class="fa  fa-home"></i></a></li>
             <li> <a href="listing-filter.html">Professionals</a> </li>
             <li> <a href="index.html">Pages</a>
               <ul>
