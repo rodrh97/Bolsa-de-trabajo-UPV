@@ -39,27 +39,8 @@
   
   <div class="box-shadow-for-ui">
     <div class="uou-block-2b">
-      <div class="container"> <a href="#" class="logo"><img src="images/UP_Victoria.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
-        <nav class="nav">
-          <ul class="sf-menu">
-            <li class="active"><a href="/"><i class="fa  fa-home"></i></a></li>
-            <li> <a href="listing-filter.html">Professionals</a> </li>
-            <li> <a href="index.html">Pages</a>
-              <ul>
-                <li><a href="profile_company.html">Profile Company</a></li>
-                <li><a href="profile_company-no-tabs.html">Profile Company No Tabs</a></li>
-                <li><a href="user-dashboard(connections)(hotkeys-disabled).html">User Dashboard 1</a></li>
-                <li><a href="user-dashboard(connections)(hotkeys-enabled).html">User Dashboard 2</a></li>
-                <li><a href="user-dashboard(followers).html">User Dashboard 3</a></li>
-                <li><a href="user-dashboard(following).html">User Dashboard 4</a></li>
-                <li><a href="blog-post.html">Blog Post</a></li>
-              </ul>
-            </li>
-            <li> <a href="user-profile(layout-1).html">User Profile</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="gui-kit.html">GUI KIT</a></li>
-          </ul>
-        </nav>
+      <div class="container"> <a href="/" class="logo"><img src="images/UP_Victoria.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+        
       </div>
     </div>
     <!-- end .uou-block-2b --> 
@@ -96,20 +77,16 @@
                 <!-- REGISTER -->
                 <div class="content">
                   <div id="register">
-                    <form>
-                      <input type="text" placeholder="Full Name">
-                      <input type="email" placeholder="Email Address">
-                      <input type="text" placeholder="Phone">
-                      <input type="password" placeholder="Password">
-                      <button type="submit">Registrar</button>
-                      <div class="login-with"> <span>O iniciar sesión con:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
-                    </form>
+                    <div class="forget">
+                      <a href="#" class="btn mb20 btn-large btn-primary"><i class="fa fa-university"> Egresado</i></a>
+                      <a href="#" class="btn mb20 btn-large btn-primary"><i class="fa fa-suitcase"> Empresa</i></a>
+                    </div>
                   </div>
                   
                   <!-- LOGIN -->
                   <div id="log-in" class="active">
                     <form>
-                      <input type="email" placeholder="Matricula/Nickname">
+                      <input type="email" placeholder="Correo Electrónico">
                       <input type="password" placeholder="Contraseña">
                       <button type="submit">Iniciar Sesión</button>
                       <div class="forget">Olvidaste tu contraseña? <a href="#.">Click Aquí</a></div>
@@ -130,16 +107,6 @@
     </div>
   </div>
 </div>
-
-<!-- Footer -->
-<div class="uou-block-4e">
-  <div class="container">
-    <div class="row">
-     
-    </div>
-  </div>
-</div>
-<!-- end .uou-block-4e -->
 
 <div class="uou-block-4a secondary dark">
   <div class="container">

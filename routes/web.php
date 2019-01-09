@@ -30,3 +30,7 @@ Route::get('/ofertas_trabajo', function () {
 Route::get('/conexiones_perfiles', function () {
     return view('conexiones_perfiles');
 });
+
+Route::get('/principal', function () {
+    return view('principal');
+});
