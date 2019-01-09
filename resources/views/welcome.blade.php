@@ -9,7 +9,7 @@
 <!-- Fonts Online -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
+<link rel="icon" src="images/UP_Victoria.png" sizes="32x32" />
 <!-- Style Sheet -->
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/main-style.css">
@@ -30,28 +30,7 @@
   <div class="toolbar">
     <div class="uou-block-1a blog">
       <div class="container">
-        <div class="search"> <a href="#" class="toggle fa fa-search"></a>
-          <form action="#">
-            <input type="text" class="search-input" placeholder="Search ...">
-            <input type="submit" value="">
-          </form>
-        </div>
-        <ul class="social">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-google-plus"></a></li>
-        </ul>
-        <ul class="authentication">
-          <li><a href="#">Iniciar Sesión</a></li>
-          <li><a href="#">Registro</a></li>
-        </ul>
-        <div class="language"> <a href="#" class="toggle"><img src="images/flags/32/US.png" alt=""> ENG</a>
-          <ul>
-            <li><a href="#"><img src="images/flags/32/PT.png" alt=""> ENG</a></li>
-            <li><a href="#"><img src="images/flags/32/FR.png" alt=""> FR</a></li>
-            <li><a href="#"><img src="images/flags/32/ES.png" alt=""> ES</a></li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <!-- end .uou-block-1a --> 
@@ -98,8 +77,7 @@
           <div class="col-sm-7">
             <div class="text-area">
               <div class="position-center-center col-md-10">
-                <h1> Here comes the social networking platform that you’ve been waiting for</h1>
-                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur. </h6>
+                <b><h1>Bienvenido a la bolsa de trabajo de la Universidad Politécnica de Victoria</h1></b>
               </div>
             </div>
           </div>
@@ -131,11 +109,10 @@
                   <!-- LOGIN -->
                   <div id="log-in" class="active">
                     <form>
-                      <input type="email" placeholder="Matricula">
+                      <input type="email" placeholder="Matricula/Nickname">
                       <input type="password" placeholder="Contraseña">
-                      <button type="submit">Login</button>
-                      <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
-                      <div class="forget">Forgot your password? <a href="#.">Click Here</a></div>
+                      <button type="submit">Iniciar Sesión</button>
+                      <div class="forget">Olvidaste tu contraseña? <a href="#.">Click Aquí</a></div>
                     </form>
                   </div>
                   <div id="forget">
@@ -158,43 +135,7 @@
 <div class="uou-block-4e">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6"> <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
-        <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
-          <li> <i class="fa fa-map-marker"></i>
-            <address>
-            795 Folsom Ave, Suite 600, San Francisco, CA 94107
-            </address>
-          </li>
-          <li> <i class="fa fa-phone"></i> <a href="tel:#">(123) 456-7890</a> </li>
-          <li> <i class="fa fa-envelope"></i> <a href="mailto:#">first.last@example.com</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Twitter Feed</h5>
-        <ul class="twitter-feed">
-          <li> RT <a href="#">@no1son</a>: Now this <a href="#">http://t.co/TSfMW1qMAW</a> is one hell of a stunning site!!! Awesome work guys <a href="#">@AIRNAUTS</a> <a href="#" class="time">May 25</a> </li>
-          <li> Check out the wordpress version of Tucson - <a href="#">http://t.co/sBlU3GbapT</a> <a href="#" class="time">May 22</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Photostream</h5>
-        <ul class="photos-list">
-          <li><img src="images/photostream4.jpg" alt=""></li>
-          <li><img src="images/photostream6.jpg" alt=""></li>
-          <li><img src="images/photostream3.jpg" alt=""></li>
-          <li><img src="images/photostream2.jpg" alt=""></li>
-          <li><img src="images/photostream1.jpg" alt=""></li>
-          <li><img src="images/photostream.jpg" alt=""></li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Newsletter</h5>
-        <p>Subscribe to our newsletter to receive our latest news and updates. We do not spam.</p>
-        <form class="newsletter-form" action="#">
-          <input type="email" placeholder="Enter your email address">
-          <input type="submit" class="btn btn-primary" value="Subscribe">
-        </form>
-      </div>
+     
     </div>
   </div>
 </div>
