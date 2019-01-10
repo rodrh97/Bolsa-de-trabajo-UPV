@@ -56,7 +56,7 @@
             <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
             <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
             <li> <a href="/perfil_egresado">Tu perfil</a></li>
-            <li><a href="/conexiones_perfiles">Tus conexiones</a></li>
+            <li><a href="/conexiones_perfiles">Conexiones</a></li>
           </ul>
         </nav>
       </div>
@@ -348,7 +348,7 @@
       <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
       <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
       <li> <a href="/perfil_egresado">Tu perfil</a></li>
-      <li><a href="/conexiones_perfiles">Tus conexiones</a></li>
+      <li><a href="/conexiones_perfiles">Conexiones</a></li>
     </ul>
   </nav>
   <hr>

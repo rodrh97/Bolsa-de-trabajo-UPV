@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>TIGER - Social Network HTML Template</title>
+<title>Bolsa de Trabajo Universidad Politécnica de Victoria</title>
 
 <!-- Fonts Online -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="icon" src="images/UP_Victoria.png" sizes="32x32"/>
 
 <!-- Style Sheet -->
 <link rel="stylesheet" href="css/owl.carousel.css">
@@ -37,22 +38,6 @@
             <input type="submit" value="">
           </form>
         </div>
-        <ul class="social">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-google-plus"></a></li>
-        </ul>
-        <ul class="authentication">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
-        <div class="language"> <a href="#" class="toggle"><img src="images/flags/32/US.png" alt=""> ENG</a>
-          <ul>
-            <li><a href="#"><img src="images/flags/32/PT.png" alt=""> PT</a></li>
-            <li><a href="#"><img src="images/flags/32/FR.png" alt=""> FR</a></li>
-            <li><a href="#"><img src="images/flags/32/ES.png" alt=""> ES</a></li>
-          </ul>
-        </div>
       </div>
     </div>
     <!-- end .uou-block-1a --> 
@@ -68,7 +53,7 @@
             <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
             <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
             <li> <a href="/perfil_egresado">Tu perfil</a></li>
-            <li><a href="/conexiones_perfiles">Tus conexiones</a></li>
+            <li><a href="/conexiones_perfiles">Conexiones</a></li>
           </ul>
         </nav>
       </div>
@@ -83,13 +68,13 @@
       <div class="container">
         <div class="pull-left">
           <h2>Michael Peterson</h2>
-          <h5>Front-End Developer</h5>
+          <!--h5>Front-End Developer</h5-->
         </div>
         
         <!-- Top Riht Button -->
         <div class="right-top-bnr">
-          <div class="connect"> <a href="#." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Connect</a> <a href="#."><i class="fa fa-share-alt"></i> Share</a>
-            <div class="bt-ns"> <a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a> </div>
+          <div class="connect"> <a href="#." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
+            <!--div class="bt-ns"> <a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a> </div-->
           </div>
         </div>
       </div>
@@ -138,12 +123,12 @@
           <!-- Nav Tabs -->
           <div class="col-md-12">
             <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
-              <li><a data-toggle="tab" href="#jobs">Jobs</a></li>
-              <li><a data-toggle="tab" href="#contact">Contact</a></li>
-              <li><a data-toggle="tab" href="#portfolio">Portfolio</a></li>
-              <li><a data-toggle="tab" href="#blog-tab">Blog Posts</a></li>
-              <li><a data-toggle="tab" href="#Con-tab">Connections</a></li>
+              <li class="active"><a data-toggle="tab" href="#profile">Perfil</a></li>
+              <li><a data-toggle="tab" href="#jobs">Mis trabajos</a></li>
+              <!--li><a data-toggle="tab" href="#contact">Contact</a></li-->
+              <li><a data-toggle="tab" href="#portfolio">Galeria</a></li>
+              <!--li><a data-toggle="tab" href="#blog-tab">Blog Posts</a></li-->
+              <li><a data-toggle="tab" href="#Con-tab">Mis conexiones</a></li>
               <li><a data-toggle="tab" href="#flowrs-tabs">Followers (241)</a></li>
               <li><a data-toggle="tab" href="#foll-tabs">Following</a></li>
             </ul>
@@ -158,7 +143,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="profile-main">
-                      <h3>About</h3>
+                      <h3>Experiencia Laboral</h3>
                       <div class="profile-in">
                         <div class="media-left">
                           <div class="img-profile"> <img class="media-object" src="images/avatar-1.jpg" alt=""> </div>
@@ -180,7 +165,7 @@
                     
                     <!-- Skills -->
                     <div class="sidebar">
-                      <h5 class="main-title">Skills</h5>
+                      <h5 class="main-title">Habilidades</h5>
                       <div class="job-skills"> 
                         
                         <!-- Logo Design -->
@@ -236,7 +221,7 @@
                     
                     <!-- Professional Details -->
                     <div class="sidebar">
-                      <h5 class="main-title">Similar Professionals</h5>
+                      <h5 class="main-title">Conexiones Similares</h5>
                       
                       <!-- Similar -->
                       <div class="similar">
@@ -298,7 +283,7 @@
                     
                     <!-- Professional Details -->
                     <div class="sidebar">
-                      <h5 class="main-title">Professional Details</h5>
+                      <h5 class="main-title">Detalles profesionales</h5>
                       <div class="sidebar-information">
                         <ul class="single-category">
                           <li class="row">
@@ -333,41 +318,6 @@
                             <span class="subtitle col-xs-6"><a href="#.">example.com </a></span></li>
                         </ul>
                       </div>
-                    </div>
-                    
-                    <!-- Rating -->
-                    <div class="sidebar">
-                      <h5 class="main-title">Rating</h5>
-                      <div class="sidebar-information">
-                        <ul class="single-category com-rate">
-                          <li class="row">
-                            <h6 class="title col-xs-6">Expertise:</h6>
-                            <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Knowledge:</h6>
-                            <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Quality::</h6>
-                            <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></span> </li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Price:</h6>
-                            <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Services:</h6>
-                            <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></span> </li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <!-- Social Profiles -->
-                    <div class="sidebar">
-                      <h5 class="main-title">Social Profiles</h5>
-                      <ul class="socil">
-                        <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#."><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#."><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#."><i class="fa fa-twitter"></i></a></li>
-                      </ul>
                     </div>
                   </div>
                 </div>
@@ -1169,51 +1119,6 @@
   </div>
 </div>
 
-<!-- Footer -->
-<div class="uou-block-4e">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6"> <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
-        <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
-          <li> <i class="fa fa-map-marker"></i>
-            <address>
-            795 Folsom Ave, Suite 600, San Francisco, CA 94107
-            </address>
-          </li>
-          <li> <i class="fa fa-phone"></i> <a href="tel:#">(123) 456-7890</a> </li>
-          <li> <i class="fa fa-envelope"></i> <a href="mailto:#">first.last@example.com</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Twitter Feed</h5>
-        <ul class="twitter-feed">
-          <li> RT <a href="#">@no1son</a>: Now this <a href="#">http://t.co/TSfMW1qMAW</a> is one hell of a stunning site!!! Awesome work guys <a href="#">@AIRNAUTS</a> <a href="#" class="time">May 25</a> </li>
-          <li> Check out the wordpress version of Tucson - <a href="#">http://t.co/sBlU3GbapT</a> <a href="#" class="time">May 22</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Photostream</h5>
-        <ul class="photos-list">
-          <li><img src="images/photostream4.jpg" alt=""></li>
-          <li><img src="images/photostream6.jpg" alt=""></li>
-          <li><img src="images/photostream3.jpg" alt=""></li>
-          <li><img src="images/photostream2.jpg" alt=""></li>
-          <li><img src="images/photostream1.jpg" alt=""></li>
-          <li><img src="images/photostream.jpg" alt=""></li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Newsletter</h5>
-        <p>Subscribe to our newsletter to receive our latest news and updates. We do not spam.</p>
-        <form class="newsletter-form" action="#">
-          <input type="email" placeholder="Enter your email address">
-          <input type="submit" class="btn btn-primary" value="Subscribe">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end .uou-block-4e -->
 
 <div class="uou-block-4a secondary dark">
   <div class="container">
@@ -1231,18 +1136,11 @@
   <a href="#" class="mobile-sidebar-close">&times;</a>
   <nav class="main-nav">
     <ul>
-      <li><a href="index.html">Index</a></li>
-      <li><a href="listing-filter.html">Professionals</a> </li>
-      <li><a href="profile_company.html">Profile Company</a></li>
-      <li><a href="profile_company-no-tabs.html">Profile Company No Tabs</a></li>
-      <li><a href="user-dashboard(connections)(hotkeys-disabled).html">User Dashboard 1</a></li>
-      <li><a href="user-dashboard(connections)(hotkeys-enabled).html">User Dashboard 2</a></li>
-      <li><a href="user-dashboard(followers).html">User Dashboard 3</a></li>
-      <li><a href="user-dashboard(following).html">User Dashboard 4</a></li>
-      <li><a href="blog-post.html">Blog Post</a></li>
-      <li class="active"><a href="user-profile(layout-1).html">User Profile</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="gui-kit.html">GUI KIT</a></li>
+      <li><a href="/principal">Inicio</a></li>
+      <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
+      <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
+      <li> <a href="/perfil_egresado">Tu perfil</a></li>
+      <li><a href="/conexiones_perfiles">Conexiones</a></li>
     </ul>
   </nav>
   <hr>
