@@ -53,55 +53,32 @@
     <div class="banr-head">
       <div class="container">
         <div class="row"> 
-          
-          <!-- CONTENT -->
-          <div class="col-sm-7">
-            <div class="text-area">
-              <div class="position-center-center col-md-10">
-                <b><h1>Bienvenido a la bolsa de trabajo de la Universidad Politécnica de Victoria</h1></b>
-              </div>
-            </div>
-          </div>
-          
+          <div class="col-sm-2"></div>
           <!-- FORM SECTION -->
-          <div class="col-sm-5">
+          <div class="col-sm-8">
             <div class="login-sec"> 
-              
-              <!-- TABS -->
-              <div class="uou-tabs">
-                <ul class="tabs">
-                  <li><a href="#register">Registrar Ahora</a></li>
-                  <li class="active"><a href="#log-in">Iniciar Sesión</a></li>
-                </ul>
-                
-                <!-- REGISTER -->
-                <div class="content">
-                  <div id="register">
-                    <div class="forget">
-                      <a href="/registro_egresado" class="btn mb20 btn-large btn-primary"><i class="fa fa-university"> Egresado</i></a>
-                      <a href="/registro_empresa" class="btn mb20 btn-large btn-primary"><i class="fa fa-suitcase"> Empresa</i></a>
-                    </div>
-                  </div>
-                  
-                  <!-- LOGIN -->
-                  <div id="log-in" class="active">
-                    <form>
-                      <input type="email" placeholder="Correo Electrónico">
-                      <input type="password" placeholder="Contraseña">
-                      <a href="/principal"><button type="button">Iniciar Sesión</button></a>
-                      <div class="forget">Olvidaste tu contraseña? <a href="#.">Click Aquí</a></div>
-                    </form>
-                  </div>
-                  <div id="forget">
-                    <form>
-                      <input type="email" placeholder="Email Address">
-                      <button type="submit">Login</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+            
+                <div class="col-sm-1"></div>
+                <h4 class="col-sm-8" style="color:white;">Registrarse como egresado</h4>
+                <form>
+                    <input type="text" placeholder="Matricula">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido Paterno">
+                    <input type="text" placeholder="Apellido Materno">
+                    <input type="email" placeholder="Correo Electrónico">
+                    <input type="text" placeholder="Telefono">
+                    <input type="text" placeholder="Periodo escolar inicio">
+                    <input type="text" placeholder="Periodo escolar termino">
+                    <input type="file" placeholder="Elige una fotografía">
+                    <input type="password" placeholder="Contraseña">
+                    <a href="/principal"><button type="button">Registrar</button></a>
+                    <div class="forget"></div>
+                </form>
             </div>
+
           </div>
+
+          
         </div>
       </div>
     </div>
@@ -114,10 +91,32 @@
       <li><a href="#">Privacy Policy</a></li>
       <li><a href="#">Terms &amp; Conditions</a></li>
     </ul>
-    <p>Copyright &copy; 2015 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
+    <p>Copyright &copy; 2019 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
   </div>
 </div>
 <!-- end .uou-block-4a -->
+
+<div class="uou-block-11a">
+  <h5 class="title">Menu</h5>
+  <a href="#" class="mobile-sidebar-close">&times;</a>
+  <nav class="main-nav">
+    <ul>
+      <li class="active"><a href="index.html">Index</a></li>
+      <li> <a href="listing-filter.html">Professionals</a> </li>
+      <li><a href="profile_company.html">Profile Company</a></li>
+      <li><a href="profile_company-no-tabs.html">Profile Company No Tabs</a></li>
+      <li><a href="user-dashboard(connections)(hotkeys-disabled).html">User Dashboard 1</a></li>
+      <li><a href="user-dashboard(connections)(hotkeys-enabled).html">User Dashboard 2</a></li>
+      <li><a href="user-dashboard(followers).html">User Dashboard 3</a></li>
+      <li><a href="user-dashboard(following).html">User Dashboard 4</a></li>
+      <li><a href="blog-post.html">Blog Post</a></li>
+      <li> <a href="user-profile(layout-1).html">User Profile</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gui-kit.html">GUI KIT</a></li>
+    </ul>
+  </nav>
+  <hr>
+</div>
 
 <!-- Scripts --> 
 <script src="https://maps.googleapis.com/maps/api/js"></script> 

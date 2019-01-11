@@ -129,8 +129,8 @@
               <li><a data-toggle="tab" href="#portfolio">Galeria</a></li>
               <!--li><a data-toggle="tab" href="#blog-tab">Blog Posts</a></li-->
               <li><a data-toggle="tab" href="#Con-tab">Mis conexiones</a></li>
-              <li><a data-toggle="tab" href="#flowrs-tabs">Followers (241)</a></li>
-              <li><a data-toggle="tab" href="#foll-tabs">Following</a></li>
+              <li><a data-toggle="tab" href="#flowrs-tabs">Seguidores (241)</a></li>
+              <li><a data-toggle="tab" href="#foll-tabs">Siguiendo</a></li>
             </ul>
           </div>
           
@@ -287,35 +287,20 @@
                       <div class="sidebar-information">
                         <ul class="single-category">
                           <li class="row">
-                            <h6 class="title col-xs-6">Name</h6>
-                            <span class="subtitle col-xs-6">Abu Antar</span></li>
+                                <h6 class="title col-xs-6">Matricula</h6>
+                                <span class="subtitle col-xs-6">1530001</span></li>
                           <li class="row">
-                            <h6 class="title col-xs-6">Age</h6>
-                            <span class="subtitle col-xs-6">38 Years Old</span></li>
+                            <h6 class="title col-xs-6">Nombre Completo</h6>
+                            <span class="subtitle col-xs-6">Michael Peterson</span></li>
                           <li class="row">
-                            <h6 class="title col-xs-6">Location</h6>
-                            <span class="subtitle col-xs-6">Jordan Amman</span></li>
+                            <h6 class="title col-xs-6">Periodo Escolar</h6>
+                            <span class="subtitle col-xs-6">2015-2018</span></li>
                           <li class="row">
-                            <h6 class="title col-xs-6">Experiance</h6>
-                            <span class="subtitle col-xs-6">15 Years</span></li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Dgree</h6>
-                            <span class="subtitle col-xs-6">MBA</span></li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Career Lavel</h6>
-                            <span class="subtitle col-xs-6">Mid-Level</span></li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Phone</h6>
+                            <h6 class="title col-xs-6">Telefono</h6>
                             <span class="subtitle col-xs-6">(800) 123-4567</span></li>
                           <li class="row">
-                            <h6 class="title col-xs-6">Fax </h6>
-                            <span class="subtitle col-xs-6">(800) 123-4568</span></li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">E-mail</h6>
+                            <h6 class="title col-xs-6">Correo</h6>
                             <span class="subtitle col-xs-6"><a href="#.">example@example.com</a></span></li>
-                          <li class="row">
-                            <h6 class="title col-xs-6">Website</h6>
-                            <span class="subtitle col-xs-6"><a href="#.">example.com </a></span></li>
                         </ul>
                       </div>
                     </div>
@@ -326,12 +311,12 @@
               <!-- Jobs -->
               <div id="jobs" class="tab-pane fade">
                 <div class="header-listing">
-                  <h6>Sort by</h6>
+                  <h6>Listado por</h6>
                   <div class="custom-select-box">
                     <select name="order" class="custom-select">
-                      <option value="0">Most popular</option>
-                      <option value="1">The latest</option>
-                      <option value="2">The best rating</option>
+                      <option value="0">Más popular</option>
+                      <option value="1">Ultimos en subir</option>
+                      <option value="2">Mejor Calificado</option>
                     </select>
                   </div>
                   <ul class="listing-views">
@@ -356,7 +341,7 @@
                           <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
                           <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
                           <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Skills required:</h6>
+                          <h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>
                             <li><a href="#">Wordpress</a></li>
@@ -367,19 +352,8 @@
                       </div>
                       <div class="listing-tabs">
                         <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> email@mail.com</a></li>
+                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
                           <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                          <li><a href="#"><i class="fa fa-globe"></i> www.webstite.com</a></li>
-                          <li class="share-button"> <a href="#"><i class="fa fa-share"></i> Share</a>
-                            <div class="contact-share">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                              </ul>
-                            </div>
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -397,7 +371,7 @@
                           <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
                           <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
                           <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Skills required:</h6>
+                          <h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>
                             <li><a href="#">Wordpress</a></li>
@@ -408,19 +382,8 @@
                       </div>
                       <div class="listing-tabs">
                         <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> email@mail.com</a></li>
+                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
                           <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                          <li><a href="#"><i class="fa fa-globe"></i> www.webstite.com</a></li>
-                          <li class="share-button"> <a href="#"><i class="fa fa-share"></i> Share</a>
-                            <div class="contact-share">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                              </ul>
-                            </div>
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -554,7 +517,7 @@
               <!-- Blog Post -->
               <div id="Con-tab" class="tab-pane fade">
                 <div class="profile-main">
-                  <h3>People in Connections</h3>
+                  <h3>Personas en Conexión</h3>
                   <div class="profile-in">
                     <div class="folow-persons">
                       <ul>
@@ -741,7 +704,7 @@
               <!-- Blog Post -->
               <div id="flowrs-tabs" class="tab-pane fade">
                 <div class="profile-main">
-                  <h3>Followers</h3>
+                  <h3>Seguidores</h3>
                   <div class="profile-in">
                     <div class="folow-persons">
                       <ul>
@@ -928,7 +891,7 @@
               <!-- Blog Post -->
               <div id="foll-tabs" class="tab-pane fade">
                 <div class="profile-main">
-                  <h3>Following</h3>
+                  <h3>Siguiendo</h3>
                   <div class="profile-in">
                     <div class="folow-persons">
                       <ul>

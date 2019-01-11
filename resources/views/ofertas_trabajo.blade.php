@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>TIGER - Social Network HTML Template</title>
+<title>Bolsa de Trabajo Universidad Politécnica de Victoria</title>
 
 <!-- Fonts Online -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="icon" src="images/UP_Victoria.png" sizes="32x32"/>
 
 
 <!-- Style Sheet -->
@@ -37,22 +38,6 @@
             <input type="submit" value="">
           </form>
         </div>
-        <ul class="social">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-google-plus"></a></li>
-        </ul>
-        <ul class="authentication">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
-        <div class="language"> <a href="#" class="toggle"><img src="images/flags/32/US.png" alt=""> ENG</a>
-          <ul>
-            <li><a href="#"><img src="images/flags/32/PT.png" alt=""> PT</a></li>
-            <li><a href="#"><img src="images/flags/32/FR.png" alt=""> FR</a></li>
-            <li><a href="#"><img src="images/flags/32/ES.png" alt=""> ES</a></li>
-          </ul>
-        </div>
       </div>
     </div>
     <!-- end .uou-block-1a --> 
@@ -61,25 +46,14 @@
   
   <div class="box-shadow-for-ui">
     <div class="uou-block-2b">
-      <div class="container"> <a href="#" class="logo"><img src="images/logo.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+      <div class="container"> <a href="#" class="logo"><img src="images/UP_Victoria.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
         <nav class="nav">
           <ul class="sf-menu">
-            <li><a href="index.html"><i class="fa  fa-home"></i></a></li>
-            <li class="active"> <a href="listing-filter.html">Professionals</a> </li>
-            <li> <a href="index.html">Pages</a>
-              <ul>
-                <li><a href="profile_company.html">Profile Company</a></li>
-                <li><a href="profile_company-no-tabs.html">Profile Company No Tabs</a></li>
-                <li><a href="user-dashboard(connections)(hotkeys-disabled).html">User Dashboard 1</a></li>
-                <li><a href="user-dashboard(connections)(hotkeys-enabled).html">User Dashboard 2</a></li>
-                <li><a href="user-dashboard(followers).html">User Dashboard 3</a></li>
-                <li><a href="user-dashboard(following).html">User Dashboard 4</a></li>
-                <li><a href="blog-post.html">Blog Post</a></li>                
-              </ul>
-            </li>
-            <li> <a href="user-profile(layout-1).html">User Profile</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="gui-kit.html">GUI KIT</a></li>
+          <li><a href="/principal"><i class="fa  fa-home"></i></a></li>
+            <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
+            <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
+            <li> <a href="/perfil_egresado">Tu perfil</a></li>
+            <li><a href="/conexiones_perfiles">Conexiones</a></li>
           </ul>
         </nav>
       </div>
@@ -91,7 +65,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
     <div class="position-center-center">
       <div class="container">
-        <h2>Search Professionals</h2>
+        <h2>Buscar Trabajos</h2>
       </div>
     </div>
   </div>
@@ -104,18 +78,18 @@
           <div class="col-md-12">
             <div class="map-toggleButton"> <i class="fa fa-bars"></i> </div>
             <div class="map-search-fields">
-              <div class="field">
+              <!--div class="field">
                 <input type="text" placeholder="Keyword">
-              </div>
+              </div->
               <div class="field">
                 <input type="text" placeholder="Location">
-              </div>
+              </div-->
               <div class="field custom-select-box">
-                <input type="text" placeholder="Profession">
+                <input type="text" placeholder="Buscar empresa">
               </div>
             </div>
             <div class="search-button">
-              <button>Search Professionals</button>
+              <button>Buscar Trabajos</button>
             </div>
           </div>
         </div>
@@ -126,7 +100,7 @@
   <!-- Members -->
   <section class="pro-mem">
     <div class="container pb30">
-      <h3>Professionals</h3>
+      <h3>Trabajos</h3>
       <div class="row">
         <div class="col-sm-3">
           <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
@@ -189,51 +163,7 @@
   </section>
 </div>
 
-<!-- Footer -->
-<div class="uou-block-4e">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6"> <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
-        <ul class="contact-info has-bg-image contain" data-bg-image="images/footer-map-bg.png">
-          <li> <i class="fa fa-map-marker"></i>
-            <address>
-            795 Folsom Ave, Suite 600, San Francisco, CA 94107
-            </address>
-          </li>
-          <li> <i class="fa fa-phone"></i> <a href="tel:#">(123) 456-7890</a> </li>
-          <li> <i class="fa fa-envelope"></i> <a href="mailto:#">first.last@example.com</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Twitter Feed</h5>
-        <ul class="twitter-feed">
-          <li> RT <a href="#">@no1son</a>: Now this <a href="#">http://t.co/TSfMW1qMAW</a> is one hell of a stunning site!!! Awesome work guys <a href="#">@AIRNAUTS</a> <a href="#" class="time">May 25</a> </li>
-          <li> Check out the wordpress version of Tucson - <a href="#">http://t.co/sBlU3GbapT</a> <a href="#" class="time">May 22</a> </li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Photostream</h5>
-        <ul class="photos-list">
-          <li><img src="images/photostream4.jpg" alt=""></li>
-          <li><img src="images/photostream6.jpg" alt=""></li>
-          <li><img src="images/photostream3.jpg" alt=""></li>
-          <li><img src="images/photostream2.jpg" alt=""></li>
-          <li><img src="images/photostream1.jpg" alt=""></li>
-          <li><img src="images/photostream.jpg" alt=""></li>
-        </ul>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <h5>Newsletter</h5>
-        <p>Subscribe to our newsletter to receive our latest news and updates. We do not spam.</p>
-        <form class="newsletter-form" action="#">
-          <input type="email" placeholder="Enter your email address">
-          <input type="submit" class="btn btn-primary" value="Subscribe">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end .uou-block-4e -->
+
 
 <div class="uou-block-4a secondary dark">
   <div class="container">
@@ -251,18 +181,11 @@
   <a href="#" class="mobile-sidebar-close">&times;</a>
   <nav class="main-nav">
     <ul>
-      <li><a href="index.html">Index</a></li>
-      <li class="active"><a href="listing-filter.html">Professionals</a> </li>
-      <li><a href="profile_company.html">Profile Company</a></li>
-      <li><a href="profile_company-no-tabs.html">Profile Company No Tabs</a></li>
-      <li><a href="user-dashboard(connections)(hotkeys-disabled).html">User Dashboard 1</a></li>
-      <li><a href="user-dashboard(connections)(hotkeys-enabled).html">User Dashboard 2</a></li>
-      <li><a href="user-dashboard(followers).html">User Dashboard 3</a></li>
-      <li><a href="user-dashboard(following).html">User Dashboard 4</a></li>
-      <li><a href="blog-post.html">Blog Post</a></li>
-      <li> <a href="user-profile(layout-1).html">User Profile</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="gui-kit.html">GUI KIT</a></li>
+    <li><a href="/principal">Inicio</a></li>
+      <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
+      <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
+      <li> <a href="/perfil_egresado">Tu perfil</a></li>
+      <li><a href="/conexiones_perfiles">Conexiones</a></li>
     </ul>
   </nav>
   <hr>

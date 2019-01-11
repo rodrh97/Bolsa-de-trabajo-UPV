@@ -34,3 +34,11 @@ Route::get('/conexiones_perfiles', function () {
 Route::get('/principal', function () {
     return view('principal');
 });
+
+Route::get('/registro_egresado', function () {
+    return view('registro_egresados');
+});
+
+Route::get('/registro_empresa', function () {
+    return view('registro_empresas');
+});
