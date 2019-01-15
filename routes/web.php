@@ -35,6 +35,10 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
+Route::get('/registro', function () {
+    return view('registros');
+});
+
 Route::get('/registro_egresado', function () {
     return view('registro_egresados');
 });
