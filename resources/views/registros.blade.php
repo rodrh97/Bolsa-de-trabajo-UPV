@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
 </head>
@@ -74,17 +75,21 @@
                                 <hr/>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <a href="/registro_egresado"><button type="button" class="btn btn-primary btn-md waves-effect waves-light text-center m-b-20"> Registro Egresado</button></a>
+                                        <a href="/registro_egresado"><button type="button" class="btn btn-primary btn-md waves-effect waves-light text-center m-b-20 col-lg-7"><i class="fas fa-user-graduate"></i>Registro Egresado</button></a>
+                                    </div>
+                                
+                                    <div class="col-md-12">
+                                        <a href="/registro_empresa"><button type="button" class="btn btn-primary btn-md waves-effect waves-light text-center m-b-20 col-lg-7"><i class="fas fa-briefcase"></i>Registro Empresa</button></a>
                                     </div>
                                     <div class="col-md-12">
-                                        <a href="/registro_empresa"><button type="button" class="btn btn-primary btn-md waves-effect waves-light text-center m-b-20">Registro Empresa</button></a>
+                                        <a href="/registro_empresa"><button type="button" class="btn btn-primary btn-md waves-effect waves-light text-center m-b-20 col-lg-7"><i class="fas fa-chalkboard-teacher"></i>Registro Tutor</button></a>
                                     </div>
                                 </div>
                                 <hr/>
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <p class="text-inverse text-left m-b-0">Si todavia no te registras</p>
-                                        <p class="text-inverse text-left"><b><a href="/registro_egresado">Dar clic aquí para registrarte</a></b></p>
+                                        <p class="text-inverse text-left m-b-0">Si ya tienes una cuenta</p>
+                                        <p class="text-inverse text-left"><b><a href="/registro_egresado">Dar clic aquí para iniciar sesión </a></b></p>
                                     </div>
                                     <div class="col-md-2">
                                         <!--img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png"-->
