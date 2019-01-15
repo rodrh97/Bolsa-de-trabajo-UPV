@@ -1,140 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Bolsa de Trabajo Universidad Politécnica de Victoria</title>
+    <title>GURU Able - Premium Admin Template </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
 
-<!-- Fonts Online -->
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link rel="icon" src="images/UP_Victoria.png" sizes="32x32" />
-<!-- Style Sheet -->
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/main-style.css">
-<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/UP_Victoria.png" type="image/x-icon" sizes="32x32">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+
 </head>
 
-<body>
-<div id="main-wrapper"> 
-  
-  <!-- Top Toolbar -->
-  <div class="toolbar">
-    <div class="uou-block-1a blog">
-      <div class="container">
-
-      </div>
-    </div>
-    <!-- end .uou-block-1a --> 
-  </div>
-  <!-- end toolbar -->
-  
-  <div class="box-shadow-for-ui">
-    <div class="uou-block-2b">
-      <div class="container"> <a href="/" class="logo"><img src="images/UP_Victoria.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
-        
-      </div>
-    </div>
-    <!-- end .uou-block-2b --> 
-  </div>
-  
-  <!-- HOME PRO-->
-  <div class="home-pro"> 
-    
-    <!-- PRO BANNER HEAD -->
-    <div class="banr-head">
-      <div class="container">
-        <div class="row"> 
-          
-          <!-- CONTENT -->
-          <div class="col-sm-7">
-            <div class="text-area">
-              <div class="position-center-center col-md-10">
-                <b><h1>Bienvenido a la bolsa de trabajo de la Universidad Politécnica de Victoria</h1></b>
-              </div>
-            </div>
-          </div>
-          
-          <!-- FORM SECTION -->
-          <div class="col-sm-5">
-            <div class="login-sec"> 
-              
-              <!-- TABS -->
-              <div class="uou-tabs">
-                <ul class="tabs">
-                  <li><a href="#register">Registrar Ahora</a></li>
-                  <li class="active"><a href="#log-in">Iniciar Sesión</a></li>
-                </ul>
-                
-                <!-- REGISTER -->
-                <div class="content">
-                  <div id="register">
-                    <div class="forget">
-                      <a href="/registro_egresado" class="btn mb20 btn-large btn-primary"><i class="fa fa-university"> Egresado</i></a>
-                      <a href="/registro_empresa" class="btn mb20 btn-large btn-primary"><i class="fa fa-suitcase"> Empresa</i></a>
-                    </div>
-                  </div>
-                  
-                  <!-- LOGIN -->
-                  <div id="log-in" class="active">
-                    <form>
-                      <input type="email" placeholder="Correo Electrónico">
-                      <input type="password" placeholder="Contraseña">
-                      <a href="/principal"><button type="button">Iniciar Sesión</button></a>
-                      <div class="forget">Olvidaste tu contraseña? <a href="#.">Click Aquí</a></div>
-                    </form>
-                  </div>
-                  <div id="forget">
-                    <form>
-                      <input type="email" placeholder="Email Address">
-                      <button type="submit">Login</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<body class="fix-menu">
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+    <div class="ball-scale">
+        <div class='contain'>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
+            <div class="ring"><div class="frame"></div></div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+    <!-- Pre-loader end -->
 
-<div class="uou-block-4a secondary dark">
-  <div class="container">
-    <ul class="links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms &amp; Conditions</a></li>
-    </ul>
-    <p>Copyright &copy; 2015 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
-  </div>
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+        <!-- Container-fluid starts -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Authentication card start -->
+                    <div class="login-card card-block auth-body mr-auto ml-auto">
+                        <form class="md-float-material">
+                            <div class="text-center">
+                                <img src="assets/images/auth/logo-dark.png" alt="logo.png">
+                            </div>
+                            <div class="auth-box">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-left txt-primary">Sign In</h3>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Your Email Address">
+                                    <span class="md-line"></span>
+                                </div>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                    <span class="md-line"></span>
+                                </div>
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-12">
+                                        <div class="checkbox-fade fade-in-primary d-">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                                <span class="text-inverse">Remember me</span>
+                                            </label>
+                                        </div>
+                                        <div class="forgot-phone text-right f-right">
+                                            <a href="auth-reset-password.html" class="text-right f-w-600 text-inverse"> Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign in</button>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Thank you and enjoy our website.</p>
+                                        <p class="text-inverse text-left"><b>Your Authentication Team</b></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- Authentication card end -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
 </div>
-<!-- end .uou-block-4a -->
-
-<!-- Scripts --> 
-<script src="https://maps.googleapis.com/maps/api/js"></script> 
-<script src="js/jquery-2.1.3.min.js"></script> 
-<script src="js/bootstrap.js"></script> 
-<script src="js/plugins/superfish.min.js"></script> 
-<script src="js/jquery.ui.min.js"></script> 
-<script src="js/plugins/rangeslider.min.js"></script> 
-<script src="js/plugins/jquery.flexslider-min.js"></script> 
-<script src="js/uou-accordions.js"></script> 
-<script src="js/uou-tabs.js"></script> 
-<script src="js/plugins/select2.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/gmap3.min.js"></script> 
-<script src="js/scripts.js"></script> 
-<script>
-
-</script>
+<![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="bower_components/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="bower_components/popper.js/js/popper.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="bower_components/modernizr/js/modernizr.js"></script>
+    <script type="text/javascript" src="bower_components/modernizr/js/css-scrollbars.js"></script>
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="bower_components/i18next/js/i18next.min.js"></script>
+    <script type="text/javascript" src="bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+    <script type="text/javascript" src="assets/js/common-pages.js"></script>
 </body>
+
 </html>
