@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>GURU Able - Premium Admin Template </title>
+    <title>Bolsa de Trabajo de la Universidad Politécnica de Victoria </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -18,7 +18,8 @@
     <meta name="author" content="#">
     <!-- Favicon icon -->
 
-    <link rel="icon" href="assets/images/UP_Victoria.png" type="image/x-icon" sizes="32x32">
+    <!--link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"-->
+    <link rel="icon" href="assets/images/UP_Victoria.ico" sizes="32x32" />
     <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
@@ -61,21 +62,21 @@
                     <div class="login-card card-block auth-body mr-auto ml-auto">
                         <form class="md-float-material">
                             <div class="text-center">
-                                <img src="assets/images/auth/logo-dark.png" alt="logo.png">
+                                <img src="assets/images/UP_Victoria.png" alt="UP_Victoria.png" width="200px" height="100px">
                             </div>
                             <div class="auth-box">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <h3 class="text-left txt-primary">Sign In</h3>
+                                        <h3 class="text-left txt-primary">Inicio de Sesión</h3>
                                     </div>
                                 </div>
                                 <hr/>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Your Email Address">
+                                    <input type="email" class="form-control" placeholder="Correo Electrónico">
                                     <span class="md-line"></span>
                                 </div>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" placeholder="Contraseña">
                                     <span class="md-line"></span>
                                 </div>
                                 <div class="row m-t-25 text-left">
@@ -84,27 +85,27 @@
                                             <label>
                                                 <input type="checkbox" value="">
                                                 <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
-                                                <span class="text-inverse">Remember me</span>
+                                                <span class="text-inverse">Recuerdame</span>
                                             </label>
                                         </div>
                                         <div class="forgot-phone text-right f-right">
-                                            <a href="auth-reset-password.html" class="text-right f-w-600 text-inverse"> Forgot Password?</a>
+                                            <a href="auth-reset-password.html" class="text-right f-w-600 text-inverse"> Olvide mi contraseña?</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign in</button>
+                                        <a href="/principal"><button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Iniciar Sesión</button></a>
                                     </div>
                                 </div>
                                 <hr/>
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <p class="text-inverse text-left m-b-0">Thank you and enjoy our website.</p>
-                                        <p class="text-inverse text-left"><b>Your Authentication Team</b></p>
+                                        <p class="text-inverse text-left m-b-0">Si todavia no te registras</p>
+                                        <p class="text-inverse text-left"><b><a href="/registro_egresado">Dar clic aquí para registrarte</a></b></p>
                                     </div>
                                     <div class="col-md-2">
-                                        <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                                        <!--img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png"-->
                                     </div>
                                 </div>
 

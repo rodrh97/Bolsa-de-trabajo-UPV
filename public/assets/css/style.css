@@ -17165,7 +17165,7 @@ table.footable-paging-center > tfoot > tr.footable-paging > td {
  ========================================= */
 .common-img-bg {
   background-size: cover;
-  background: url(../images/bg.jpg) no-repeat center center fixed;
+  background: url(../images/principal.jpg) no-repeat center center fixed;
   height: 100%;
 }
 
