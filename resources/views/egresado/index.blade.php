@@ -23,9 +23,10 @@
             <nav class="nav">
               <ul class="sf-menu">
                 <li><a href="/principal_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
-                <li> <a href="/ofertas_trabajo" style="color:white;">Lista de trabajos</a> </li>
-                <li> <a href="/perfil_egresado" style="color:white;">Tu perfil</a></li>
-                <li><a href="/conexiones_perfiles" style="color:white;">Conexiones</a></li>
+                <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Lista de trabajos</a> </li>
+                <li> <a href="/perfil_egresado" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
+                <li><a href="/conexiones_perfiles" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
+                <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
               </ul>
             </nav>
           </div>
@@ -39,7 +40,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
       <div class="position-center-center">
         <div class="container">
-          <h2>Ultimas novedades</h2>
+          <h2><i class="fas fa-newspaper"></i>Ultimas novedades</h2>
         </div>
       </div>
     </div>
