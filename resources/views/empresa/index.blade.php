@@ -24,41 +24,40 @@
 <![endif]-->
 </head>
 <body>
-<div id="main-wrapper"> 
-  
+<div id="main-wrapper">
   <!-- Top Toolbar -->
   <div class="toolbar">
-    <div class="uou-block-1a blog">
-      <div class="container">
-        <div class="search"> <a href="#" class="toggle fa fa-search"></a>
-          <form action="#">
-            <input type="text" class="search-input" placeholder="Search ...">
-            <input type="submit" value="">
-          </form>
-        </div>
-
-      </div>
-    </div>
-    <!-- end .uou-block-1a --> 
-  </div>
-  <!-- end toolbar -->
+      <div class="uou-block-1a blog">
+        <div class="container">
+          <div class="search"> <a href="#" class="toggle fa fa-search"></a>
+            <form action="#">
+              <input type="text" class="search-input" placeholder="Search ...">
+              <input type="submit" value="">
+            </form>
+          </div>
   
-  <div class="box-shadow-for-ui">
-    <div class="uou-block-2b">
-      <div class="container"> <a href="/principal" class="logo"><img src="assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
-        <nav class="nav">
-          <ul class="sf-menu">
-            <li><a href="/principal" style="color:white;"><i class="fa  fa-home"></i></a></li>
-            <li> <a href="/ofertas_trabajo" style="color:white;">Trabajos</a> </li>
-            <li> <a href="/perfil_empresa" style="color:white;">Perfil de la empresa</a></li>
-            <li> <a href="/perfil_egresado" style="color:white;">Tu perfil</a></li>
-            <li><a href="/conexiones_perfiles" style="color:white;">Conexiones</a></li>
-          </ul>
-        </nav>
+        </div>
       </div>
+      <!-- end .uou-block-1a --> 
     </div>
-    <!-- end .uou-block-2b --> 
-  </div>
+    <!-- end toolbar -->
+    
+    <div class="box-shadow-for-ui">
+      <div class="uou-block-2b">
+        <div class="container"> <a href="/principal" class="logo"><img src="assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+          <nav class="nav">
+            <ul class="sf-menu">
+              <li><a href="/principal" style="color:white;"><i class="fa  fa-home"></i></a></li>
+              <li> <a href="/ofertas_trabajo" style="color:white;">Trabajos</a> </li>
+              <li> <a href="/perfil_empresa" style="color:white;">Perfil de la empresa</a></li>
+              <li> <a href="/perfil_egresado" style="color:white;">Tu perfil</a></li>
+              <li><a href="/conexiones_perfiles" style="color:white;">Conexiones</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- end .uou-block-2b --> 
+    </div> 
   
   <!-- SUB Banner -->
   <div class="profile-bnr sub-bnr user-profile-bnr">

@@ -35,8 +35,12 @@ Route::get('/conexiones_perfiles', function () {
     return view('conexiones_perfiles');
 });
 
-Route::get('/principal', function () {
-    return view('principal');
+Route::get('/principal_egresado', function () {
+    return view('egresado.index');
+});
+
+Route::get('/principal_empresa', function () {
+    return view('egresado.index');
 });
 
 Route::get('/registro', function () {
