@@ -19,6 +19,10 @@ Route::get('/perfil_egresado', function () {
     return view('perfil_egresado');
 });
 
+Route::get('administrador/inicio',function(){
+    return view('administrador.inicio');
+});
+
 Route::get('/perfil_empresa', function () {
     return view('perfil_empresa');
 });

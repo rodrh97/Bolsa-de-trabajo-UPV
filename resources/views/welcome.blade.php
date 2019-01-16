@@ -80,35 +80,13 @@
                                     <input type="password" class="form-control" placeholder="Contraseña">
                                     <span class="md-line"></span>
                                 </div>
-                                <div class="row m-t-25 text-left">
-                                    <div class="col-12">
-                                        <div class="checkbox-fade fade-in-primary d-">
-                                            <label>
-                                                <input type="checkbox" value="">
-                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
-                                                <span class="text-inverse">Recuerdame</span>
-                                            </label>
-                                        </div>
-                                        <div class="forgot-phone text-right f-right">
-                                            <a href="auth-reset-password.html" class="text-right f-w-600 text-inverse"> Olvide mi contraseña?</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <a href="/principal"><button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Iniciar Sesión</button></a>
+                                        <a href="/principal"><button type="button" class="btn btn-inverse btn-md btn-block text-center m-b-20">Iniciar Sesión</button></a>
                                     </div>
                                 </div>
-                                <hr/>
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <p class="text-inverse text-left m-b-0">Si todavia no te registras</p>
-                                        <p class="text-inverse text-left"><b><a href="/registro">Dar clic aquí para registrarte</a></b></p>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <!--img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png"-->
-                                    </div>
-                                </div>
+                                
 
                             </div>
                         </form>
