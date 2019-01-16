@@ -40,7 +40,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
       <div class="position-center-center">
         <div class="container">
-          <h2><i class="fas fa-newspaper"></i>Ultimas novedades</h2>
+          <h2><i class="fas fa-newspaper"></i> Ultimas novedades</h2>
         </div>
       </div>
     </div>
@@ -183,31 +183,32 @@
     </div>
   </div>
   
-  <!-- Footer -->
   
-  
+@endsection
+@section('pie_pagina')
+    <!-- Footer -->
   <div class="uou-block-4a secondary dark">
-    <div class="container">
-      <ul class="links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms &amp; Conditions</a></li>
-      </ul>
-      <p>Copyright &copy; 2015 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
+      <div class="container">
+        <ul class="links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+        <p>Copyright &copy; 2015 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
+      </div>
     </div>
-  </div>
-  <!-- end .uou-block-4a --> 
-  
-  <div class="uou-block-11a">
-    <h5 class="title">Menu</h5>
-    <a href="#" class="mobile-sidebar-close">&times;</a>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/principal">Inicio</a></li>
-        <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
-        <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
-        <li> <a href="/perfil_egresado">Tu perfil</a></li>
-        <li><a href="/conexiones_perfiles">Conexiones</a></li>
-      </ul>
-    </nav>
-    <hr>
+    <!-- end .uou-block-4a --> 
+    
+    <div class="uou-block-11a">
+      <h5 class="title">Menu</h5>
+      <a href="#" class="mobile-sidebar-close">&times;</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/principal">Inicio</a></li>
+          <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
+          <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
+          <li> <a href="/perfil_egresado">Tu perfil</a></li>
+          <li><a href="/conexiones_perfiles">Conexiones</a></li>
+        </ul>
+      </nav>
+      <hr>
 @endsection

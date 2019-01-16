@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/perfil_egresado', function () {
-    return view('perfil_egresado');
+    return view('egresado.perfil');
 });
 
 Route::get('administrador/inicio',function(){
@@ -28,11 +28,11 @@ Route::get('/perfil_empresa', function () {
 });
 
 Route::get('/ofertas_trabajo', function () {
-    return view('ofertas_trabajo');
+    return view('egresado.lista_trabajo');
 });
 
 Route::get('/conexiones_perfiles', function () {
-    return view('conexiones_perfiles');
+    return view('egresado.conexiones');
 });
 
 Route::get('/principal_egresado', function () {

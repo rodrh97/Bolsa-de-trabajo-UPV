@@ -28,6 +28,7 @@
 <div id="main-wrapper"> 
    @yield('menu')
    @yield('contenido')
+   @yield('pie_pagina')
 </div>
 
 <!-- Scripts --> 
