@@ -83,7 +83,7 @@
                                 
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <a href="/principal_egresado"><button type="button" class="btn btn-inverse btn-md btn-block text-center m-b-20">Iniciar Sesión</button></a>
+                                        <a href="/inicio_egresado"><button type="button" class="btn btn-inverse btn-md btn-block text-center m-b-20">Iniciar Sesión</button></a>
                                     </div>
                                 </div>
                                 
