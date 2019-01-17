@@ -1,6 +1,6 @@
 @extends('egresado.layout')
 @section('titulo')
-    Lista de trabajos
+    Lista de egresados
 @endsection
 @section('menu')
          <!-- Top Toolbar -->
@@ -43,7 +43,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
         <div class="position-center-center">
           <div class="container">
-            <h2>Trabajos</h2>
+            <h2>Egresados</h2>
           </div>
         </div>
       </div>
@@ -63,11 +63,11 @@
                     <input type="text" placeholder="Location">
                   </div-->
                   <div class="field custom-select-box">
-                    <input type="text" placeholder="Buscar empresa">
+                    <input type="text" placeholder="Buscar egresado">
                   </div>
                 </div>
                 <div class="search-button">
-                  <button>Buscar Trabajos</button>
+                  <button>Buscar Egresados</button>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@
       <!-- Members -->
       <section class="pro-mem">
         <div class="container pb30">
-          <h3>Lista de Trabajos</h3>
+          <h3>Lista de Egresados</h3>
           <div class="row">
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">

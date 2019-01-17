@@ -1,4 +1,7 @@
 @extends('egresado.layout')
+@section('titulo')
+    Inicio
+@endsection
 @section('menu')
      <!-- Top Toolbar -->
     <div class="toolbar">
@@ -19,11 +22,12 @@
       
       <div class="box-shadow-for-ui">
         <div class="uou-block-2b">
-          <div class="container"> <a href="/principal_egresado" class="logo"><img src="assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+          <div class="container"> <a href="/principal_egresado"><img src="assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
             <nav class="nav">
               <ul class="sf-menu">
                 <li><a href="/principal_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
-                <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Lista de trabajos</a> </li>
+                <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Trabajos</a> </li>
+                <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-users"></i> Egresados</a> </li>
                 <li> <a href="/perfil_egresado" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
                 <li><a href="/conexiones_perfiles" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
                 <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>

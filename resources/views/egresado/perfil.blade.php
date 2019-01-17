@@ -1,4 +1,7 @@
 @extends('egresado.layout')
+@section('titulo')
+    Tu perfil
+@endsection
 @section('menu')
          <!-- Top Toolbar -->
          <div class="toolbar">
@@ -23,7 +26,8 @@
                     <nav class="nav">
                       <ul class="sf-menu">
                         <li><a href="/principal_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
-                        <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Lista de trabajos</a> </li>
+                        <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Trabajos</a> </li>
+                        <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-users"></i> Egresados</a> </li>
                         <li> <a href="/perfil_egresado" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
                         <li><a href="/conexiones_perfiles" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
                         <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>

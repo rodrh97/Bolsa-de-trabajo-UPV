@@ -38,6 +38,9 @@ Route::get('/conexiones_perfiles', function () {
 Route::get('/principal_egresado', function () {
     return view('egresado.index');
 });
+Route::get('/lista_egresados', function () {
+    return view('egresado.lista_egresados');
+});
 
 Route::get('/principal_empresa', function () {
     return view('egresado.index');
