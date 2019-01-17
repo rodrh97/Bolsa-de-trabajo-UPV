@@ -50,7 +50,7 @@
             <div class="ring"><div class="frame"></div></div>
         </div>
     </div>
-</div>
+    </div>
     <!-- Pre-loader end -->
 
     <section class="login p-fixed d-flex text-center bg-primary common-img-bg">

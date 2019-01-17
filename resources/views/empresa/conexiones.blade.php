@@ -1,6 +1,6 @@
 @extends('empresa.layout')
 @section('titulo')
-    Inicio Empresa
+    Conexiones Empresa
 @endsection
 @section('menu')
      <!-- Top Toolbar -->

@@ -42,6 +42,10 @@ Route::get('/conexiones_egresado', function () {
     return view('egresado.conexiones');
 });
 
+Route::get('/vacante', function () {
+    return view('egresado.vacante');
+});
+
 //------------------------------------------
 //RUTAS DE EMPRESA
 Route::get('/inicio_empresa', function () {

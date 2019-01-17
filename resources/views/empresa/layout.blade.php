@@ -25,6 +25,7 @@
 <![endif]-->
 </head>
 <body>
+
 <div id="main-wrapper"> 
    @yield('menu')
    @yield('contenido')
