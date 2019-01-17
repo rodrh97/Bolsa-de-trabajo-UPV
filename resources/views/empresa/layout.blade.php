@@ -45,5 +45,10 @@
 <script src="js/owl.carousel.min.js"></script> 
 <script src="js/gmap3.min.js"></script> 
 <script src="js/scripts.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </html>

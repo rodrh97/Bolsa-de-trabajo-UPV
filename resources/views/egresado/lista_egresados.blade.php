@@ -67,7 +67,7 @@
                   </div>
                 </div>
                 <div class="search-button">
-                  <button>Buscar Egresados</button>
+                  <button>Buscar Egresado</button>
                 </div>
               </div>
             </div>
