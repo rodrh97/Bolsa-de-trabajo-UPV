@@ -29,8 +29,8 @@
 <div id="main-wrapper"> 
    @yield('menu')
    @yield('contenido')
-   @yield('pie_pagina')
 </div>
+@yield('pie_pagina')
 
 <!-- Scripts --> 
 <script src="https://maps.googleapis.com/maps/api/js"></script> 
