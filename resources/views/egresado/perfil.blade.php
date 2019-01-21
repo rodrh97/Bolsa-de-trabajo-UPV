@@ -1078,11 +1078,12 @@
         <a href="#" class="mobile-sidebar-close">&times;</a>
         <nav class="main-nav">
           <ul>
-            <li><a href="/principal">Inicio</a></li>
-            <li> <a href="/ofertas_trabajo">Trabajos</a> </li>
-            <li> <a href="/perfil_empresa">Perfil de la empresa</a></li>
-            <li> <a href="/perfil_egresado">Tu perfil</a></li>
-            <li><a href="/conexiones_perfiles">Conexiones</a></li>
+            <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i> Inicio</a></li>
+            <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Trabajos</a> </li>
+            <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-users"></i> Egresados</a> </li>
+            <li> <a href="/perfil_egresado" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
+            <li><a href="/conexiones_egresado" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
+            <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
           </ul>
         </nav>
         <hr>

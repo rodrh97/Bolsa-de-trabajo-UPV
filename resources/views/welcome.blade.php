@@ -19,7 +19,7 @@
     <!-- Favicon icon -->
 
     <!--link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"-->
-    <link rel="icon" href="assets/images/UP_Victoria.png" sizes="32x32" />
+    <link rel="icon" href="../assets/images/upv.ico" type="image/x-icon" sizes="32x32">
     <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">

@@ -10,7 +10,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="icon" href="../assets/images/UP_Victoria.png" type="image/x-icon" sizes="32x32">
+<link rel="icon" href="../assets/images/upv.ico" type="image/x-icon" sizes="32x32">
 
 <!-- Style Sheet -->
 <link rel="stylesheet" href="css/owl.carousel.css">
@@ -28,9 +28,8 @@
 <div id="main-wrapper"> 
    @yield('menu')
    @yield('contenido')
-   @yield('pie_pagina')
 </div>
-
+@yield('pie_pagina')
 <!-- Scripts --> 
 <script src="https://maps.googleapis.com/maps/api/js"></script> 
 <script src="js/jquery-2.1.3.min.js"></script> 
