@@ -38,6 +38,10 @@ Route::get('/perfil_egresado', function () {
     return view('egresado.perfil');
 });
 
+Route::get('/perfil_usuario', function () {
+    return view('egresado.perfil_usuario');
+});
+
 Route::get('/conexiones_egresado', function () {
     return view('egresado.conexiones');
 });

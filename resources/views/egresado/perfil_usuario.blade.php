@@ -1,6 +1,6 @@
 @extends('egresado.layout')
 @section('titulo')
-    Tu perfil
+    Perfil
 @endsection
 @section('menu')
          <!-- Top Toolbar -->
@@ -46,6 +46,13 @@
             <div class="pull-left">
               <h2>Michael Peterson</h2>
               <!--h5>Front-End Developer</h5-->
+            </div>
+            
+            <!-- Top Riht Button -->
+            <div class="right-top-bnr">
+              <div class="connect"> <a href="#." class="btn mb20 btn-large btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus warning"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
+                <!--div class="bt-ns"> <a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a> </div-->
+              </div>
             </div>
           </div>
           
@@ -93,13 +100,13 @@
               <!-- Nav Tabs -->
               <div class="col-md-12">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a data-toggle="tab" href="#profile">Mi Perfil</a></li>
-                  <li><a data-toggle="tab" href="#jobs">Mis trabajos</a></li>
+                  <li class="active"><a data-toggle="tab" href="#profile">Su Perfil</a></li>
+                  <li><a data-toggle="tab" href="#jobs">Sus trabajos</a></li>
                   <!--li><a data-toggle="tab" href="#contact">Contact</a></li-->
-                  <li><a data-toggle="tab" href="#portfolio">Mi Galeria</a></li>
+                  <li><a data-toggle="tab" href="#portfolio">Su Galeria</a></li>
                   <!--li><a data-toggle="tab" href="#blog-tab">Blog Posts</a></li-->
-                  <li><a data-toggle="tab" href="#Con-tab">Mis conexiones</a></li>
-                  <li><a data-toggle="tab" href="#flowrs-tabs">Mis Seguidores (241)</a></li>
+                  <li><a data-toggle="tab" href="#Con-tab">Sus conexiones</a></li>
+                  <li><a data-toggle="tab" href="#flowrs-tabs">Sus Seguidores (241)</a></li>
                   <li><a data-toggle="tab" href="#foll-tabs">Siguiendo</a></li>
                 </ul>
               </div>

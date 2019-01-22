@@ -82,7 +82,7 @@
           <div class="row">
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
+                <a href="/perfil_usuario"><h6>Jessica Walsh</a> <span>Founder &amp; Web Designer</span></h6>
                 <p><i class="fa fa-map-marker"></i> New York, USA</p>
               </div>
               <!-- end .uou-block-6a --> 
