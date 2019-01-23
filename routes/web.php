@@ -22,33 +22,19 @@ Route::get('administrador/inicio',function(){
 
 //------------------------------------------
 //RUTAS DE EGRESADOS
-Route::get('/inicio_egresado', function () {
-    return view('egresado.inicio');
-});
+Route::get('/inicio_egresado','EgresadosController@inicio_egresado');
 
-Route::get('/ofertas_trabajo', function () {
-    return view('egresado.lista_trabajo');
-});
+Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
-Route::get('/lista_egresados', function () {
-    return view('egresado.lista_egresados');
-});
+Route::get('/lista_egresados','EgresadosController@lista_egresados');
 
-Route::get('/perfil_egresado', function () {
-    return view('egresado.perfil');
-});
+Route::get('/perfil_egresado','EgresadosController@perfil_egresado');
 
-Route::get('/perfil_usuario', function () {
-    return view('egresado.perfil_usuario');
-});
+Route::get('/perfil_usuario','EgresadosController@perfil_usuario');
 
-Route::get('/conexiones_egresado', function () {
-    return view('egresado.conexiones');
-});
+Route::get('/conexiones_egresado','EgresadosController@conexiones_egresado');
 
-Route::get('/vacante', function () {
-    return view('egresado.vacante');
-});
+Route::get('/vacante','EgresadosController@vacante');
 
 //------------------------------------------
 //RUTAS DE EMPRESA
