@@ -38,13 +38,9 @@ Route::get('/vacante','EgresadosController@vacante');
 
 //------------------------------------------
 //RUTAS DE EMPRESA
-Route::get('/inicio_empresa', function () {
-    return view('empresa.inicio');
-});
+Route::get('/inicio_empresa', 'EmpresasController@inicio_empresa');
 
-Route::get('/tus_trabajos', function () {
-    return view('empresa.tus_trabajos');
-});
+Route::get('/tus_trabajos', 'EmpresasController@tus_trabajos');
 
 Route::get('/egresados', function () {
     return view('empresa.lista_egresados');
