@@ -17,4 +17,19 @@ class EmpresasController extends Controller
     public function tus_trabajos(){
         return view('empresa.tus_trabajos');
     }
+
+    //Pagina para que la empresa vea la lista egresados
+    public function egresados(){
+        return view('empresa.lista_egresados');
+    }
+
+    //Pagina para que la empresa vea su perfil
+    public function perfil_empresa(){
+        return view('empresa.perfil');
+    }
+
+    //Pagina para que la empresa vea sus conexiones
+    public function conexiones_empresa(){
+        return view('empresa.conexiones');
+    }
 }
