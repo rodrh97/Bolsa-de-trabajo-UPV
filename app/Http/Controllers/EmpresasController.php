@@ -32,4 +32,9 @@ class EmpresasController extends Controller
     public function conexiones_empresa(){
         return view('empresa.conexiones');
     }
+
+    //Pagina para que la empresa vea el perfil del egresado
+    public function egresado(){
+        return view('empresa.egresado');
+    }
 }
