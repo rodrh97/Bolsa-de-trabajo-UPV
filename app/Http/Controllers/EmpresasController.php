@@ -37,4 +37,9 @@ class EmpresasController extends Controller
     public function egresado(){
         return view('empresa.egresado');
     }
+
+    //Pagina para que la empresa vea su trabajo publicado
+    public function empresa_vacante(){
+        return view('empresa.empresa_vacante');
+    }
 }

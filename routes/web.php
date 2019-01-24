@@ -51,3 +51,5 @@ Route::get('/perfil_empresa','EmpresasController@perfil_empresa');
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 
 Route::get('/egresado','EmpresasController@egresado');
+
+Route::get('/empresa_vacante','EmpresasController@empresa_vacante');
