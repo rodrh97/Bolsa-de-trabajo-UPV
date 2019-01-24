@@ -27,8 +27,8 @@
               <ul class="sf-menu">
                 <li><a href="/inicio_empresa" style="color:white;"><i class="fa  fa-home"></i></a></li>
                 <li> <a href="/tus_trabajos" style="color:white;"><i class="fas fa-clipboard-list"></i> Tus Trabajos</a> </li>
-                <li> <a href="/egresados" style="color:white;"><i class="fas fa-users"></i> Egresados</a> </li>
-                <li> <a href="/perfil_empresa" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
+                <li> <a href="/egresados" style="color:white;"><i class="fas fa-user-graduate"></i> Egresados</a> </li>
+                <li> <a href="/perfil_empresa" style="color:white;"><i class="fas fa-building"></i>  Tu perfil</a></li>
                 <li><a href="/conexiones_empresa" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
                 <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
               </ul>

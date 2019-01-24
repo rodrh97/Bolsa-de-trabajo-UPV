@@ -42,5 +42,10 @@ class EgresadosController extends Controller
     public function vacante(){
         return view('egresado.vacante');
     }
+    
+    //Pagina para ver el perfil de la empresa
+    public function egresado_perfil_empresa(){
+        return view('egresado.egresado_perfil_empresa');
+    }
 
 }

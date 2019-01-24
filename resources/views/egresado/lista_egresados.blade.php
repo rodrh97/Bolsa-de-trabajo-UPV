@@ -54,17 +54,17 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <div class="map-toggleButton"> <i class="fa fa-bars"></i> </div>
+                
                 <div class="map-search-fields">
-                  <!--div class="field">
-                    <input type="text" placeholder="Keyword">
-                  </div->
-                  <div class="field">
-                    <input type="text" placeholder="Location">
-                  </div-->
-                  <div class="field custom-select-box">
-                    <input type="text" placeholder="Buscar egresado">
-                  </div>
+                    <div class="field">
+                        <input type="text" placeholder="Buscar por nombre">
+                      </div>
+                      <div class="field">
+                        <input type="text" placeholder="Buscar por carrera">
+                      </div>
+                      <div class="field custom-select-box">
+                        <input type="text" placeholder="Buscar por habilidad">
+                      </div>
                 </div>
                 <div class="search-button">
                   <button>Buscar Egresado</button>

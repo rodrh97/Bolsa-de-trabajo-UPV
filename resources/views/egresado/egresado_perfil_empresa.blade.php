@@ -80,7 +80,7 @@
         
         <!-- Top Riht Button -->
         <div class="right-top-bnr">
-          <div class="connect"> <a href="#." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
+          <div class="connect"> <a href="#." class="btn mb20 btn-large btn-inverse" data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
             <div class="bt-ns"> <!--a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a--> </div>
           </div>
         </div>

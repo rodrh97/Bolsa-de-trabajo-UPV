@@ -57,6 +57,7 @@
           <img src="img/b-post-image.jpg" alt="">
 
           <div class="meta">
+            <span class="time-ago"><a href="/egresado_perfil_empresa">Nombre Empresa</a></span>
             <span class="time-ago">3 days ago</span>
             <span class="category">Posted in: <a href="#">Design</a></span>
             <a href="#" class="comments">12 Comments</a>

@@ -32,6 +32,8 @@ Route::get('/perfil_egresado','EgresadosController@perfil_egresado');
 
 Route::get('/perfil_usuario','EgresadosController@perfil_usuario');
 
+Route::get('/egresado_perfil_empresa','EgresadosController@egresado_perfil_empresa');
+
 Route::get('/conexiones_egresado','EgresadosController@conexiones_egresado');
 
 Route::get('/vacante','EgresadosController@vacante');
