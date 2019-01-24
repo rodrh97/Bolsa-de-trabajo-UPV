@@ -3,23 +3,6 @@
     Egresados Empresa
 @endsection
 @section('menu')
-     <!-- Top Toolbar -->
-    <div class="toolbar">
-        <div class="uou-block-1a blog">
-          <div class="container">
-            <div class="search"> <a href="#" class="toggle fa fa-search"></a>
-              <form action="#">
-                <input type="text" class="search-input" placeholder="Search ...">
-                <input type="submit" value="">
-              </form>
-            </div>
-    
-          </div>
-        </div>
-        <!-- end .uou-block-1a --> 
-      </div>
-      <!-- end toolbar -->
-      
       <div class="box-shadow-for-ui">
         <div class="uou-block-2b">
           <div class="container"> <a href="/inicio_empresa"><img src="assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
