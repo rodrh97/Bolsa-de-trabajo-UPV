@@ -27,7 +27,7 @@
         <div class="profile-bnr user-profile-bnr">
           <div class="container">
             <div class="pull-left">
-              <h2><i class="fas fa-user"></i> Michael Peterson</h2>
+            <h2><i class="fas fa-user"></i>Michael Peterson</h2>
               <!--h5>Front-End Developer</h5-->
             </div>
           </div>
