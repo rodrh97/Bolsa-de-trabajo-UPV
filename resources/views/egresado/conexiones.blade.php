@@ -27,7 +27,7 @@
                       <ul class="sf-menu">
                         <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
                         <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-clipboard-list"></i> Trabajos</a> </li>
-                        <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-users"></i> Egresados</a> </li>
+                        <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-user-graduate"></i> Egresados</a> </li>
                         <li> <a href="/perfil_egresado" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
                         <li><a href="/conexiones_egresado" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
                         <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
@@ -43,7 +43,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
         <div class="position-center-center">
           <div class="container">
-            <h2>Conexiones</h2>
+            <h2><i class="fab fa-connectdevelop"></i> Conexiones</h2>
           </div>
         </div>
       </div>
@@ -831,10 +831,9 @@
       <div class="uou-block-4a secondary dark">
         <div class="container">
           <ul class="links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
+            <p>Versión 1.0 - Enero 2019</p>
           </ul>
-          <p>Copyright &copy; 2015 <a href="#">UOUAPPS</a>. All Rights reserved.</p>
+          <p>Desarollo: Equipo del M.S.I. Mario Humberto Rodríguez Chávez - Dirección de Tecnologías de la Información</p>
         </div>
       </div>
       <!-- end .uou-block-4a --> 

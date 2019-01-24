@@ -295,7 +295,7 @@ body
 .user-profile-bnr {
 	min-height: 250px;
 	padding-top: 65px;
-	background: url(../images/noticias.jpg) no-repeat;
+	background: url(../images/perfil.jpg) no-repeat;
 	background-size: cover;
 }
 .user-profile-bnr h2 {
@@ -2995,7 +2995,7 @@ CANVAS PAGE STYLE
 	position: relative;
 	padding: 0px;
 	min-height: 165px;
-	background: url(../images/noticias.png) no-repeat;
+	background: url(../images/perfil.jpg) no-repeat;
 	background-size: cover;
 }
 .profile-usermenu .nav-links {
