@@ -24,10 +24,11 @@
 @section('contenido')
 <div class="compny-profile"> 
         <!-- SUB Banner -->
+        @foreach ($users as $user)  
         <div class="profile-bnr user-profile-bnr">
           <div class="container">
             <div class="pull-left">
-            <h2><i class="fas fa-user"></i>Michael Peterson</h2>
+            <h2><i class="fas fa-user"></i> {{$user->first_name}}</h2>
               <!--h5>Front-End Developer</h5-->
             </div>
           </div>
@@ -241,10 +242,10 @@
                             <ul class="single-category">
                               <li class="row">
                                     <h6 class="title col-xs-6">Matricula</h6>
-                                    <span class="subtitle col-xs-6">1530001</span></li>
+                                    <span class="subtitle col-xs-6">{{$user->university_id}}</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Nombre Completo</h6>
-                                <span class="subtitle col-xs-6">Michael Peterson</span></li>
+                                <span class="subtitle col-xs-6">{{$user->first_name}} {{$user->last_name}} {{$user->second_last_name}}</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Periodo Escolar</h6>
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
@@ -253,14 +254,14 @@
                                 <span class="subtitle col-xs-6">(800) 123-4567</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Correo</h6>
-                                <span class="subtitle col-xs-6"><a href="#.">example@example.com</a></span></li>
+                                <span class="subtitle col-xs-6"><a href="#.">{{$user->email}}</a></span></li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
+                  @endforeach
                   <!-- Jobs -->
                   <div id="jobs" class="tab-pane fade">
                     <div class="header-listing">

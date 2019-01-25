@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\users;
+use App\students;
 
 class EgresadosController extends Controller
 {
@@ -27,7 +28,8 @@ class EgresadosController extends Controller
 
     //Pagina para ver el perfil del egresado
     public function perfil_egresado(){
-        return view('egresado.perfil');
+        $users=users::all()->where('id','=',1912);
+        return view('egresado.perfil', compact('users'));
     }
 
     //Pagina para ver el perfil de otros egresados
