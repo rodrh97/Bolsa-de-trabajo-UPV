@@ -295,7 +295,7 @@ body
 .user-profile-bnr {
 	min-height: 250px;
 	padding-top: 65px;
-	background: url(../images/perfil.jpg) no-repeat;
+	background: url(../images/perfil_1.jpg) no-repeat;
 	background-size: cover;
 }
 .user-profile-bnr h2 {
@@ -2978,15 +2978,15 @@ CANVAS PAGE STYLE
 	font-size: 16px;
 	color: #ffffff;
 	padding: 10px 20px;
-	background: #0063A9;
+	background: #303548;
 }
 .profile-company-content.main-user .nav-tabs li a:hover {
 	background: #ffffff;
-	color: #0063A9;
+	color: #303548;
 }
 .profile-company-content.main-user .nav-tabs li.active a {
 	background: #ffffff;
-	color: #0063A9;
+	color: #303548;
 }
 .profile-company-content.main-user .tab-content #profile {
 	background: none;
