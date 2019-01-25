@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\users;
-use App\students;
+use Illuminate\Support\Facades\DB;
 
 class EgresadosController extends Controller
 {
@@ -22,14 +21,14 @@ class EgresadosController extends Controller
     
     //Pagina para ver otros egresados
     public function lista_egresados(){
-        $users=users::all()->where('type','=',3);
-        return view('egresado.lista_egresados', compact('users'));
+        $users=DB::table('users')->where('type','=',3)->get();
+        return view('egresado.lista_egresados', ['users'=>$users]);
     }
 
     //Pagina para ver el perfil del egresado
     public function perfil_egresado(){
-        $users=users::all()->where('id','=',1912);
-        return view('egresado.perfil', compact('users'));
+        $users=DB::table('users')->where('id','=',1912)->get();
+        return view('egresado.perfil', ['users'=>$users]);
     }
 
     //Pagina para ver el perfil de otros egresados
