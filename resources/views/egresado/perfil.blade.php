@@ -5,7 +5,7 @@
 @section('menu')
               <div class="box-shadow-for-ui">
                 <div class="uou-block-2b">
-                  <div class="container"> <a href="/inicio_egresado" class="logo"><img src="assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+                  <div class="container"> <a href="/inicio_egresado" class="logo"><img src="/assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
                     <nav class="nav">
                       <ul class="sf-menu">
                         <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
@@ -24,11 +24,11 @@
 @section('contenido')
 <div class="compny-profile"> 
         <!-- SUB Banner -->
-        @foreach ($users as $user)  
+        
         <div class="profile-bnr user-profile-bnr">
           <div class="container">
             <div class="pull-left">
-            <h2><i class="fas fa-user"></i> {{$user->first_name}}</h2>
+            <h2><i class="fas fa-user"></i> {{$users->first_name}} {{$users->last_name}}</h2>
               <!--h5>Front-End Developer</h5-->
             </div>
           </div>
@@ -100,7 +100,7 @@
                           <h3>Experiencia Laboral</h3>
                           <div class="profile-in">
                             <div class="media-left">
-                              <div class="img-profile"> <img class="media-object" src="images/avatar-1.jpg" alt=""> </div>
+                              <div class="img-profile"> <img class="media-object" src="/images/avatar-1.jpg" alt=""> </div>
                             </div>
                             <div class="media-body">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem 
@@ -242,10 +242,10 @@
                             <ul class="single-category">
                               <li class="row">
                                     <h6 class="title col-xs-6">Matricula</h6>
-                                    <span class="subtitle col-xs-6">{{$user->university_id}}</span></li>
+                                    <span class="subtitle col-xs-6">{{$users->university_id}}</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Nombre Completo</h6>
-                                <span class="subtitle col-xs-6">{{$user->first_name}} {{$user->last_name}} {{$user->second_last_name}}</span></li>
+                                <span class="subtitle col-xs-6">{{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Periodo Escolar</h6>
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
@@ -254,14 +254,14 @@
                                 <span class="subtitle col-xs-6">(800) 123-4567</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Correo</h6>
-                                <span class="subtitle col-xs-6"><a href="#.">{{$user->email}}</a></span></li>
+                                <span class="subtitle col-xs-6"><a href="#."></a>{{$users->email}}</span></li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  @endforeach
+                  
                   <!-- Jobs -->
                   <div id="jobs" class="tab-pane fade">
                     <div class="header-listing">
@@ -372,23 +372,23 @@
                           <section class="portfolio">
                             <div class="portfolio-filters-content"> 
                               <!-- Portfolio Item -->
-                              <article class="development design"> <a href="img/portfolio-1.jpg" class="swipebox"> <img src="img/portfolio-1.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="development design"> <a href="img/portfolio-1.jpg" class="swipebox"> <img src="/img/portfolio-1.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="design"> <a href="img/portfolio-2.jpg" class="swipebox"> <img src="img/portfolio-2.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="design"> <a href="img/portfolio-2.jpg" class="swipebox"> <img src="/img/portfolio-2.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="development branding"> <a href="img/portfolio-3.jpg" class="swipebox"> <img src="img/portfolio-3.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="development branding"> <a href="img/portfolio-3.jpg" class="swipebox"> <img src="/img/portfolio-3.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="development design"> <a href="img/portfolio-6.jpg" class="swipebox"> <img src="img/portfolio-6.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="development design"> <a href="img/portfolio-6.jpg" class="swipebox"> <img src="/img/portfolio-6.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="branding development"> <a href="img/portfolio-4.jpg" class="swipebox"> <img src="img/portfolio-4.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="branding development"> <a href="img/portfolio-4.jpg" class="swipebox"> <img src="/img/portfolio-4.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="mobile branding"> <a href="img/portfolio-5.jpg" class="swipebox"> <img src="img/portfolio-5.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="mobile branding"> <a href="img/portfolio-5.jpg" class="swipebox"> <img src="/img/portfolio-5.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="branding"> <a href="img/portfolio-7.jpg" class="swipebox"> <img src="img/portfolio-7.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="branding"> <a href="img/portfolio-7.jpg" class="swipebox"> <img src="/img/portfolio-7.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="branding"> <a href="img/portfolio-2.jpg" class="swipebox"> <img src="img/portfolio-2.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="branding"> <a href="img/portfolio-2.jpg" class="swipebox"> <img src="/img/portfolio-2.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
-                              <article class="design development"> <a href="img/portfolio-8.jpg" class="swipebox"> <img src="img/portfolio-8.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="design development"> <a href="img/portfolio-8.jpg" class="swipebox"> <img src="/img/portfolio-8.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                             </div>
                           </section>
                         </div>

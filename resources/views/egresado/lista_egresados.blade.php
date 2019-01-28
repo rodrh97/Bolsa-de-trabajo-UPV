@@ -66,7 +66,7 @@
             @foreach ($users as $user)  
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-              <a href="/perfil_usuario"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span></h6>
+              <a href="/perfil_usuario/{{$user->id}}"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span></h6>
                 <p></p>
               </div>
               <!-- end .uou-block-6a --> 

@@ -28,9 +28,10 @@ Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
 Route::get('/lista_egresados','EgresadosController@lista_egresados');
 
-Route::get('/perfil_egresado','EgresadosController@perfil_egresado');
+Route::get('/perfil_egresado/{users}','EgresadosController@perfil_egresado');
 
-Route::get('/perfil_usuario','EgresadosController@perfil_usuario');
+
+Route::get('/perfil_usuario/{users}','EgresadosController@perfil_usuario');
 
 Route::get('/egresado_perfil_empresa','EgresadosController@egresado_perfil_empresa');
 
