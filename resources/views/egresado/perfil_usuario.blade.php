@@ -1,6 +1,6 @@
 @extends('egresado.layout')
 @section('titulo')
-    Perfil
+  {{$users->first_name}}
 @endsection
 @section('menu')
               <div class="box-shadow-for-ui">
