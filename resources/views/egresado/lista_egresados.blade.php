@@ -40,13 +40,28 @@
                 
                 <div class="map-search-fields">
                     <div class="field">
-                        <input type="search" placeholder="Buscar por nombre">
+                      <input type="text" name="first_name" list="first_name" placeholder="Buscar nombre">
+                      <datalist id="first_name">
+                       @foreach ($users as $user)
+                        <option value="{{$user->first_name}}">
+                       @endforeach
+                      </datalist>
                       </div>
                       <div class="field">
-                        <input type="text" placeholder="Buscar por carrera">
+                        <input type="text" name="university_id" list="university_id" placeholder="Buscar matricula">
+                          <datalist id="university_id">
+                           @foreach ($users as $user)
+                            <option value="{{$user->university_id}}">
+                           @endforeach
+                          </datalist>
                       </div>
-                      <div class="field custom-select-box">
-                        <input type="text" placeholder="Buscar por habilidad">
+                      <div class="field">
+                        <input type="text" name="careers" list="career" placeholder="Buscar carrera">
+                          <datalist id="career">
+                           @foreach ($users as $user)
+                            <option value="{{$user->name}}">
+                           @endforeach
+                          </datalist>
                       </div>
                 </div>
                 <div class="search-button">
