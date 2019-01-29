@@ -40,7 +40,7 @@
                 
                 <div class="map-search-fields">
                     <div class="field">
-                        <input type="text" placeholder="Buscar por nombre">
+                        <input type="search" placeholder="Buscar por nombre">
                       </div>
                       <div class="field">
                         <input type="text" placeholder="Buscar por carrera">
@@ -66,7 +66,7 @@
             @foreach ($users as $user)  
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-              <a href="/perfil_usuario/{{$user->id}}"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span><span>{{$user->name}}</span></h6>
+              <a href="/perfil_usuario/{{$user->user_id}}"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span><span>{{$user->name}}</span></h6>
                 <p></p>
               </div>
               <!-- end .uou-block-6a --> 

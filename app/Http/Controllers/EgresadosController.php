@@ -46,8 +46,9 @@ class EgresadosController extends Controller
     }
 
     //Pagina para ver la conexiones del egresado
-    public function conexiones_egresado(){
-        return view('egresado.conexiones');
+    public function conexiones_egresado($id){
+        $users=users::findOrFail($id);
+        return view('egresado.conexiones',compact('users'));
     }
 
     //Pagina para ver las vacantes

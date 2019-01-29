@@ -45,16 +45,16 @@
               <div class="col-md-4"> 
                 <!-- Company Information -->
                 <div class="sidebar">
-                  <h5 class="main-title">Mike Tomlinson</h5>
-                  <div class="sidebar-thumbnail"> <img src="images/avatar.jpg" alt=""> </div>
+                  <h5 class="main-title">{{$users->first_name}} {{$users->last_name}}</h5>
+                  <div class="sidebar-thumbnail"> <img src="/images/avatar.jpg" alt=""> </div>
                   <div class="sidebar-information">
                     <ul class="single-category">
                       <li class="row">
                         <h6 class="title col-xs-6">Matricula</h6>
-                        <span class="subtitle col-xs-6">1530001</span></li>
+                      <span class="subtitle col-xs-6">{{$users->university_id}}</span></li>
                   <li class="row">
                     <h6 class="title col-xs-6">Nombre Completo</h6>
-                    <span class="subtitle col-xs-6">Michael Peterson</span></li>
+                    <span class="subtitle col-xs-6">{{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
                   <li class="row">
                     <h6 class="title col-xs-6">Periodo Escolar</h6>
                     <span class="subtitle col-xs-6">2015-2018</span></li>
@@ -63,7 +63,7 @@
                     <span class="subtitle col-xs-6">(800) 123-4567</span></li>
                   <li class="row">
                     <h6 class="title col-xs-6">Correo</h6>
-                    <span class="subtitle col-xs-6"><a href="#.">example@example.com</a></span></li>
+                    <span class="subtitle col-xs-6"><a href="#.">{{$users->email}}</a></span></li>
                     </ul>
                   </div>
                 </div>
