@@ -29,7 +29,7 @@ class EgresadosController extends Controller
         ->join('students','users.id','=','students.user_id')
         ->join('careers','students.career_id','=','careers.id')
         ->select('users.*','students.*','careers.*')
-        ->get();
+        ->paginate(12);
 
         //Obtener la lista de carreras
         $careers=DB::table('careers')

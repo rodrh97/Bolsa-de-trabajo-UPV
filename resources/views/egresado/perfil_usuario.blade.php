@@ -258,7 +258,7 @@
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Telefono</h6>
-                                <span class="subtitle col-xs-6">(800) 123-4567</span></li>
+                                <span class="subtitle col-xs-6">834 123 4567</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Correo</h6>
                                 <span class="subtitle col-xs-6"><a href="#.">{{$users->email}}</a></span></li>

@@ -69,6 +69,7 @@
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
+          {{ $users->render() }}
           <div class="row">
             @foreach ($users as $user)  
             <div class="col-sm-3">
@@ -79,6 +80,7 @@
               <!-- end .uou-block-6a --> 
             </div>
             @endforeach
+            
           </div>
         </div>
       </section>
