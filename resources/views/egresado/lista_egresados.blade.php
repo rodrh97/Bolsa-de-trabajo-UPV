@@ -32,15 +32,15 @@
       </div>
       
       <!-- search -->
+      {!! Form::open(['route' => 'users', 'method' => 'GET']) !!}
       <div class="search-pro">
         <div class="map-search">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                
                 <div class="map-search-fields">
                       <div class="field">
-                        <input type="text" name="university_id" list="university_id" placeholder="Buscar matricula">
+                        {{ Form::text('university_id', null, ['list'=>'university_id','placeholder' => 'Buscar matricula']) }}
                           <datalist id="university_id">
                            @foreach ($users as $user)
                             <option value="{{$user->university_id}}">
@@ -48,7 +48,7 @@
                           </datalist>
                       </div>
                       <div class="field">
-                        <input type="text" name="careers" list="career" placeholder="Buscar carrera">
+                        {{ Form::text('career', null, ['list'=>'career','placeholder' => 'Buscar carrera']) }}
                           <datalist id="career">
                            @foreach ($careers as $career)
                             <option value="{{$career->abbreviation}}">
@@ -57,14 +57,14 @@
                       </div>
                 </div>
                 <div class="search-button">
-                  <button>Buscar Egresado</button>
+                  <button type="submit">Buscar Egresado</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      {!! Form::close() !!}
       <!-- Members -->
       <section class="pro-mem">
         <div class="container pb30">
