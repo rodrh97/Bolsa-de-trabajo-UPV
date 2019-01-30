@@ -58,8 +58,8 @@
                       <div class="field">
                         <input type="text" name="careers" list="career" placeholder="Buscar carrera">
                           <datalist id="career">
-                           @foreach ($users as $user)
-                            <option value="{{$user->name}}">
+                           @foreach ($careers as $career)
+                            <option value="{{$career->abbreviation}}">
                            @endforeach
                           </datalist>
                       </div>
@@ -81,7 +81,7 @@
             @foreach ($users as $user)  
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-              <a href="/perfil_usuario/{{$user->user_id}}"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span><span>{{$user->name}}</span></h6>
+              <a href="/perfil_usuario/{{$user->user_id}}"><h6>{{$user->first_name}}</a> <span>{{$user->university_id}}</span><span>{{$user->abbreviation}}</span></h6>
                 <p></p>
               </div>
               <!-- end .uou-block-6a --> 

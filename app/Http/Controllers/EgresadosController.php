@@ -24,14 +24,18 @@ class EgresadosController extends Controller
     
     //Pagina para ver otros egresados
     public function lista_egresados(){
-        //$users=DB::table('users')->where('type','=',3)->get();
-        
+        //Obetener a los estudiantes acorde a su carrera
         $users=DB::table('users')
         ->join('students','users.id','=','students.user_id')
         ->join('careers','students.career_id','=','careers.id')
         ->select('users.*','students.*','careers.*')
         ->get();
-        return view('egresado.lista_egresados', compact('users'));
+        
+        //Obtener la lista de carreras
+        $careers=DB::table('careers')
+        ->select('careers.*')
+        ->get();
+        return view('egresado.lista_egresados', compact('users','careers'));
     }
 
     //Pagina para ver el perfil del egresado
