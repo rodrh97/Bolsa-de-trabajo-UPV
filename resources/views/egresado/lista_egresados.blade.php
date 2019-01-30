@@ -39,14 +39,6 @@
               <div class="col-md-12">
                 
                 <div class="map-search-fields">
-                    <div class="field">
-                      <input type="text" name="first_name" list="first_name" placeholder="Buscar nombre">
-                      <datalist id="first_name">
-                       @foreach ($users as $user)
-                        <option value="{{$user->first_name}}">
-                       @endforeach
-                      </datalist>
-                      </div>
                       <div class="field">
                         <input type="text" name="university_id" list="university_id" placeholder="Buscar matricula">
                           <datalist id="university_id">

@@ -30,7 +30,7 @@ class EgresadosController extends Controller
         ->join('careers','students.career_id','=','careers.id')
         ->select('users.*','students.*','careers.*')
         ->get();
-        
+
         //Obtener la lista de carreras
         $careers=DB::table('careers')
         ->select('careers.*')
@@ -46,8 +46,9 @@ class EgresadosController extends Controller
 
     //Pagina para ver el perfil de otros egresados
     public function perfil_usuario($id){
+        //Mostrar un perfil de usuario con el id correspondiente
         $users=users::findOrFail($id);
-        return view('egresado.perfil_usuario',compact('users'));
+        return view('egresado.perfil_usuario', compact('users'));
     }
 
     //Pagina para ver la conexiones del egresado

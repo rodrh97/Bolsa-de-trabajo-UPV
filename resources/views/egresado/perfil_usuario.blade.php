@@ -27,6 +27,7 @@
         <div class="profile-bnr user-profile-bnr">
           <div class="container">
             <div class="pull-left">
+              
               <h2><i class="fas fa-user"></i> {{$users->first_name}} {{$users->last_name}}</h2>
               <!--h5>Front-End Developer</h5-->
             </div>
@@ -251,8 +252,8 @@
                                     <span class="subtitle col-xs-6">{{$users->university_id}}</span></li>
                               <li class="row">
                                 <h6 class="title col-xs-6">Nombre Completo</h6>
-                                <span class="subtitle col-xs-6">{{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
-                              <li class="row">
+                                <span class="subtitle col-xs-6"> {{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
+                                <li class="row">
                                 <h6 class="title col-xs-6">Periodo Escolar</h6>
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
                               <li class="row">
@@ -262,6 +263,7 @@
                                 <h6 class="title col-xs-6">Correo</h6>
                                 <span class="subtitle col-xs-6"><a href="#.">{{$users->email}}</a></span></li>
                             </ul>
+                            
                           </div>
                         </div>
                       </div>
