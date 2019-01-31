@@ -250,15 +250,27 @@
                               <li class="row">
                                     <h6 class="title col-xs-6">Matricula</h6>
                                     <span class="subtitle col-xs-6">{{$users->university_id}}</span></li>
+                                    <br>
                               <li class="row">
                                 <h6 class="title col-xs-6">Nombre Completo</h6>
                                 <span class="subtitle col-xs-6"> {{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
+                                <br>
+                                @foreach ($careers as $career)
+                                <li class="row">
+                                  <h6 class="title col-xs-6">Carrera</h6>
+                                  <span class="subtitle col-xs-6">{{$career->name}}</span></li>
+                                  @endforeach
+                                  <br>
                                 <li class="row">
                                 <h6 class="title col-xs-6">Periodo Escolar</h6>
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
+                                <br>
+                                @foreach ($careers as $career)
                               <li class="row">
                                 <h6 class="title col-xs-6">Telefono</h6>
-                                <span class="subtitle col-xs-6">834 123 4567</span></li>
+                                <span class="subtitle col-xs-6">{{$career->phone}}</span></li>
+                                @endforeach
+                                <br>
                               <li class="row">
                                 <h6 class="title col-xs-6">Correo</h6>
                                 <span class="subtitle col-xs-6"><a href="#.">{{$users->email}}</a></span></li>
