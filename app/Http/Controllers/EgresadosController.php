@@ -48,7 +48,7 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*')
         ->get();
 
-        return view('egresado.lista_egresados', compact('users','careers','students'));
+        return view('egresado.lista_egresados', compact('users','careers','students'))->render();
     }
 
     //Pagina para ver el perfil del egresado
