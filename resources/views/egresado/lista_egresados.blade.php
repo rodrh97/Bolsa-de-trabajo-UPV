@@ -42,14 +42,14 @@
                       <div class="field">
                         {{ Form::text('university_id', null, ['list'=>'university_id','placeholder' => 'Buscar matricula']) }}
                           <datalist id="university_id">
-                           @foreach ($users as $user)
-                            <option value="{{$user->university_id}}">
+                           @foreach ($students as $student)
+                            <option value="{{$student->university_id}}">
                            @endforeach
                           </datalist>
                       </div>
                       <div class="field">
-                        {{ Form::text('career', null, ['list'=>'career','placeholder' => 'Buscar carrera']) }}
-                          <datalist id="career">
+                        {{ Form::text('abbreviation', null, ['list'=>'abbreviation','placeholder' => 'Buscar carrera']) }}
+                          <datalist id="abbreviation">
                            @foreach ($careers as $career)
                             <option value="{{$career->abbreviation}}">
                            @endforeach
