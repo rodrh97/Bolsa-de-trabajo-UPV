@@ -13,9 +13,9 @@
 <link rel="icon" href="../assets/images/upv.ico" type="image/x-icon" sizes="32x32">
 
 <!-- Style Sheet -->
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/main-style.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/main-style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,18 +34,18 @@
 
 <!-- Scripts --> 
 <script src="https://maps.googleapis.com/maps/api/js"></script> 
-<script src="js/jquery-2.1.3.min.js"></script> 
-<script src="js/bootstrap.js"></script> 
-<script src="js/plugins/superfish.min.js"></script> 
-<script src="js/jquery.ui.min.js"></script> 
-<script src="js/plugins/rangeslider.min.js"></script> 
-<script src="js/plugins/jquery.flexslider-min.js"></script> 
-<script src="js/uou-accordions.js"></script> 
-<script src="js/uou-tabs.js"></script> 
-<script src="js/plugins/select2.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/gmap3.min.js"></script> 
-<script src="js/scripts.js"></script>
+<script src="/js/jquery-2.1.3.min.js"></script> 
+<script src="/js/bootstrap.js"></script> 
+<script src="/js/plugins/superfish.min.js"></script> 
+<script src="/js/jquery.ui.min.js"></script> 
+<script src="/js/plugins/rangeslider.min.js"></script> 
+<script src="/js/plugins/jquery.flexslider-min.js"></script> 
+<script src="/js/uou-accordions.js"></script> 
+<script src="/js/uou-tabs.js"></script> 
+<script src="/js/plugins/select2.min.js"></script> 
+<script src="/js/owl.carousel.min.js"></script> 
+<script src="/js/gmap3.min.js"></script> 
+<script src="/js/scripts.js"></script>
 <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()

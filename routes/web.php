@@ -26,7 +26,7 @@ Route::get('/inicio_egresado','EgresadosController@inicio_egresado');
 
 Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
-Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('users');;
+Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('users');
 
 Route::get('/perfil_egresado/{users}','EgresadosController@perfil_egresado');
 
@@ -45,12 +45,12 @@ Route::get('/inicio_empresa','EmpresasController@inicio_empresa');
 
 Route::get('/tus_trabajos','EmpresasController@tus_trabajos');
 
-Route::get('/egresados','EmpresasController@egresados');
+Route::get('/egresados','EmpresasController@egresados')->name('users');
 
 Route::get('/perfil_empresa','EmpresasController@perfil_empresa');
 
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 
-Route::get('/egresado','EmpresasController@egresado');
+Route::get('/egresado/{users}','EmpresasController@egresado');
 
 Route::get('/empresa_vacante','EmpresasController@empresa_vacante');
