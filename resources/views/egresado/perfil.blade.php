@@ -1049,11 +1049,13 @@
                       <h3>Editar Perfil</h3>
                       <div class="profile-in">
                         <div class="folow-persons">
-                          {!! Form::open(['route' => 'users', 'method' => 'POST']) !!}
-                            {{ csrf_field() }}
+                          
+                        <form method="post" action="/perfil_egresado/@foreach($careers as $career){{$career->user_id}}@endforeach">
+                          {{method_field('PATCH')}}  
+                          {{ csrf_field() }}
                             <div class="row pt15">
                               <div class="col-xs-4">
-                              {{ Form::text('phone', null, ['style'=>'color: black','placeholder' => 'Poner tu número de telefono','required']) }}
+                              <input name='phone' type="text" style="color:black" value="@foreach($careers as $career){{$career->phone}}@endforeach">
                               </div>
                             </div>
                             <div class="row pt16">
@@ -1061,7 +1063,7 @@
                                     <button type="submit" class="btn btn-primary">Actualizar</button>
                                 </div>
                               </div>
-                          {!! Form::close() !!}
+                          </form>
                         </div>
                       </div>
                     </div>

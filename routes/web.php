@@ -30,6 +30,7 @@ Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('user
 
 Route::get('/perfil_egresado/{users}','EgresadosController@perfil_egresado');
 
+Route::PATCH('/perfil_egresado/{users}','EgresadosController@update_perfil_egresado');
 
 Route::get('/perfil_usuario/{users}','EgresadosController@perfil_usuario');
 

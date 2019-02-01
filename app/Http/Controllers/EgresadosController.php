@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests;
+use App\Helpers\DeleteHelper;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
 use App\students;
 use App\careers;
@@ -57,13 +64,30 @@ class EgresadosController extends Controller
         $users=users::findOrFail($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $careers=DB::table('students')
-        ->join('users','students.user_id','=','users.id')
+        $careers=DB::table('users')
+        ->join('students','students.user_id','=','users.id')
         ->join('careers','careers.id','=','students.career_id')
         ->select('students.*', 'users.*','careers.*')
-        ->where('users.id','=',$id)
+        ->where('students.user_id','=',$id)
         ->get();
         return view('egresado.perfil', compact('users','careers'));
+    }
+
+    public function update_perfil_egresado(Request $request, $id){
+        
+        $users=users::findOrFail($id);
+        
+        //Mostrar la carrera del alumno correspondiente
+        $careers=DB::table('users')
+        ->join('students','students.user_id','=','users.id')
+        ->join('careers','careers.id','=','students.career_id')
+        ->select('students.*', 'users.*','careers.*')
+        ->where('students.user_id','=',$users)
+        ->get();
+        $careers->phone= $request->get('phone');
+        DB::update('UPDATE students SET phone = ? WHERE user_id = ?', [ $careers->phone, $id]);
+        $careers->update();
+        return redirect('/inicio_egresado');
     }
 
     //Pagina para ver el perfil de otros egresados
