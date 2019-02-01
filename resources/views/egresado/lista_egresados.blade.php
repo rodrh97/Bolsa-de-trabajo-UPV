@@ -69,7 +69,7 @@
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
-          {{ $users->render() }}
+          {{ $users->links()}}
           <div class="row">
             @foreach ($users as $user)  
             <div class="col-sm-3">
