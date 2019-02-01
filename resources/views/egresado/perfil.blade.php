@@ -386,7 +386,7 @@
                           <section class="portfolio">
                             <div class="portfolio-filters-content"> 
                               <!-- Portfolio Item -->
-                              <article class="development design"> <a href="img/portfolio-1.jpg" class="swipebox"> <img src="img/portfolio-1.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
+                              <article class="development design"> <a href="/img/portfolio-1.jpg" class="swipebox"> <img src="img/portfolio-1.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
                               <article class="design"> <a href="img/portfolio-2.jpg" class="swipebox"> <img src="img/portfolio-2.jpg" alt="" class="work img-responsive"> <span class="overlay"> <i class="fa fa-plus"></i> <b class="title"><strong>Photo Session</strong>Brands</b> </span> </a> </article>
                               <!-- Portfolio Item -->
@@ -1042,188 +1042,26 @@
                       </div>
                     </div>
                   </div>
+
                   <!-- EDITAR-->
                   <div id="editar" class="tab-pane fade">
                     <div class="profile-main">
-                      <h3>Siguiendo</h3>
+                      <h3>Editar Perfil</h3>
                       <div class="profile-in">
                         <div class="folow-persons">
-                          <ul>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row">
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-1" class="styled" type="checkbox">
-                                    <label for="checkbox3-1"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
+                          {!! Form::open(['route' => 'users', 'method' => 'POST']) !!}
+                            {{ csrf_field() }}
+                            <div class="row pt15">
+                              <div class="col-xs-4">
+                              {{ Form::text('phone', null, ['style'=>'color: black','placeholder' => 'Poner tu número de telefono','required']) }}
                               </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-2" class="styled" type="checkbox">
-                                    <label for="checkbox3-2"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
+                            </div>
+                            <div class="row pt16">
+                                <div class="col-xs-4">
+                                    <button type="submit" class="btn btn-primary">Actualizar</button>
                                 </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
                               </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-3" class="styled" type="checkbox">
-                                    <label for="checkbox3-3"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
-                              </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-4" class="styled" type="checkbox">
-                                    <label for="checkbox3-4"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
-                              </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-5" class="styled" type="checkbox">
-                                    <label for="checkbox3-5"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
-                              </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-6" class="styled" type="checkbox">
-                                    <label for="checkbox3-6"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
-                              </div>
-                            </li>
-                            
-                            <!-- MEMBER -->
-                            <li>
-                              <div class="row"> 
-                                <!-- Title -->
-                                <div class="col-xs-4"> 
-                                  <!-- Check Box -->
-                                  <div class="checkbox">
-                                    <input id="checkbox3-7" class="styled" type="checkbox">
-                                    <label for="checkbox3-7"></label>
-                                  </div>
-                                  <!-- Name -->
-                                  <div class="fol-name">
-                                    <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
-                                    <h6>Collin Weiland</h6>
-                                    <span>Web Developer</span> </div>
-                                </div>
-                                <!-- Location -->
-                                <div class="col-xs-3 n-p-r n-p-l"> <span>San Francisco, USA</span> </div>
-                                <!-- Network -->
-                                <div class="col-xs-3 n-p-r"> <span>21 Followers</span> <span>10 Following</span> </div>
-                                <!-- Connections -->
-                                <div class="col-xs-2 n-p-r n-p-l"> <span>31 Connections</span> </div>
-                              </div>
-                            </li>
-                          </ul>
+                          {!! Form::close() !!}
                         </div>
                       </div>
                     </div>
