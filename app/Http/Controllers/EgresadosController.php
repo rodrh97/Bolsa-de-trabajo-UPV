@@ -75,7 +75,7 @@ class EgresadosController extends Controller
 
     public function update_perfil_egresado(Request $request, $id){
         
-        $users=users::findOrFail($id);
+        /*$users=users::findOrFail($id);
         
         //Mostrar la carrera del alumno correspondiente
         $careers=DB::table('users')
@@ -86,7 +86,13 @@ class EgresadosController extends Controller
         ->get();
         $careers->phone= $request->get('phone');
         DB::update('UPDATE students SET phone = ? WHERE user_id = ?', [ $careers->phone, $id]);
-        $careers->update();
+        $careers->update($request->all());*/
+        $users=users::find($id)
+        ->join('students','students.user_id','=','users.id')
+        ->join('careers','careers.id','=','students.career_id')
+        ->select('students.*', 'users.*','careers.*')
+        ->where('students.user_id','=',$users)
+        ->update($request->all());
         return redirect('/inicio_egresado');
     }
 
