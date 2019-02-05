@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
@@ -84,7 +85,6 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*')
         ->where('students.user_id',$id)
         ->update(['phone' => request('phone')]);
-
         return back();
     }
 

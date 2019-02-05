@@ -1051,13 +1051,12 @@
                       <h3>Editar Perfil</h3>
                       <div class="profile-in">
                         <div class="folow-persons">
-                          
                         <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach">
                           {{method_field('PATCH')}}  
                           {{ csrf_field() }}
                             <div class="row pt15">
                               <div class="col-xs-4">
-                              <input name='phone' type="text" style="color:black" value="@foreach($users as $user){{$user->phone}}@endforeach">
+                              <label>Telefono </label><input name='phone' type="text" style="color:black" value="@foreach($users as $user){{$user->phone}}@endforeach">
                               </div>
                             </div>
                             <div class="row pt16">
