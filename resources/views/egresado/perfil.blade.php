@@ -28,7 +28,9 @@
           <div class="container">
             <div class="pull-left">
               
-              <h2><i class="fas fa-user"></i> {{$users->first_name}} {{$users->last_name}}</h2>
+              <h2><i class="fas fa-user"></i> @foreach ($users as $user)
+                  
+             {{$user->first_name}} {{$user->last_name}}</h2> 
               <!--h5>Front-End Developer</h5-->
             </div>
           </div>
@@ -243,31 +245,31 @@
                             <ul class="single-category">
                               <li class="row">
                                     <h6 class="title col-xs-6">Matricula</h6>
-                                    <span class="subtitle col-xs-6">{{$users->university_id}}</span></li>
+                                    <span class="subtitle col-xs-6">{{$user->university_id}}</span></li>
                                     <br>
                               <li class="row">
                                 <h6 class="title col-xs-6">Nombre Completo</h6>
-                                <span class="subtitle col-xs-6"> {{$users->first_name}} {{$users->last_name}} {{$users->second_last_name}}</span></li>
+                                <span class="subtitle col-xs-6"> {{$user->first_name}} {{$user->last_name}} {{$user->second_last_name}}</span></li>
                                 <br>
-                                @foreach ($careers as $career)
+                                
                                 <li class="row">
                                   <h6 class="title col-xs-6">Carrera</h6>
-                                  <span class="subtitle col-xs-6">{{$career->name}}</span></li>
-                                  @endforeach
+                                  <span class="subtitle col-xs-6">{{$user->name}}</span></li>
+                                  
                                   <br>
                                 <li class="row">
                                 <h6 class="title col-xs-6">Periodo Escolar</h6>
                                 <span class="subtitle col-xs-6">2015-2018</span></li>
                                 <br>
-                                @foreach ($careers as $career)
+                               
                               <li class="row">
                                 <h6 class="title col-xs-6">Telefono</h6>
-                                <span class="subtitle col-xs-6">{{$career->phone}}</span></li>
-                                @endforeach
+                                <span class="subtitle col-xs-6">{{$user->phone}}</span></li>
+                               
                                 <br>
                               <li class="row">
                                 <h6 class="title col-xs-6">Correo</h6>
-                                <span class="subtitle col-xs-6"><a href="#.">{{$users->email}}</a></span></li>
+                                <span class="subtitle col-xs-6"><a href="#.">{{$user->email}}</a></span></li>
                             </ul>
                             
                           </div>
@@ -275,7 +277,7 @@
                       </div>
                     </div>
                   </div>
-                  
+                  @endforeach
                   <!-- Jobs -->
                   <div id="jobs" class="tab-pane fade">
                     <div class="header-listing">
@@ -1050,12 +1052,12 @@
                       <div class="profile-in">
                         <div class="folow-persons">
                           
-                        <form method="post" action="/perfil_egresado/@foreach($careers as $career){{$career->user_id}}@endforeach">
+                        <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach">
                           {{method_field('PATCH')}}  
                           {{ csrf_field() }}
                             <div class="row pt15">
                               <div class="col-xs-4">
-                              <input name='phone' type="text" style="color:black" value="@foreach($careers as $career){{$career->phone}}@endforeach">
+                              <input name='phone' type="text" style="color:black" value="@foreach($users as $user){{$user->phone}}@endforeach">
                               </div>
                             </div>
                             <div class="row pt16">

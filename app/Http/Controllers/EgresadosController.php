@@ -64,36 +64,27 @@ class EgresadosController extends Controller
         $users=users::findOrFail($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $careers=DB::table('users')
-        ->join('students','students.user_id','=','users.id')
+        $users=DB::table('students')
+        ->join('users','students.user_id','=','users.id')
         ->join('careers','careers.id','=','students.career_id')
         ->select('students.*', 'users.*','careers.*')
         ->where('students.user_id','=',$id)
         ->get();
-        return view('egresado.perfil', compact('users','careers'));
+        return view('egresado.perfil', compact('users'));
     }
 
-    public function update_perfil_egresado(Request $request, $id){
-        
-        /*$users=users::findOrFail($id);
-        
+    public function update_perfil_egresado($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $users=users::find($id);
+
         //Mostrar la carrera del alumno correspondiente
-        $careers=DB::table('users')
-        ->join('students','students.user_id','=','users.id')
-        ->join('careers','careers.id','=','students.career_id')
-        ->select('students.*', 'users.*','careers.*')
-        ->where('students.user_id','=',$users)
-        ->get();
-        $careers->phone= $request->get('phone');
-        DB::update('UPDATE students SET phone = ? WHERE user_id = ?', [ $careers->phone, $id]);
-        $careers->update($request->all());*/
-        $users=users::find($id)
-        ->join('students','students.user_id','=','users.id')
-        ->join('careers','careers.id','=','students.career_id')
-        ->select('students.*', 'users.*','careers.*')
-        ->where('students.user_id','=',$users)
-        ->update($request->all());
-        return redirect('/inicio_egresado');
+        $users=DB::table('students')
+        ->join('users','students.user_id','=','users.id')
+        ->select('students.*', 'users.*')
+        ->where('students.user_id',$id)
+        ->update(['phone' => request('phone')]);
+
+        return back();
     }
 
     //Pagina para ver el perfil de otros egresados
