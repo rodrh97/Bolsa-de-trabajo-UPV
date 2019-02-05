@@ -32,7 +32,7 @@
       </div>
       
       <!-- search -->
-      {!! Form::open(['route' => 'users', 'method' => 'GET']) !!}
+      {!! Form::open(['route' => 'students_upv', 'method' => 'GET']) !!}
       <div class="search-pro">
         <div class="map-search">
           <div class="container">
@@ -69,12 +69,12 @@
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
-          {{ $users->links()}}
+          {{ $students_upv->links()}}
           <div class="row">
-            @foreach ($users as $user)  
+            @foreach ($students_upv as $student_upv)  
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-              <a href="/perfil_usuario/{{$user->user_id}}"><h6>{{$user->first_name}}</a> <span>Matrícula: {{$user->university_id}}</span><span>Carrera: {{$user->abbreviation}}</span></h6>
+              <a href="/perfil_usuario/{{$student_upv->user_id}}"><h6>{{$student_upv->first_name}}</a> <span>Matrícula: {{$student_upv->university_id}}</span><span>Carrera: {{$student_upv->abbreviation}}</span></h6>
                 <p></p>
               </div>
               <!-- end .uou-block-6a --> 

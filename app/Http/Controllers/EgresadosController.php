@@ -36,12 +36,13 @@ class EgresadosController extends Controller
     	$abbreviation = $request->get('abbreviation');
 
         //Obetener a los estudiantes acorde a su carrera
-        $users=DB::table('users')
+        $students_upv=DB::table('users')
         ->join('students','users.id','=','students.user_id')
         ->join('careers','students.career_id','=','careers.id')
         ->select('users.*','students.*','careers.*')
         ->where('university_id','LIKE',"%$university_id%")
         ->where('abbreviation','LIKE',"%$abbreviation%")
+        ->orderBy('university_id')
         ->paginate(16);
 
         //Obtener la lista de carreras
@@ -55,7 +56,7 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*')
         ->get();
 
-        return view('egresado.lista_egresados', compact('users','careers','students'))->render();
+        return view('egresado.lista_egresados', compact('students_upv','careers','students'))->render();
     }
 
     //Pagina para ver el perfil del egresado

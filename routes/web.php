@@ -26,7 +26,7 @@ Route::get('/inicio_egresado','EgresadosController@inicio_egresado');
 
 Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
-Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('users');
+Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('students_upv');
 
 Route::get('/perfil_egresado/{users}','EgresadosController@perfil_egresado');
 
