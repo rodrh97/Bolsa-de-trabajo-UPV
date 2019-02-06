@@ -103,7 +103,7 @@
                           <h3>Experiencia Laboral</h3>
                           <div class="profile-in">
                             <div class="media-left">
-                              <div class="img-profile"> <img class="media-object" src="/images/avatar-1.jpg" alt=""> </div>
+                              <div class="img-profile"> <img class="media-object" src="{{ asset($user->image_url)}}" alt="" width="245px" height="220px"> </div>
                             </div>
                             <div class="media-body">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem 

@@ -69,11 +69,11 @@
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
-          {{ $students_upv->links()}}
+         {{ $students_upv->links()}}
           <div class="row">
             @foreach ($students_upv as $student_upv)  
             <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
+              <div class="uou-block-6a"> <img src="{{ asset($student_upv->image_url)}}" alt="{{$student_upv->first_name}}"  style="width:100%;max-width:200px">
               <a href="/perfil_usuario/{{$student_upv->user_id}}"><h6>{{$student_upv->first_name}}</a> <span>Matrícula: {{$student_upv->university_id}}</span><span>Carrera: {{$student_upv->abbreviation}}</span></h6>
                 <p></p>
               </div>

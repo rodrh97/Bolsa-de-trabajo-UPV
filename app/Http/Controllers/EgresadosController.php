@@ -44,8 +44,8 @@ class EgresadosController extends Controller
         ->where('university_id','LIKE',"%$university_id%")
         ->where('abbreviation','LIKE',"%$abbreviation%")
         ->orderBy('university_id')
-        ->paginate(16);
-
+        ->paginate(12);
+        
         //Obtener la lista de carreras
         $careers=DB::table('careers')
         ->select('careers.*')
