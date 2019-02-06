@@ -1051,7 +1051,7 @@
                       <h3>Editar Perfil</h3>
                       <div class="profile-in">
                         <div class="folow-persons">
-                        <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach">
+                        <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach" files="true" enctype="multipart/form-data">
                           {{method_field('PATCH')}}  
                           {{ csrf_field() }}
                             <div class="row pt15">
