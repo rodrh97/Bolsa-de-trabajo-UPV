@@ -1054,16 +1054,25 @@
                         <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach" files="true" enctype="multipart/form-data">
                           {{method_field('PATCH')}}  
                           {{ csrf_field() }}
+                          @foreach($users as $user)
                             <div class="row pt15">
                               <div class="col-xs-4">
-                              <label>Telefono </label><input name='phone' type="text" style="color:black" value="@foreach($users as $user){{$user->phone}}@endforeach">
+                              <label>Telefono </label><input name='phone' type="text" style="color:black" value="{{$user->phone}}" maxlength="10">
                               </div>
                             </div>
                             <div class="row pt16">
                                 <div class="col-xs-4">
+                                <label>Imagen Actual </label> <img src="{{ asset($user->image_url)}}" alt="" width="245px" height="220px" >
+                                <input type="file" name="imagen" id="imagen" class="btn btn-warning" onchange="readURL(this);">
+                                <img class="file-upload-image" src="#" alt="your image" />
+                              </div>
+                              </div>
+                            <div class="row pt16">
+                                <div class="col-xs-4">
                                     <button type="submit" class="btn btn-primary">Actualizar</button>
                                 </div>
-                              </div>
+                            </div>
+                          @endforeach
                           </form>
                         </div>
                       </div>

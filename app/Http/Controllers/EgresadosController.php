@@ -46,12 +46,12 @@ class EgresadosController extends Controller
         ->orderBy('university_id')
         ->paginate(12);
         
-        //Obtener la lista de carreras
+        //Obtener la lista de carreras para su busqueda
         $careers=DB::table('careers')
         ->select('careers.*')
         ->get();
 
-        //Obtener la lista de los alumnos
+        //Obtener la lista de los alumnos para su busqueda
         $students=DB::table('students')
         ->join('users','students.user_id','=','users.id')
         ->select('students.*', 'users.*')
