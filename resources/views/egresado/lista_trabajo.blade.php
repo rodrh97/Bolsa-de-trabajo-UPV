@@ -26,7 +26,7 @@
   <div class="profile-bnr sub-bnr user-profile-bnr">
         <div class="position-center-center">
           <div class="container">
-            <h2><i class="fas fa-clipboard-list"></i> Trabajos</h2>
+            <h2><i class="fas fa-clipboard-list"></i> Empresas</h2>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
       <!-- Members -->
       <section class="pro-mem">
         <div class="container pb30">
-          <h3>Lista de Trabajos</h3>
+          <h3>Lista de Empresas</h3>
           <div class="row">
             <div class="col-sm-3">
               <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
