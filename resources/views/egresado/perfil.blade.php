@@ -13,7 +13,10 @@
                           <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-user-graduate"></i> Egresados</a> </li>
                           <li> <a href="/perfil_egresado/{{auth()->user()->id}}" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
                           <li><a href="/conexiones_egresado/{{auth()->user()->id}}" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
-                          <li><a href="/" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                          <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                          </form>
                       </ul>
                     </nav>
                   </div>
@@ -1060,13 +1063,13 @@
                               <label>Telefono </label><input name='phone' type="text" style="color:black" value="{{$user->phone}}" maxlength="10">
                               </div>
                             </div>
-                            <div class="row pt16">
+                            <!--<div class="row pt16">
                                 <div class="col-xs-4">
                                 <label>Imagen Actual </label> <img src="{{ asset($user->image_url)}}" alt="" width="245px" height="220px" >
                                 <input type="file" name="imagen" id="imagen" class="btn btn-warning" onchange="readURL(this);">
                                 <img class="file-upload-image" src="#" alt="your image" />
                               </div>
-                              </div>
+                              </div>-->
                             <div class="row pt16">
                                 <div class="col-xs-4">
                                     <button type="submit" class="btn btn-primary">Actualizar</button>

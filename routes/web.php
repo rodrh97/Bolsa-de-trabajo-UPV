@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('administrador/inicio',function(){
@@ -22,7 +22,7 @@ Route::get('administrador/inicio',function(){
 
 //------------------------------------------
 //RUTAS DE EGRESADOS
-Route::get('/inicio_egresado','EgresadosController@inicio_egresado');
+//Route::get('/inicio_egresado','EgresadosController@inicio_egresado');
 
 Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
@@ -57,4 +57,4 @@ Route::get('/egresado/{users}','EmpresasController@egresado');
 Route::get('/empresa_vacante','EmpresasController@empresa_vacante');
 Auth::routes();
 
-Route::get('/home', 'HomeController@inicio_egresado')->name('inicio_egresado');
+Route::get('/inicio_egresado', 'HomeController@inicio_egresado')->name('inicio_egresado');
