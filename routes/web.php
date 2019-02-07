@@ -55,3 +55,6 @@ Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 Route::get('/egresado/{users}','EmpresasController@egresado');
 
 Route::get('/empresa_vacante','EmpresasController@empresa_vacante');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
