@@ -55,6 +55,15 @@
                            @endforeach
                           </datalist>
                       </div>
+                      <div class="field">
+                          {{ Form::text('sort', null, ['list'=>'sort','placeholder' => 'Ordenar por']) }}
+                            <datalist id="sort">
+                              <option value="Nombre">
+                              <option value="Carrera">
+                              <option value="Matricula">
+                            </datalist>
+                        </div>
+                      
                 </div>
                 <div class="search-button">
                   <button type="submit">Buscar Egresado</button>
@@ -73,7 +82,7 @@
           <div class="row">
             @foreach ($students_upv as $student_upv)  
             <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="{{ asset($student_upv->image_url)}}" alt="{{$student_upv->first_name}}" width="265px" height="215px">
+              <div class="uou-block-6a"> <img src="{{ asset($student_upv->image_url)}}" alt="{{$student_upv->first_name}}"  style="width:100%;max-width:175px;height:100%;max-height:175px">
               <a href="/perfil_usuario/{{$student_upv->user_id}}"><h6>{{$student_upv->first_name}}</a> <span>Matrícula: {{$student_upv->university_id}}</span><span>Carrera: {{$student_upv->abbreviation}}</span></h6>
               </div>
               <!-- end .uou-block-6a --> 
