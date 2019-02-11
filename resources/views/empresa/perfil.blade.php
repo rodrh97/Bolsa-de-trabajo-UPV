@@ -283,11 +283,18 @@
                 <div class="profile-main">
                   <h3>Añadir Vacantes</h3>
                   <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis tenetur velit! Provident eum molestias aperiam suscipit distinctio ipsum cupiditate quasi, dolor sunt, cum reprehenderit quibusdam, repellendus eaque, quas magni.</p>
                     <form action="#">
                       <input type="text" placeholder="Nombre y Apellido">
                       <input type="text" placeholder="Tu correo electrónico">
-                      <input type="text" placeholder="Tu numero telefónico">
+                      <input type="text" name="sector_name" placeholder="Sector" list="sector_names" style="color:black">
+                      <datalist id="sector_names">
+                        @foreach ($sectors as $sector)
+                         <option value="{{$sector->name}}">
+                        @endforeach
+                       </datalist>
+                       @foreach ($companies as $company)
+                      <input type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" disabled>
+                       @endforeach
                       <textarea placeholder="Tu mensaje"></textarea>
                       <button class="btn btn-primary">Enviar Mensaje</button>
                     </form>

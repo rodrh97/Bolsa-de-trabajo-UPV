@@ -60,10 +60,12 @@ class EmpresasController extends Controller
 
     //Pagina para que la empresa vea su perfil
     public function perfil_empresa(){
-        $sector=DB::table('sectors')
-        ->select('sectors.name');
-        $company=DB::table('companies')
-        ->select('companies.name');
+        $sectors=DB::table('sectors')
+        ->select('sectors.*')
+        ->get();
+        $companies=DB::table('companies')
+        ->select('companies.*')
+        ->get();
         return view('empresa.perfil', compact('sectors','companies'));
     }
 
