@@ -28,12 +28,12 @@ class EmpresasController extends Controller
         $id_sector=DB::table('sectors as s')
         ->select('s.id')
         ->where('s.name',request('sector_name'))
-        ->get();
+        ->first();
 
         $id_company=DB::table('companies as c')
         ->select('c.id')
         ->where('c.name',request('company_name'))
-        ->get();  
+        ->first();  
 
         $job= new job();
         $job->name=request('name');
