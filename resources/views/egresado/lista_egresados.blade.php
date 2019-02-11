@@ -10,7 +10,7 @@
                       <ul class="sf-menu">
                           <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
                           <li> <a href="/ofertas_trabajo" style="color:white;"><i class="fas fa-building"></i> Empresas</a> </li>
-                          <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-user-graduate"></i> Egresados</a> </li>
+                          <li> <a href="/lista_egresados" style="color:white;"><i class="fas fa-user-tie"></i> Alumnos</a> </li>
                           <li> <a href="/perfil_egresado/{{auth()->user()->id}}" style="color:white;"><i class="fas fa-user"></i> Tu perfil</a></li>
                           <li><a href="/conexiones_egresado/{{auth()->user()->id}}" style="color:white;"><i class="fab fa-connectdevelop"></i> Conexiones</a></li>
                           <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color:white;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
@@ -78,6 +78,7 @@
       </div>
       {!! Form::close() !!}
       <!-- Members -->
+      <div class="users">
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
@@ -99,6 +100,7 @@
           </div>
         </div>
       </section>
+      </div>
     </div>        
 @endsection
 @section('pie_pagina')

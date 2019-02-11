@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests;
+use App\Helpers\DeleteHelper;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
 use App\students;
 use App\careers;
@@ -53,7 +60,11 @@ class EmpresasController extends Controller
 
     //Pagina para que la empresa vea su perfil
     public function perfil_empresa(){
-        return view('empresa.perfil');
+        $sector=DB::table('sectors')
+        ->select('sectors.name');
+        $company=DB::table('companies')
+        ->select('companies.name');
+        return view('empresa.perfil', compact('sectors','companies'));
     }
 
     //Pagina para que la empresa vea sus conexiones

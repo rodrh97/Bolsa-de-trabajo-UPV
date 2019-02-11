@@ -116,6 +116,7 @@
               <li class="active"><a data-toggle="tab" href="#profile">Perfil</a></li>
               <li><a data-toggle="tab" href="#jobs">Trabajos</a></li>
               <li><a data-toggle="tab" href="#contact">Contacto</a></li>
+              <li><a data-toggle="tab" href="#addjob"> Añadir Vacantes</a></li>
             </ul>
           </div>
           
@@ -277,6 +278,23 @@
                   </div>
                 </div>
               </div>
+
+              <div id="addjob" class="tab-pane fade">
+                <div class="profile-main">
+                  <h3>Añadir Vacantes</h3>
+                  <div class="profile-in">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis tenetur velit! Provident eum molestias aperiam suscipit distinctio ipsum cupiditate quasi, dolor sunt, cum reprehenderit quibusdam, repellendus eaque, quas magni.</p>
+                    <form action="#">
+                      <input type="text" placeholder="Nombre y Apellido">
+                      <input type="text" placeholder="Tu correo electrónico">
+                      <input type="text" placeholder="Tu numero telefónico">
+                      <textarea placeholder="Tu mensaje"></textarea>
+                      <button class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
