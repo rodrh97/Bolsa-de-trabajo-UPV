@@ -284,9 +284,18 @@
                 <div class="profile-main">
                   <h3>Añadir Vacantes</h3>
                   <div class="profile-in">
-                    <form action="#">
-                      <input type="text" placeholder="Nombre y Apellido">
-                      <input type="text" placeholder="Tu correo electrónico">
+                    <form method="POST" action="/perfil_empresa/@foreach($companies as $company){{$company->id}}@endforeach">
+                      {{ csrf_field() }}
+                      <input type="text" placeholder="Nombre de la vacante" style="color:black" name="name">
+                      <textarea type="text" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description"></textarea>
+                      <input type="text" placeholder="Salario" style="color:black" name="salary">
+                      <input type="text" placeholder="Tipo de vacante" style="color:black" name="job_type">
+                      <input type="text" placeholder="Pais" style="color:black" name="country">
+                      <input type="text" placeholder="Estado" style="color:black" name="state">
+                      <input type="text" placeholder="Ciudad" style="color:black" name="city">
+                      <input type="text" placeholder="Codigo Postal" style="color:black" name="zip">
+                      <input type="text" placeholder="Colonia" style="color:black" name="colony">
+                      <input type="text" placeholder="Calle" style="color:black" name="street">
                       <input type="text" name="sector_name" placeholder="Sector" list="sector_names" style="color:black">
                       <datalist id="sector_names">
                         @foreach ($sectors as $sector)
@@ -296,8 +305,7 @@
                        @foreach ($companies as $company)
                       <input type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" disabled>
                        @endforeach
-                      <textarea placeholder="Tu mensaje"></textarea>
-                      <button class="btn btn-primary">Enviar Mensaje</button>
+                      <button type="submit" class="btn btn-primary">Enviar Vacante</button>
                     </form>
                   </div>
                 </div>

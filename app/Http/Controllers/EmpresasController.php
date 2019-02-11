@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
+use App\job;
+use App\sector;
 use App\company;
 use App\students;
 use App\careers;
@@ -20,6 +22,36 @@ class EmpresasController extends Controller
 {
     //Funciones para regresar la vistas de las empresas
     
+    //Función para insertar una vacante de una empresa
+    public function store(){
+        //Encontrar el id del sector y compañia
+        $id_sector=DB::table('sectors as s')
+        ->select('s.id')
+        ->where('s.name',request('sector_name'))
+        ->get();
+
+        $id_company=DB::table('companies as c')
+        ->select('c.id')
+        ->where('c.name',request('company_name'))
+        ->get();  
+
+        $job= new job();
+        $job->name=request('name');
+        $job->description=request('description');
+        $job->salary=request('salary');
+        $job->job_type=request('job_type');
+        $job->country=request('country');
+        $job->state=request('state');
+        $job->city=request('city');
+        $job->zip=request('zip');
+        $job->colony=request('colony');
+        $job->street=request('street');
+        $job->id_sector=request($id_sector);
+        $job->id_company=request($id_company);
+        $job->save();
+        return back();
+    }
+
     //Pagina de inicio
     public function inicio_empresa(){
         return view('empresa.inicio');

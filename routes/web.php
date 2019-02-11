@@ -50,6 +50,8 @@ Route::get('/egresados','EmpresasController@egresados')->name('users');
 
 Route::get('/perfil_empresa/{companies}','EmpresasController@perfil_empresa');
 
+Route::post('/perfil_empresa/{companies}','EmpresasController@store');
+
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 
 Route::get('/egresado/{users}','EmpresasController@egresado');
