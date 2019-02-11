@@ -48,7 +48,7 @@ Route::get('/tus_trabajos','EmpresasController@tus_trabajos');
 
 Route::get('/egresados','EmpresasController@egresados')->name('users');
 
-Route::get('/perfil_empresa','EmpresasController@perfil_empresa');
+Route::get('/perfil_empresa/{companies}','EmpresasController@perfil_empresa');
 
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 

@@ -5,7 +5,7 @@
 @section('menu')
       <div class="box-shadow-for-ui">
         <div class="uou-block-2b">
-          <div class="container"> <a href="/inicio_empresa"><img src="assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+          <div class="container"> <a href="/inicio_empresa"><img src="/assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
             <nav class="nav">
               <ul class="sf-menu">
                 <li><a href="/inicio_empresa" style="color:white;"><i class="fa  fa-home"></i></a></li>
@@ -27,14 +27,13 @@
     <!-- SUB Banner -->
     <div class="profile-bnr">
       <div class="container"> 
-        
         <!-- User Iinfo -->
         <div class="user-info">
-          <h1><i class="fas fa-building"></i> Honda Motor Co. Ltd. <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="images/icon-ver.png" alt="" ></a> </h1>
+          @foreach ($companies as $company)
+        <h1><i class="fas fa-building"></i> {{$company->name}} <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="/images/icon-ver.png" alt="" ></a> </h1>
           <h6>Sector: Automotriz</h6>
-          <p>Dirección: 7979 Leary Way Northeast
-            Redmond, WA 98052  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
-          
+          <p>Dirección: {{$company->street}}, {{$company->state}} {{$company->zip}}  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
+          @endforeach
           <!-- Social Icon -->
           <!--div class="social-links"> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div-->
           
@@ -126,29 +125,35 @@
             <!-- Company Information -->
             <div class="sidebar">
               <h5 class="main-title">Información de la Empresa</h5>
-              <div class="sidebar-thumbnail"> <img src="images/honda.jpg" alt=""> </div>
+              @foreach ($companies as $company)
+              <div class="sidebar-thumbnail"> <img src="{{asset($company->image_url)}}" alt=""  width="251px" height="181px"> </div>
+              @endforeach
               <div class="sidebar-information">
                 <ul class="single-category">
                   <li class="row">
                     <h6 class="title col-xs-6">Sector</h6>
-                    <span class="subtitle col-xs-6">Automotriz</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Localización</h6>
-                    <span class="subtitle col-xs-6">Tokio, Japón</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">RFC</h6>
-                    <span class="subtitle col-xs-6">HSD7589</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Horario</h6>
-                    <span class="subtitle col-xs-6">10:00 AM - 5:00 PM</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Telefono</h6>
-                    <span class="subtitle col-xs-6">(834) 1234567</span> </li>
-                  </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Correo Electrónico</h6>
-                    <span class="subtitle col-xs-6">honda@contact.com</span> </li>
-                  </li>
+                    @foreach ($sectors as $sector)
+                      <span class="subtitle col-xs-6">{{$sector->name}}</span> </li>
+                    @endforeach
+                    @foreach ($companies as $company)
+                    <li class="row">
+                      <h6 class="title col-xs-6">Localización</h6>
+                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li>
+                    <li class="row">
+                      <h6 class="title col-xs-6">RFC</h6>
+                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Horario</h6>
+                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Telefono</h6>
+                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li>
+                    </li>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Correo Electrónico</h6>
+                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li>
+                    </li>
+                    @endforeach
                 </ul>
               </div>
             </div>
@@ -164,13 +169,9 @@
                 <div class="profile-main">
                   <h3>Descripción general</h3>
                   <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus 
-                      similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque. </p>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat 
-                      accusamus nemoitate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid 
-                      laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum
-                      assumenda.</p>
-                    
+                    @foreach ($companies as $company)
+                      <p>{{$company->description}}</p>
+                    @endforeach  
                     <!-- Video -->
                     <iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>
                   </div>

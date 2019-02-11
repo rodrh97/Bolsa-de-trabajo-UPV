@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
+use App\company;
 use App\students;
 use App\careers;
 
@@ -59,12 +60,15 @@ class EmpresasController extends Controller
     }
 
     //Pagina para que la empresa vea su perfil
-    public function perfil_empresa(){
+    public function perfil_empresa($id){
+        $companies=company::findOrFail($id);
+
         $sectors=DB::table('sectors')
         ->select('sectors.*')
         ->get();
         $companies=DB::table('companies')
         ->select('companies.*')
+        ->where('companies.id','=',$id)
         ->get();
         return view('empresa.perfil', compact('sectors','companies'));
     }
