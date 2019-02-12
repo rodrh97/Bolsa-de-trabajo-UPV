@@ -173,7 +173,7 @@
                       <p>{{$company->description}}</p>
                     @endforeach  
                     <!-- Video -->
-                    <iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>
+                    <!--<iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>-->
                   </div>
                 </div>
                 
@@ -303,7 +303,7 @@
                         @endforeach
                        </datalist>
                        @foreach ($companies as $company)
-                      <input type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" disabled>
+                      <input type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" readonly>
                        @endforeach
                       <button type="submit" class="btn btn-primary">Enviar Vacante</button>
                     </form>

@@ -25,16 +25,14 @@ class EmpresasController extends Controller
     //Función para insertar una vacante de una empresa
     public function store(){
         //Encontrar el id del sector y compañia
-        $id_sector=DB::table('sectors as s')
-        ->select('s.id')
-        ->where('s.name',request('sector_name'))
+        $id_sector=sector::all()
+        ->where('name',request('sector_name'))
         ->first();
-
-        $id_company=DB::table('companies as c')
-        ->select('c.id')
-        ->where('c.name',request('company_name'))
+        //dd($id_sector);
+        $id_company=company::all()
+        ->where('name',request('company_name'))
         ->first();  
-
+        
         $job= new job();
         $job->name=request('name');
         $job->description=request('description');
@@ -46,8 +44,8 @@ class EmpresasController extends Controller
         $job->zip=request('zip');
         $job->colony=request('colony');
         $job->street=request('street');
-        $job->id_sector=request($id_sector);
-        $job->id_company=request($id_company);
+        $job->id_sector=$id_sector->id;
+        $job->id_company=$id_company->id;
         $job->save();
         return back();
     }
