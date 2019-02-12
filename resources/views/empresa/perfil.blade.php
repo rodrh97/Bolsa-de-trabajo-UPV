@@ -199,9 +199,11 @@
                 </div>
                 <div class="listing listing-1">
                   <div class="listing-section">
+
+                    @foreach ($jobs as $job)
                     <div class="listing-ver-3">
                       <div class="listing-heading">
-                        <h5>Front-End Web Developer</h5>
+                      <h5>{{$job->name}}</h5>
                         <ul class="bookmark list-inline">
                           <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
                           <li><a href="#"><i class="fa fa-eye"></i></a></li>
@@ -229,36 +231,7 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                        <h5>Front-End Web Developer</h5>
-                        <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
-                          <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                          <li><a href="#"><i class="fa fa-share"></i></a></li>
-                        </ul>
-                      </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                          <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
-                          <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Habilidades requeridas:</h6>
-                          <ul class="tags list-inline">
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Presta</a></li>
-                            <li><a href="#">Sass</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                    @endforeach
                   </div>
                 </div>
               </div>

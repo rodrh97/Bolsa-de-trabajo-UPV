@@ -100,7 +100,15 @@ class EmpresasController extends Controller
         ->select('companies.*')
         ->where('companies.id','=',$id)
         ->get();
-        return view('empresa.perfil', compact('sectors','companies'));
+        $jobs=DB::table('jobs as j')
+        ->join('companies as c', 'c.id','=','j.id_company')
+        ->join('sectors as s', 's.id','=','j.id_sector')
+        ->select('c.name as company_name','j.*','s.name as sector_name')
+        ->where('j.id_company',$id)
+        ->orderBy('j.id','desc')
+        ->get();
+        
+        return view('empresa.perfil', compact('sectors','companies','jobs'));
     }
 
     //Pagina para que la empresa vea sus conexiones
