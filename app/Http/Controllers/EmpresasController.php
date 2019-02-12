@@ -103,9 +103,9 @@ class EmpresasController extends Controller
         $jobs=DB::table('jobs as j')
         ->join('companies as c', 'c.id','=','j.id_company')
         ->join('sectors as s', 's.id','=','j.id_sector')
-        ->select('c.name as company_name','j.*','s.name as sector_name')
+        ->select('c.name as company_name', 'c.phone as company_phone','c.email as company_email','j.*','s.name as sector_name')
         ->where('j.id_company',$id)
-        ->orderBy('j.id','desc')
+        ->latest()
         ->get();
         
         return view('empresa.perfil', compact('sectors','companies','jobs'));

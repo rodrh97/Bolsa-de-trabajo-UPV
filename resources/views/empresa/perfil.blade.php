@@ -112,10 +112,11 @@
           <!-- Nav Tabs -->
           <div class="col-md-12 ">
             <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile">Perfil</a></li>
-              <li><a data-toggle="tab" href="#jobs">Trabajos</a></li>
-              <li><a data-toggle="tab" href="#contact">Contacto</a></li>
-              <li><a data-toggle="tab" href="#addjob"> Añadir Vacantes</a></li>
+              <li class="active"><a data-toggle="tab" href="#profile"><i class="fas fa-building"></i> Perfil</a></li>
+              <li><a data-toggle="tab" href="#jobs"><i class="fas fa-clipboard-list"></i> Vacantes</a></li>
+              <li><a data-toggle="tab" href="#contacts"><i class="fas fa-address-book"></i> Contactos</a></li>
+              <li><a data-toggle="tab" href="#addcontact"><i class="fas fa-phone"></i> Añadir Contactos</a></li>
+              <li><a data-toggle="tab" href="#addjob"><i class="fas fa-suitcase"></i> Añadir Vacantes</a></li>
             </ul>
           </div>
           
@@ -212,9 +213,9 @@
                       </div>
                       <div class="listing-inner">
                         <div class="listing-content">
-                          <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
-                          <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
+                        <h6 class="title-company">{{$job->company_name}}</h6>
+                          <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
+                        <p>{{$job->description}} <a href="single_job.html">read more</a></p>
                           <h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>
@@ -236,52 +237,167 @@
                 </div>
               </div>
               
+              <div id="contacts" class="tab-pane fade">
+                <div class="header-listing">
+                  <h6>Contactos por</h6>
+                  <div class="custom-select-box">
+                    <select name="order" class="custom-select">
+                      <option value="0">Más popular</option>
+                      <option value="1">Ultimos en subir</option>
+                      <option value="2">Mejor Calificado</option>
+                    </select>
+                  </div>
+                  <ul class="listing-views">
+                    <li class="active"><a href="#"><i class="fa fa-list"></i></a></li>
+                    <li><a href="#"><i class="fa fa-th"></i></a></li>
+                    <li><a href="#"><i class="fa fa-th-large"></i></a></li>
+                  </ul>
+                </div>
+                <div class="listing listing-1">
+                  <div class="listing-section">
+
+                    @foreach ($jobs as $job)
+                    <div class="listing-ver-3">
+                      <div class="listing-heading">
+                      <h5>{{$job->name}}</h5>
+                        <ul class="bookmark list-inline">
+                          <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
+                          <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                          <li><a href="#"><i class="fa fa-share"></i></a></li>
+                        </ul>
+                      </div>
+                      <div class="listing-inner">
+                        <div class="listing-content">
+                        <h6 class="title-company">{{$job->company_name}}</h6>
+                          <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
+                        <p>{{$job->description}} <a href="single_job.html">read more</a></p>
+                          <h6 class="title-tags">Habilidades requeridas:</h6>
+                          <ul class="tags list-inline">
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">Wordpress</a></li>
+                            <li><a href="#">Presta</a></li>
+                            <li><a href="#">Sass</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="listing-tabs">
+                        <ul>
+                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
+                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    @endforeach
+                  </div>
+                </div>
+              </div>
+
+
               <!-- Contact -->
-              <div id="contact" class="tab-pane fade">
+              <div id="addcontact" class="tab-pane fade">
                 <div class="profile-main">
-                  <h3>Contacta a la Empresa</h3>
+                  <h3>Añadir Contactos</h3>
                   <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis tenetur velit! Provident eum molestias aperiam suscipit distinctio ipsum cupiditate quasi, dolor sunt, cum reprehenderit quibusdam, repellendus eaque, quas magni.</p>
+                    <p>Aquí puedes agregar tus contactos</p>
                     <form action="#">
                       <input type="text" placeholder="Nombre y Apellido">
                       <input type="text" placeholder="Tu correo electrónico">
                       <input type="text" placeholder="Tu numero telefónico">
                       <textarea placeholder="Tu mensaje"></textarea>
-                      <button class="btn btn-primary">Enviar Mensaje</button>
+                      <center><button class="btn btn-primary">Agregar Contacto</button></center>
+                      <br>
                     </form>
                   </div>
                 </div>
               </div>
 
               <div id="addjob" class="tab-pane fade">
-                <div class="profile-main">
+                
+
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
                   <h3>Añadir Vacantes</h3>
-                  <div class="profile-in">
-                    <form method="POST" action="/perfil_empresa/@foreach($companies as $company){{$company->id}}@endforeach">
+                  </div>
+                  </div>
+
+                  
+
+                    <div class="form-row">
+                    <div class="form-group col-md-12">
+                    <p>Aquí puedes agregar tus vacantes</p>
+                    </div>
+                    </div>
+
+                    
+                    <form method="POST"  action="/perfil_empresa/@foreach($companies as $company){{$company->id}}@endforeach">
                       {{ csrf_field() }}
-                      <input type="text" placeholder="Nombre de la vacante" style="color:black" name="name">
-                      <textarea type="text" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description"></textarea>
-                      <input type="text" placeholder="Salario" style="color:black" name="salary">
-                      <input type="text" placeholder="Tipo de vacante" style="color:black" name="job_type">
-                      <input type="text" placeholder="Pais" style="color:black" name="country">
-                      <input type="text" placeholder="Estado" style="color:black" name="state">
-                      <input type="text" placeholder="Ciudad" style="color:black" name="city">
-                      <input type="text" placeholder="Codigo Postal" style="color:black" name="zip">
-                      <input type="text" placeholder="Colonia" style="color:black" name="colony">
-                      <input type="text" placeholder="Calle" style="color:black" name="street">
-                      <input type="text" name="sector_name" placeholder="Sector" list="sector_names" style="color:black">
+                      <div class="form-row">
+                      <div class="form-group col-md-12">
+                      <input class="form-control" type="text" placeholder="Nombre de la vacante" style="color:black" name="name" required>
+                      </div>
+                      </div>
+                      
+                      <div class="form-row">
+                      <div class="form-group col-md-12">
+                      <textarea class="form-control" type="text" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required></textarea>
+                      </div>
+                      </div>
+                      
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Salario" style="color:black" name="salary">
+                      </div>
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Tipo de vacante" style="color:black" name="job_type" required>
+                      </div>
+                      </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Pais" style="color:black" name="country" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Estado" style="color:black" name="state" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Ciudad" style="color:black" name="city" required>
+                      </div>
+                      </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Codigo Postal" style="color:black" name="zip" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Colonia" style="color:black" name="colony" required>
+                      </div>
+                      </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-12">
+                      <input class="form-control" type="text" placeholder="Calle" style="color:black" name="street" required>
+                      </div>
+                      </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" name="sector_name" placeholder="Sector" list="sector_names" style="color:black" required>
                       <datalist id="sector_names">
                         @foreach ($sectors as $sector)
                          <option value="{{$sector->name}}">
                         @endforeach
-                       </datalist>
-                       @foreach ($companies as $company)
-                      <input type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" readonly>
-                       @endforeach
-                      <button type="submit" class="btn btn-primary">Enviar Vacante</button>
+                      </datalist>
+                      </div>
+                      <div class="form-group col-md-6">
+                      @foreach ($companies as $company)
+                      <input class="form-control" type="text" name="company_name" placeholder="Compañia" list="company_names" style="color:black" value="{{$company->name}}" readonly>
+                      @endforeach
+                      </div>
+                      </div>
+
+                      <div class="form-row"><div class="form-group col-md-6"><button type="submit" class="btn btn-primary" >Agregar Vacante</button></div></div>
+    
                     </form>
-                  </div>
-                </div>
               </div>
 
             </div>
