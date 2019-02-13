@@ -48,9 +48,15 @@ Route::get('/tus_trabajos','EmpresasController@tus_trabajos');
 
 Route::get('/egresados','EmpresasController@egresados')->name('users');
 
-Route::get('/perfil_empresa/{companies}','EmpresasController@perfil_empresa');
+Route::get('/perfil_empresa/{companies}','EmpresasController@perfil_empresa')->name('profile');
 
-Route::post('/perfil_empresa/{companies}','EmpresasController@store');
+Route::get('/agregar_contacto/{companies}','EmpresasController@addcontact');
+
+Route::post('/agregar_contacto/{companies}','EmpresasController@store_addcontact');
+
+Route::get('/agregar_vacante/{companies}','EmpresasController@addjob');
+
+Route::post('/agregar_vacante/{companies}','EmpresasController@store_addjob');
 
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');
 

@@ -24,9 +24,7 @@ class EmpresasController extends Controller
     //Funciones para regresar la vistas de las empresas
     
     //Función para insertar una vacante de una empresa
-    public function store(Request $request){
-       
-        if($request->has($request['addedcontact'])){
+    public function store_addcontact(){
             $contact= new contact();
             $contact->first_name=request('first_name');
             $contact->last_name=request('last_name');
@@ -37,33 +35,30 @@ class EmpresasController extends Controller
             $contact->company_id=request('id_company');
             $contact->schedule=request('schedule');
             $contact->save();
-            return back();
-        }else if($request->has($request['addedjob'])){
-            //Encontrar el id del sector y compañia
-            $id_sector=sector::all()
-            ->where('name',request('sector_name'))
-            ->first();
-                //dd($id_sector);
-            $id_company=company::all()
-            ->where('name',request('company_name'))
-            ->first();  
-                
-            $job= new job();
-            $job->name=request('name');
-            $job->description=request('description');
-            $job->salary=request('salary');
-            $job->job_type=request('job_type');
-            $job->country=request('country');
-            $job->state=request('state');
-            $job->city=request('city');
-            $job->zip=request('zip');
-            $job->colony=request('colony');
-            $job->street=request('street');
-            $job->id_sector=$id_sector->id;
-            $job->id_company=$id_company->id;
-            $job->save();
-            return back();
-        }
+            return redirect()->route('profile',[$contact->company_id]);
+    }
+
+    public function store_addjob(){
+        //Encontrar el id del sector y compañia
+        $id_sector=sector::all()
+        ->where('name',request('sector_name'))
+        ->first();
+            
+        $job= new job();
+        $job->name=request('name');
+        $job->description=request('description');
+        $job->salary=request('salary');
+        $job->job_type=request('job_type');
+        $job->country=request('country');
+        $job->state=request('state');
+        $job->city=request('city');
+        $job->zip=request('zip');
+        $job->colony=request('colony');
+        $job->street=request('street');
+        $job->id_sector=$id_sector->id;
+        $job->id_company=request('id_company');
+        $job->save();
+        return redirect()->route('profile',[$job->id_company]);
     }
 
     //Pagina de inicio
@@ -125,6 +120,47 @@ class EmpresasController extends Controller
         ->get();
         
         return view('empresa.perfil', compact('sectors','companies','jobs'));
+    }
+    //Pagina para que la empresa vea su perfil
+    public function addcontact($id){
+        $companies=company::findOrFail($id);
+
+        $sectors=DB::table('sectors')
+        ->select('sectors.*')
+        ->get();
+        $companies=DB::table('companies')
+        ->select('companies.*')
+        ->where('companies.id','=',$id)
+        ->get();
+        $jobs=DB::table('jobs as j')
+        ->join('companies as c', 'c.id','=','j.id_company')
+        ->join('sectors as s', 's.id','=','j.id_sector')
+        ->select('c.name as company_name', 'c.phone as company_phone','c.email as company_email','j.*','s.name as sector_name')
+        ->where('j.id_company',$id)
+        ->latest()
+        ->get();
+        
+        return view('empresa.addcontact', compact('sectors','companies','jobs'));
+    }
+    public function addjob($id){
+        $companies=company::findOrFail($id);
+
+        $sectors=DB::table('sectors')
+        ->select('sectors.*')
+        ->get();
+        $companies=DB::table('companies')
+        ->select('companies.*')
+        ->where('companies.id','=',$id)
+        ->get();
+        $jobs=DB::table('jobs as j')
+        ->join('companies as c', 'c.id','=','j.id_company')
+        ->join('sectors as s', 's.id','=','j.id_sector')
+        ->select('c.name as company_name', 'c.phone as company_phone','c.email as company_email','j.*','s.name as sector_name')
+        ->where('j.id_company',$id)
+        ->latest()
+        ->get();
+        
+        return view('empresa.addjob', compact('sectors','companies','jobs'));
     }
 
     //Pagina para que la empresa vea sus conexiones
