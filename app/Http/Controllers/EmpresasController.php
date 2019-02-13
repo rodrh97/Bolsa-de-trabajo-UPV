@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
 use App\job;
+use App\contact;
 use App\sector;
 use App\company;
 use App\students;
@@ -23,31 +24,46 @@ class EmpresasController extends Controller
     //Funciones para regresar la vistas de las empresas
     
     //Función para insertar una vacante de una empresa
-    public function store(){
-        //Encontrar el id del sector y compañia
-        $id_sector=sector::all()
-        ->where('name',request('sector_name'))
-        ->first();
-        //dd($id_sector);
-        $id_company=company::all()
-        ->where('name',request('company_name'))
-        ->first();  
-        
-        $job= new job();
-        $job->name=request('name');
-        $job->description=request('description');
-        $job->salary=request('salary');
-        $job->job_type=request('job_type');
-        $job->country=request('country');
-        $job->state=request('state');
-        $job->city=request('city');
-        $job->zip=request('zip');
-        $job->colony=request('colony');
-        $job->street=request('street');
-        $job->id_sector=$id_sector->id;
-        $job->id_company=$id_company->id;
-        $job->save();
-        return back();
+    public function store(Request $request){
+       
+        if($request->has($request['addedcontact'])){
+            $contact= new contact();
+            $contact->first_name=request('first_name');
+            $contact->last_name=request('last_name');
+            $contact->second_last_name=request('second_last_name');
+            $contact->email=request('email');
+            $contact->phone=request('phone');
+            $contact->position=request('position');
+            $contact->company_id=request('id_company');
+            $contact->schedule=request('schedule');
+            $contact->save();
+            return back();
+        }else if($request->has($request['addedjob'])){
+            //Encontrar el id del sector y compañia
+            $id_sector=sector::all()
+            ->where('name',request('sector_name'))
+            ->first();
+                //dd($id_sector);
+            $id_company=company::all()
+            ->where('name',request('company_name'))
+            ->first();  
+                
+            $job= new job();
+            $job->name=request('name');
+            $job->description=request('description');
+            $job->salary=request('salary');
+            $job->job_type=request('job_type');
+            $job->country=request('country');
+            $job->state=request('state');
+            $job->city=request('city');
+            $job->zip=request('zip');
+            $job->colony=request('colony');
+            $job->street=request('street');
+            $job->id_sector=$id_sector->id;
+            $job->id_company=$id_company->id;
+            $job->save();
+            return back();
+        }
     }
 
     //Pagina de inicio

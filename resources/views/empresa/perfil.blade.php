@@ -236,7 +236,7 @@
                   </div>
                 </div>
               </div>
-              
+              <!--Contactos-->
               <div id="contacts" class="tab-pane fade">
                 <div class="header-listing">
                   <h6>Contactos por</h6>
@@ -293,22 +293,65 @@
               </div>
 
 
-              <!-- Contact -->
+              <!-- Añadir Contactos -->
               <div id="addcontact" class="tab-pane fade">
-                <div class="profile-main">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
                   <h3>Añadir Contactos</h3>
-                  <div class="profile-in">
-                    <p>Aquí puedes agregar tus contactos</p>
-                    <form action="#">
-                      <input type="text" placeholder="Nombre y Apellido">
-                      <input type="text" placeholder="Tu correo electrónico">
-                      <input type="text" placeholder="Tu numero telefónico">
-                      <textarea placeholder="Tu mensaje"></textarea>
-                      <center><button class="btn btn-primary">Agregar Contacto</button></center>
-                      <br>
-                    </form>
                   </div>
-                </div>
+                  </div>
+
+                  
+
+                    <div class="form-row">
+                    <div class="form-group col-md-12">
+                    <p>Aquí puedes agregar tus contactos</p>
+                    </div>
+                    </div>
+
+                    @foreach($companies as $company)
+                    <form method="POST"  action="/perfil_empresa/{{$company->id}}">
+                      {{ csrf_field() }}
+                      <div class="form-row">
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Nombre" style="color:black" name="first_name" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Apellido Paterno" style="color:black" name="last_name" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                      <input class="form-control" type="text" placeholder="Apellido Materno" style="color:black" name="second_last_name" required>
+                      </div>
+                      </div>
+                      
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="email" placeholder="Correo Electrónico" style="color:black" name="email" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Telefono" style="color:black" name="phone" required>
+                      </div>
+                      </div>
+                      
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="text" placeholder="Posición en la empresa"  maxlength="1000" style="color:black" name="position">
+                      </div>
+                      <div class="form-group col-md-6">
+                      <input class="form-control" type="hidden" placeholder="Nombre de la empresa" style="color:black" name="id_company" value="{{$company->id}}">
+                      </div>
+                      </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-12">
+                      <textarea class="form-control" type="text" placeholder="Horario del contacto" maxlength="500" style="color:black" name="schedule" required></textarea>
+                      </div>
+                      </div>
+                      @endforeach
+
+                      <div class="form-row"><div class="form-group col-md-6"><button type="submit" class="btn btn-primary">Agregar Contacto</button></div></div>
+    
+                    </form>
               </div>
 
               <div id="addjob" class="tab-pane fade">
@@ -328,8 +371,9 @@
                     </div>
                     </div>
 
-                    
-                    <form method="POST"  action="/perfil_empresa/@foreach($companies as $company){{$company->id}}@endforeach">
+                    @foreach($companies as $company)
+                    <form method="POST"  action="/perfil_empresa/{{$company->id}}">
+                    @endforeach
                       {{ csrf_field() }}
                       <div class="form-row">
                       <div class="form-group col-md-12">
@@ -395,7 +439,7 @@
                       </div>
                       </div>
 
-                      <div class="form-row"><div class="form-group col-md-6"><button type="submit" class="btn btn-primary" >Agregar Vacante</button></div></div>
+                      <div class="form-row"><div class="form-group col-md-6"><button type="submit" class="btn btn-primary">Agregar Vacante</button></div></div>
     
                     </form>
               </div>
