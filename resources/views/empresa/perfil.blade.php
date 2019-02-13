@@ -206,23 +206,21 @@
                       <div class="listing-heading">
                       <h5>{{$job->name}}</h5>
                         <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
-                          <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                          <li><a href="#"><i class="fa fa-share"></i></a></li>
+                          <li><a href="#"><i class="fas fa-trash"></i></a></li>
                         </ul>
                       </div>
                       <div class="listing-inner">
                         <div class="listing-content">
                         <h6 class="title-company">{{$job->company_name}}</h6>
                           <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
-                        <p>{{$job->description}} <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Habilidades requeridas:</h6>
+                        <p>{{$job->description}} <a href="single_job.html"><i class="fas fa-edit"></i> Editar</a></p>
+                          <!--<h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>
                             <li><a href="#">Wordpress</a></li>
                             <li><a href="#">Presta</a></li>
                             <li><a href="#">Sass</a></li>
-                          </ul>
+                          </ul>-->
                         </div>
                       </div>
                       <div class="listing-tabs">
