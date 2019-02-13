@@ -119,7 +119,14 @@ class EmpresasController extends Controller
         ->latest()
         ->get();
         
-        return view('empresa.perfil', compact('sectors','companies','jobs'));
+        $contacts=DB::table('contacts as con')
+        ->join('companies as c', 'c.id','=','con.company_id')
+        ->select('c.name','con.*')
+        ->where('con.company_id',$id)
+        ->latest()
+        ->get();
+
+        return view('empresa.perfil', compact('sectors','companies','jobs','contacts'));
     }
     //Pagina para que la empresa vea su perfil
     public function addcontact($id){
