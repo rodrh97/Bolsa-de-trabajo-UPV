@@ -156,7 +156,7 @@
               <!-- Añadir Vacantes -->
 <div  class="tab-pane fade">
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
     <h3>Editar {{$job->name}}</h3>
     </div>
     </div>

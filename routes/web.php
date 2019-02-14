@@ -56,7 +56,7 @@ Route::post('/agregar_contacto/{companies}','EmpresasController@store_addcontact
 
 Route::get('/editar_contacto/{companies}','EmpresasController@editcontact');
 
-Route::PATCH('/editar_contacto/{jobs}','EmpresasController@update_contact');
+Route::PATCH('/editar_contacto/{contacts}','EmpresasController@update_contact');
 
 Route::get('/agregar_vacante/{companies}','EmpresasController@addjob');
 

@@ -41,13 +41,13 @@ class EmpresasController extends Controller
      //Función para mostrar la vista de editar un contacto
      public function editcontact($id){
         $contacts=DB::table('contacts')
-        ->join('companies as c','jobs.id_company','=','c.id')
+        ->join('companies as c','contacts.company_id','=','c.id')
         ->select('contacts.*',
-        'c.id as company_id',
+        'c.id as id_company',
         'c.rfc',
         'c.name as company_name',
         'c.phone',
-        'c.email as company_id',
+        'c.email as company_email',
         'c.image_url',
         'c.country as company_country',
         'c.state as company_state',
@@ -57,10 +57,22 @@ class EmpresasController extends Controller
         'c.street as company_street',
         'c.schedule',
         'c.description as company_description')
-        ->where('jobs.id',$id)
+        ->where('contacts.id',$id)
         ->get();
 
-        return view('empresa.editcontact',compact('jobs'));
+        return view('empresa.editcontact',compact('contacts'));
+    }
+
+    public function update_contact($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $contacts=contact::find($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $contacts=DB::table('contacts')
+        ->select('contacts.*')
+        ->where('contacts.id',$id)
+        ->update(['phone' => request('phone'),'email' => request('email'),'schedule' => request('schedule')]);
+        return back()->with('status', 'Vacante actualizada');;
     }
 
     //Función para agregar una vacante

@@ -29,10 +29,10 @@
       <div class="container"> 
         <!-- User Iinfo -->
         <div class="user-info">
-          @foreach ($jobs as $job)
-        <h1><i class="fas fa-building"></i> {{$job->company_name}} <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="/images/icon-ver.png" alt="" ></a> </h1>
+          @foreach ($contacts as $contact)
+        <h1><i class="fas fa-building"></i> {{$contact->company_name}} <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="/images/icon-ver.png" alt="" ></a> </h1>
           <h6>Sector: Automotriz</h6>
-          <p>Dirección: {{$job->company_street}}, {{$job->company_state}} {{$job->company_zip}}  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
+          <p>Dirección: {{$contact->company_street}}, {{$contact->company_state}} {{$contact->company_zip}}  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
           @endforeach
           <!-- Social Icon -->
           <!--div class="social-links"> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div-->
@@ -119,30 +119,30 @@
             <!-- Company Information -->
             <div class="sidebar">
               <h5 class="main-title">Información de la Empresa</h5>
-              @foreach ($jobs as $job)
-              <div class="sidebar-thumbnail"> <img src="{{asset($job->image_url)}}" alt=""  width="251px" height="181px"> </div>
+              @foreach ($contacts as $contact)
+              <div class="sidebar-thumbnail"> <img src="{{asset($contact->image_url)}}" alt=""  width="251px" height="181px"> </div>
               @endforeach
               <div class="sidebar-information">
                 <ul class="single-category">
                   <li class="row">
                     
-                    @foreach ($jobs as $job)
+                    @foreach ($contacts as $contact)
                     <li class="row">
                       <h6 class="title col-xs-6">Localización</h6>
-                      <span class="subtitle col-xs-6">{{$job->company_city}}, {{$job->company_country}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$contact->company_city}}, {{$contact->company_country}}</span> </li>
                     <li class="row">
                       <h6 class="title col-xs-6">RFC</h6>
-                      <span class="subtitle col-xs-6">{{$job->rfc}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$contact->rfc}}</span> </li>
                     <li class="row">
                       <h6 class="title col-xs-6">Horario</h6>
-                      <span class="subtitle col-xs-6">{{$job->schedule}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$contact->schedule}}</span> </li>
                     <li class="row">
                       <h6 class="title col-xs-6">Telefono</h6>
-                      <span class="subtitle col-xs-6">{{$job->phone}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$contact->phone}}</span> </li>
                     </li>
                     <li class="row">
                       <h6 class="title col-xs-6">Correo Electrónico</h6>
-                      <span class="subtitle col-xs-6">{{$job->email}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$contact->email}}</span> </li>
                     </li>
                     @endforeach
                 </ul>
@@ -156,8 +156,8 @@
               <!-- Añadir Vacantes -->
 <div  class="tab-pane fade">
   <div class="form-row">
-    <div class="form-group col-md-6">
-    <h3>Editar {{$job->name}}</h3>
+    <div class="form-group col-md-12">
+    <h3>Editar contacto {{$contact->first_name}}</h3>
     </div>
     </div>
 
@@ -167,32 +167,35 @@
       </div>
       </div>
 
-      @foreach($jobs as $job)
-      <form method="POST"  action="/editar_vacante/{{$job->id}}" >
+      @foreach($contacts as $contact)
+      <form method="POST"  action="/editar_vacante/{{$contact->id}}" >
         {{method_field('PATCH')}}  
         {{ csrf_field() }}
         <div class="form-row">
-                
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                <textarea class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$job->description}}</textarea>
-                </div>
-                </div>
-                
-                <div class="form-row">
-                <div class="form-group col-md-6">
-                <input class="form-control" type="text" placeholder="Salario" style="color:black" name="salary" value="{{$job->salary}}">
-                </div>
-        
+        <div class="form-group col-md-6">
+        <input class="form-control" type="email" placeholder="Correo Electrónico" style="color:black" name="email"  value="{{$contact->email}}" required>
+        </div>
+        <div class="form-group col-md-6">
+        <input class="form-control" type="text" placeholder="Telefono" style="color:black" name="phone"  value="{{$contact->phone}}" required>
+        </div>
+        </div>
+
         <div class="form-row">
         <div class="form-group col-md-12">
-        <center><button type="submit" class="btn btn-primary">Editar Vacante</button></center>
+        <textarea class="form-control" type="text" placeholder="Horario del contacto" maxlength="500" style="color:black" name="schedule" required>{{$contact->schedule}}</textarea>
+        </div>
+        </div>
+                            
+                
+        <div class="form-row">
+        <div class="form-group col-md-12">
+        <center><button type="submit" class="btn btn-primary">Editar Contacto</button></center>
         </div>
         </div>
 
         <div class="form-row">
         <div class="form-group col-md-1">
-        <center><a href="/perfil_empresa/{{$job->company_id}}"><button type="button" class="btn btn-warning">Regresar Perfil</button></a></center>
+        <center><a href="/perfil_empresa/{{$contact->id_company}}"><button type="button" class="btn btn-warning">Regresar Perfil</button></a></center>
         </div>
         </div>
         @endforeach
