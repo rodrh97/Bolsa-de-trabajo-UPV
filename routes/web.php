@@ -58,6 +58,8 @@ Route::get('/agregar_vacante/{companies}','EmpresasController@addjob');
 
 Route::get('/editar_vacante/{companies}','EmpresasController@editjob');
 
+Route::PATCH('/editar_vacante/{jobs}','EmpresasController@update_job');
+
 Route::post('/agregar_vacante/{companies}','EmpresasController@store_addjob');
 
 Route::get('/conexiones_empresa','EmpresasController@conexiones_empresa');

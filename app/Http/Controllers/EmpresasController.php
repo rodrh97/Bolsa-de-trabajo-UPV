@@ -86,6 +86,18 @@ class EmpresasController extends Controller
         return view('empresa.editjob',compact('jobs'));
     }
 
+    public function update_job($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $jobs=job::find($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $jobs=DB::table('jobs')
+        ->select('jobs.*')
+        ->where('jobs.id',$id)
+        ->update(['salary' => request('salary'),'description' => request('description')]);
+        return back();
+    }
+
     //Pagina de inicio
     public function inicio_empresa(){
         return view('empresa.inicio');

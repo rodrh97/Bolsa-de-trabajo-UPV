@@ -218,7 +218,9 @@
                         <div class="listing-content">
                         <h6 class="title-company">{{$job->company_name}}</h6>
                           <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
-                        <p>{{$job->description}} <a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
+                        <p>Descripción: {{$job->description}}</p>
+                        <p>Salario: {{$job->salary}}</p>
+                        <p><a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
                           <!--<h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>
