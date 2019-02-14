@@ -1072,7 +1072,7 @@
                               </div>-->
                             <div class="row pt16">
                                 <div class="col-xs-4">
-                                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                                    <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
                                 </div>
                             </div>
                           @endforeach

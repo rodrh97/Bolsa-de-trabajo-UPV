@@ -206,14 +206,19 @@
                       <div class="listing-heading">
                       <h5>{{$job->name}}</h5>
                         <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fas fa-trash"></i></a></li>
+                          @if ($job->deleted==0)
+                            <li value="1"><a href="#"><i class="fas fa-eye"></i> Visto</a></li>
+                          @else
+                            <li value="0"><a href="#"><i class="fas fa-eye"></i> No Visto</a></li>
+                          @endif
+                          
                         </ul>
                       </div>
                       <div class="listing-inner">
                         <div class="listing-content">
                         <h6 class="title-company">{{$job->company_name}}</h6>
                           <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
-                        <p>{{$job->description}} <a href="single_job.html"><i class="fas fa-edit"></i> Editar</a></p>
+                        <p>{{$job->description}} <a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
                           <!--<h6 class="title-tags">Habilidades requeridas:</h6>
                           <ul class="tags list-inline">
                             <li><a href="#">Javascript</a></li>

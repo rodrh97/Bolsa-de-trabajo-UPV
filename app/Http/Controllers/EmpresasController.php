@@ -23,7 +23,7 @@ class EmpresasController extends Controller
 {
     //Funciones para regresar la vistas de las empresas
     
-    //Función para insertar una vacante de una empresa
+    //Función para agregar un contacto
     public function store_addcontact(){
             $contact= new contact();
             $contact->first_name=request('first_name');
@@ -37,7 +37,7 @@ class EmpresasController extends Controller
             $contact->save();
             return redirect()->route('profile',[$contact->company_id]);
     }
-
+    //Función para agregar una vacante
     public function store_addjob(){
         //Encontrar el id del sector y compañia
         $id_sector=sector::all()
@@ -59,6 +59,31 @@ class EmpresasController extends Controller
         $job->id_company=request('id_company');
         $job->save();
         return redirect()->route('profile',[$job->id_company]);
+    }
+    
+    //Función para mostrar la vista de editar vacante
+    public function editjob($id){
+        $jobs=DB::table('jobs')
+        ->join('companies as c','jobs.id_company','=','c.id')
+        ->select('jobs.*',
+        'c.id as company_id',
+        'c.rfc',
+        'c.name as company_name',
+        'c.phone',
+        'c.email',
+        'c.image_url',
+        'c.country as company_country',
+        'c.state as company_state',
+        'c.city as company_city',
+        'c.zip as company_zip',
+        'c.colony as company_colony',
+        'c.street as company_street',
+        'c.schedule',
+        'c.description as company_description')
+        ->where('jobs.id',$id)
+        ->get();
+
+        return view('empresa.editjob',compact('jobs'));
     }
 
     //Pagina de inicio
@@ -128,7 +153,8 @@ class EmpresasController extends Controller
 
         return view('empresa.perfil', compact('sectors','companies','jobs','contacts'));
     }
-    //Pagina para que la empresa vea su perfil
+    
+    //Pagina para ver la vista de agregar contactos
     public function addcontact($id){
         $companies=company::findOrFail($id);
 
@@ -149,6 +175,8 @@ class EmpresasController extends Controller
         
         return view('empresa.addcontact', compact('sectors','companies','jobs'));
     }
+    
+    //Pagina para ver la vista de agregar vacantes
     public function addjob($id){
         $companies=company::findOrFail($id);
 
