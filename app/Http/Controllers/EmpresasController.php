@@ -37,6 +37,32 @@ class EmpresasController extends Controller
             $contact->save();
             return redirect()->route('profile',[$contact->company_id]);
     }
+
+     //Función para mostrar la vista de editar un contacto
+     public function editcontact($id){
+        $contacts=DB::table('contacts')
+        ->join('companies as c','jobs.id_company','=','c.id')
+        ->select('contacts.*',
+        'c.id as company_id',
+        'c.rfc',
+        'c.name as company_name',
+        'c.phone',
+        'c.email as company_id',
+        'c.image_url',
+        'c.country as company_country',
+        'c.state as company_state',
+        'c.city as company_city',
+        'c.zip as company_zip',
+        'c.colony as company_colony',
+        'c.street as company_street',
+        'c.schedule',
+        'c.description as company_description')
+        ->where('jobs.id',$id)
+        ->get();
+
+        return view('empresa.editcontact',compact('jobs'));
+    }
+
     //Función para agregar una vacante
     public function store_addjob(){
         //Encontrar el id del sector y compañia
@@ -95,7 +121,7 @@ class EmpresasController extends Controller
         ->select('jobs.*')
         ->where('jobs.id',$id)
         ->update(['salary' => request('salary'),'description' => request('description')]);
-        return back();
+        return back()->with('status', 'Vacante actualizada');;
     }
 
     //Pagina de inicio

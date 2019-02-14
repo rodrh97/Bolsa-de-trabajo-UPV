@@ -274,7 +274,7 @@
                         <div class="listing-content">
                         <h6 class="title-company">{{$contact->position}}</h6>
                           <span>Horario: {{$contact->schedule}} </span>
-                        <p><a href="single_job.html"><i class="fas fa-edit"></i> Editar</a></p>
+                          <p><a href="/editar_contacto/{{$contact->id}}"><i class="fas fa-edit"></i> Editar</a></p>
                           
                         </div>
                       </div>
