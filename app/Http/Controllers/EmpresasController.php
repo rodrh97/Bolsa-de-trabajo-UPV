@@ -36,6 +36,7 @@ class EmpresasController extends Controller
             $contact->company_id=request('id_company');
             $contact->schedule=request('schedule');
             $contact->save();
+            alert()->success('Tu contacto ha sido agregado correctamente','Bien Hecho!!!')->autoclose(4000);
             return redirect()->route('profile',[$contact->company_id]);
     }
 
@@ -47,7 +48,7 @@ class EmpresasController extends Controller
         'c.id as id_company',
         'c.rfc',
         'c.name as company_name',
-        'c.phone',
+        'c.phone as company_phone',
         'c.email as company_email',
         'c.image_url',
         'c.country as company_country',
@@ -73,6 +74,7 @@ class EmpresasController extends Controller
         ->select('contacts.*')
         ->where('contacts.id',$id)
         ->update(['phone' => request('phone'),'email' => request('email'),'schedule' => request('schedule')]);
+        alert()->success('Tu contacto ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
 
@@ -121,7 +123,6 @@ class EmpresasController extends Controller
         'c.description as company_description')
         ->where('jobs.id',$id)
         ->get();
-
         return view('empresa.editjob',compact('jobs'));
     }
 
@@ -134,7 +135,7 @@ class EmpresasController extends Controller
         ->select('jobs.*')
         ->where('jobs.id',$id)
         ->update(['salary' => request('salary'),'description' => request('description')]);
-        
+        alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
 

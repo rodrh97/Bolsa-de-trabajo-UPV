@@ -9,7 +9,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
-        "uxweb/sweet-alert": "^2.0"
+        "uxweb/sweet-alert": "^2.0",
+        "cartalyst/alerts": "2.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
