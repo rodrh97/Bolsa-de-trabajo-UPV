@@ -98,7 +98,9 @@ class EmpresasController extends Controller
         $job->street=request('street');
         $job->id_sector=$id_sector->id;
         $job->id_company=request('id_company');
+        $job->deleted=request('deleted');
         $job->save();
+        alert()->success('Tu vacante ha sido agregado correctamente','Bien Hecho!!!')->autoclose(4000);
         return redirect()->route('profile',[$job->id_company]);
     }
     

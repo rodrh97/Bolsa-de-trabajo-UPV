@@ -175,7 +175,7 @@
                 
                 <div class="form-row">
                 <div class="form-group col-md-12">
-                <textarea class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$job->description}}</textarea>
+                <textarea rows="15" cols="50" class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$job->description}}</textarea>
                 </div>
                 </div>
                 

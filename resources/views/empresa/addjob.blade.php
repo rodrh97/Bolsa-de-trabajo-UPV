@@ -234,6 +234,9 @@
                 <input class="form-control" type="hidden" placeholder="Nombre de la empresa" style="color:black" name="id_company" value="{{$company->id}}">
                 </div>
                 </div>
+                <div class="form-group col-md-6">
+                <input class="form-control" type="hidden" placeholder="Borrado" style="color:black" name="deleted" value="0">
+                </div>
         
         <div class="form-row">
         <div class="form-group col-md-12">

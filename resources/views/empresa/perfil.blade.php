@@ -115,8 +115,8 @@
               <li class="active"><a data-toggle="tab" href="#profile"><i class="fas fa-building"></i> Perfil</a></li>
               <li><a data-toggle="tab" href="#jobs"><i class="fas fa-clipboard-list"></i> Vacantes</a></li>
               <li><a data-toggle="tab" href="#contacts"><i class="fas fa-address-book"></i> Contactos</a></li>
-              <li><a href="/agregar_contacto/{{$company->id}}"><i class="fas fa-phone"></i> Añadir Contactos</a></li>
               <li><a href="/agregar_vacante/{{$company->id}}"><i class="fas fa-suitcase"></i> Añadir Vacantes</a></li>
+              <li><a href="/agregar_contacto/{{$company->id}}"><i class="fas fa-phone"></i> Añadir Contactos</a></li>
             </ul>
           </div>
           
