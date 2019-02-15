@@ -200,18 +200,21 @@
                 </div>
                 <div class="listing listing-1">
                   <div class="listing-section">
-
+                    
                     @foreach ($jobs as $job)
                     <div class="listing-ver-3">
                       <div class="listing-heading">
                       <h5>{{$job->name}}</h5>
                         <ul class="bookmark list-inline">
+                        <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
+                          {{method_field('PATCH')}}  
+                          {{ csrf_field() }}
                           @if ($job->deleted==0)
-                            <li value="1"><a href="#"><i class="fas fa-eye"></i> Visto</a></li>
+                            <li><a href="#"><button type="submit" class="btn" name="post" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Estado Publicado</button></a></li>
                           @else
-                            <li value="0"><a href="#"><i class="fas fa-eye"></i> No Visto</a></li>
+                            <li><a href="#"><button type="submit" class="btn" name="post" value="0" style="background-color:red;"><i class="fas fa-eye"></i> Estado No Publicado</button></a></li>
                           @endif
-                          
+                        </form> 
                         </ul>
                       </div>
                       <div class="listing-inner">

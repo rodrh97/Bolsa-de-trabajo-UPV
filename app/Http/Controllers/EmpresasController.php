@@ -140,6 +140,18 @@ class EmpresasController extends Controller
         alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
+    public function update_status_job($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $jobs=job::find($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $jobs=DB::table('jobs')
+        ->select('jobs.*')
+        ->where('jobs.id',$id)
+        ->update(['deleted' => request('post')]);
+        alert()->success('Tu vacante ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
+        return back();
+    }
 
     //Pagina de inicio
     public function inicio_empresa(){

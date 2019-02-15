@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function inicio_egresado()
     {
-        return view('egresado.inicio');
+        $jobs=DB::table('jobs')
+        ->latest()
+        ->get();
+        return view('egresado.inicio', compact('jobs'));
     }
 }

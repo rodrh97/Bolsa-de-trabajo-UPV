@@ -50,6 +50,8 @@ Route::get('/egresados','EmpresasController@egresados')->name('users');
 
 Route::get('/perfil_empresa/{companies}','EmpresasController@perfil_empresa')->name('profile');
 
+Route::PATCH('/perfil_empresa/{companies}','EmpresasController@update_status_job');
+
 Route::get('/agregar_contacto/{companies}','EmpresasController@addcontact');
 
 Route::post('/agregar_contacto/{companies}','EmpresasController@store_addcontact');
