@@ -168,7 +168,7 @@
       </div>
 
       @foreach($contacts as $contact)
-      <form method="POST"  action="/editar_vacante/{{$contact->id}}" >
+      <form method="POST"  action="/editar_contacto/{{$contact->id}}" >
         {{method_field('PATCH')}}  
         {{ csrf_field() }}
         <div class="form-row">

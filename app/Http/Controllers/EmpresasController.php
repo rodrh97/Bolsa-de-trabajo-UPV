@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Alert;
 use App\users;
 use App\job;
 use App\contact;
@@ -55,7 +56,7 @@ class EmpresasController extends Controller
         'c.zip as company_zip',
         'c.colony as company_colony',
         'c.street as company_street',
-        'c.schedule',
+        'c.schedule as company_schedule',
         'c.description as company_description')
         ->where('contacts.id',$id)
         ->get();
@@ -72,7 +73,7 @@ class EmpresasController extends Controller
         ->select('contacts.*')
         ->where('contacts.id',$id)
         ->update(['phone' => request('phone'),'email' => request('email'),'schedule' => request('schedule')]);
-        return back()->with('status', 'Vacante actualizada');;
+        return back();
     }
 
     //Función para agregar una vacante
@@ -133,7 +134,8 @@ class EmpresasController extends Controller
         ->select('jobs.*')
         ->where('jobs.id',$id)
         ->update(['salary' => request('salary'),'description' => request('description')]);
-        return back()->with('status', 'Vacante actualizada');;
+        
+        return back();
     }
 
     //Pagina de inicio
