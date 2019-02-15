@@ -42,7 +42,7 @@
             @foreach ($jobs as $job)
             @if ($job->deleted==0)
             <article class="uou-block-7f"> <img src="img/blog-image-1.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">{{$job->created_at}}</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
+              <div class="meta"> <span class="time-ago">{{$job->created_at}}</span> <span class="category">{{$job->company_name}}</span> <a href="#" class="comments">{{$job->sector_name}}</a> </div>
             <h1><a href="#">{{$job->name}}</a></h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
               <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
