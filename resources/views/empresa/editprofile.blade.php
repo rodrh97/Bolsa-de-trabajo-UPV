@@ -176,6 +176,7 @@
                 <div class="form-row">
                 <div class="form-group col-md-12">
                 <textarea rows="15" cols="50" class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$company->description}}</textarea>
+                <span class="bootstrap-maxlength label-success label" style="display: block; position: absolute; white-space: nowrap; z-index: 1099; top: 4153.17px; left: 630.336px;">0 / 255</span>
                 </div>
                 </div>
                 
