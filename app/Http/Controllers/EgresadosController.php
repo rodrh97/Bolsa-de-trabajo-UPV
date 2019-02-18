@@ -121,7 +121,8 @@ class EgresadosController extends Controller
         $jobs=job::find($id);
         $jobs=DB::table('jobs')
         ->join('companies as c', 'c.id','=','jobs.id_company')
-        ->select('jobs.*','c.name as company_name')
+        ->join('sectors as s', 's.id','=','jobs.id_sector')
+        ->select('jobs.*','c.name as company_name','s.name as sector_name')
         ->where('jobs.id',$id)
         ->get();
         return view('egresado.vacante', compact('jobs'));

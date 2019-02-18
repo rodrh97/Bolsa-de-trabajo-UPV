@@ -46,31 +46,20 @@
           <div class="meta">
           <span class="time-ago"><a href="/egresado_perfil_empresa">Nombre Empresa: {{$job->company_name}}</a></span>
             <span class="time-ago">{{$job->created_at}}</span>
-            <span class="category">Posted in: <a href="#">Design</a></span>
+          <span class="category"><a href="#">{{$job->sector_name}}</a></span>
             <a href="#" class="comments">12 Comments</a>
           </div>
 
-          <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
+          <h1>{{$job->name}}</h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.</p>
+          <h1>Descripción:</h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          Phasellus pharetra nulla ac diam.
-           Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-           Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-                       Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-                       Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          </p>
+        <p>{{$job->description}}</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-          Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
+        <p><b style="font-style:italic;">* Salario: ${{$job->salary}}</b></p>
 
 
-          <div class="uou-share-story clearfix">
+          <!--<div class="uou-share-story clearfix">
             <div class="row">
               <div class="col-sm-3">
                 <h5 class="sidebar-title">Share This Story</h5>
@@ -88,14 +77,14 @@
                       <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     </ul>
 
-                  </div> <!-- end .uou-block-4b -->
-                </div> <!-- end social widget -->
-              </div>
+                  </div>--> <!-- end .uou-block-4b -->
+                <!--/div--> <!-- end social widget -->
+              <!--</div>
             </div>
-          </div>
+          </div>-->
 
 
-          <a class="btn btn-primary " href="#">Back To Blog List</a>
+          <center><button type="submit" class="btn btn-primary ">Estoy Interesado</a></center>
 
         </article> <!-- end .uou-block-7f -->
 
