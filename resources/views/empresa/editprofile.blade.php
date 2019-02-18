@@ -1,6 +1,6 @@
 @extends('empresa.layout')
 @section('titulo')
-    Perfil Empresa
+    Editar Vacante
 @endsection
 @section('menu')
       <div class="box-shadow-for-ui">
@@ -108,35 +108,24 @@
     <div class="profile-company-content main-user" data-bg-color="f5f5f5">
       <div class="container">
         <div class="row"> 
-          @foreach ($companies as $company)
-          <!-- Nav Tabs -->
-          <div class="col-md-12 ">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile"><i class="fas fa-building"></i> Perfil</a></li>
-              <li><a data-toggle="tab" href="#jobs"><i class="fas fa-clipboard-list"></i> Vacantes</a></li>
-              <li><a data-toggle="tab" href="#contacts"><i class="fas fa-address-book"></i> Contactos</a></li>
-              <li><a href="/agregar_vacante/{{$company->id}}"><i class="fas fa-suitcase"></i> Añadir Vacantes</a></li>
-              <li><a href="/agregar_contacto/{{$company->id}}"><i class="fas fa-phone"></i> Añadir Contactos</a></li>
-              <li><a href="/editar_perfil/{{$company->id}}"><i class="fas fa-edit"></i> Actualizar Perfil</a></li>
-            </ul>
-          </div>
-          
+            <div class="col-md-12 ">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a><i class="fas fa-building"></i> Editar Perfil</a></li>
+                </ul>
+            </div>
           <!-- SIDE BAR -->
           <div class="col-md-4"> 
             
             <!-- Company Information -->
             <div class="sidebar">
               <h5 class="main-title">Información de la Empresa</h5>
-              
+              @foreach ($companies as $company)
               <div class="sidebar-thumbnail"> <img src="{{asset($company->image_url)}}" alt=""  width="251px" height="181px"> </div>
               @endforeach
               <div class="sidebar-information">
                 <ul class="single-category">
                   <li class="row">
-                    <h6 class="title col-xs-6">Sector</h6>
-                    <!--foreach ($sectors as $sector)
-                      <span class="subtitle col-xs-6">$sector->name}}</span> </li>
-                    endforeach-->
+                    
                     @foreach ($companies as $company)
                     <li class="row">
                       <h6 class="title col-xs-6">Localización</h6>
@@ -164,137 +153,63 @@
           
           <!-- Tab Content -->
           <div class="col-md-8">
-            <div class="tab-content"> 
-              
-              <!-- PROFILE -->
-              <div id="profile" class="tab-pane fade in active">
-                <div class="profile-main">
-                  <h3>Descripción general</h3>
-                  <div class="profile-in">
-                    @foreach ($companies as $company)
-                      <p>{{$company->description}}</p>
-                    @endforeach  
-                    <!-- Video -->
-                    <!--<iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>-->
-                  </div>
+              <!-- Añadir Vacantes -->
+<div  class="tab-pane fade">
+  <div class="form-row">
+    <div class="form-group col-md-12">
+    <h3>Editar {{$company->name}}</h3>
+    </div>
+    </div>
+
+      <div class="form-row">
+      <div class="form-group col-md-12">
+      <p>Aquí puedes editar tu perfil</p>
+      </div>
+      </div>
+
+      @foreach($companies as $company)
+      <form method="POST"  action="/editar_vacante/{{$company->id}}" >
+        {{method_field('PATCH')}}  
+        {{ csrf_field() }}
+        <div class="form-row">
+                
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                <textarea rows="15" cols="50" class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$company->description}}</textarea>
+                </div>
                 </div>
                 
-                
-              </div>
-              
-              <!-- Jobs -->
-              <div id="jobs" class="tab-pane fade">
-                <div class="header-listing">
-                  <h6>Listado por</h6>
-                  <div class="custom-select-box">
-                    <select name="order" class="custom-select">
-                      <option value="0">Más popular</option>
-                      <option value="1">Ultimos en subir</option>
-                      <option value="2">Mejor Calificado</option>
-                    </select>
-                  </div>
-                  <ul class="listing-views">
-                    <li class="active"><a href="#"><i class="fa fa-list"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th-large"></i></a></li>
-                  </ul>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                <textarea rows="5" cols="50" class="form-control" placeholder="Horario de la empresa" maxlength="500" style="color:black" name="schedule" required>{{$company->schedule}}</textarea>
                 </div>
-                <div class="listing listing-1">
-                  <div class="listing-section">
-                    
-                    @foreach ($jobs as $job)
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                      <h5>{{$job->name}}</h5>
-                        <ul class="bookmark list-inline">
-                        <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
-                          {{method_field('PATCH')}}  
-                          {{ csrf_field() }}
-                          @if ($job->deleted==0)
-                            <li><a href="#"><button type="submit" class="btn" name="post" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Estado Publicado</button></a></li>
-                          @else
-                            <li><a href="#"><button type="submit" class="btn" name="post" value="0" style="background-color:red;"><i class="fas fa-eye"></i> Estado No Publicado</button></a></li>
-                          @endif
-                        </form> 
-                        </ul>
-                      </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                        <h6 class="title-company">{{$job->company_name}}</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
-                        <p>Descripción: {{$job->description}}</p>
-                        <p>Salario: {{$job->salary}}</p>
-                        <p><a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
-                          <!--<h6 class="title-tags">Habilidades requeridas:</h6>
-                          <ul class="tags list-inline">
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Presta</a></li>
-                            <li><a href="#">Sass</a></li>
-                          </ul>-->
-                        </div>
-                      </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    @endforeach
-                  </div>
                 </div>
-              </div>
 
-              <!--Contactos-->
-              <div id="contacts" class="tab-pane fade">
-                <div class="header-listing">
-                  <h6>Contactos por</h6>
-                  <div class="custom-select-box">
-                    <select name="order" class="custom-select">
-                      <option value="0">Más popular</option>
-                      <option value="1">Ultimos en subir</option>
-                      <option value="2">Mejor Calificado</option>
-                    </select>
-                  </div>
-                  <ul class="listing-views">
-                    <li class="active"><a href="#"><i class="fa fa-list"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th-large"></i></a></li>
-                  </ul>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                <input class="form-control" type="text" placeholder="Telefono de la empresa" style="color:black" name="phone" value="{{$company->phone}}">
                 </div>
-                <div class="listing listing-1">
-                  <div class="listing-section">
-
-                    @foreach ($contacts as $contact)
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                      <h5>{{$contact->first_name}} {{$contact->last_name}} {{$contact->second_last_name}}</h5>
-                        <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fas fa-trash"></i></a></li>
-                        </ul>
-                      </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                        <h6 class="title-company">{{$contact->position}}</h6>
-                          <span>Horario: {{$contact->schedule}} </span>
-                          <p><a href="/editar_contacto/{{$contact->id}}"><i class="fas fa-edit"></i> Editar</a></p>
-                          
-                        </div>
-                      </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> {{$contact->email}}</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> {{$contact->phone}}</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    @endforeach
-                  </div>
+                <div class="form-group col-md-6">
+                <input class="form-control" type="text" placeholder="Correo empresarial" style="color:black" name="email" value="{{$company->email}}">
                 </div>
-              </div>
+                </div>
+        
+        <div class="form-row">
+        <div class="form-group col-md-12">
+        <center><button type="submit" class="btn btn-primary">Editar Vacante</button></center>
+        </div>
+        </div>
 
-            </div>
+        <div class="form-row">
+        <div class="form-group col-md-1">
+        <center><a href="/perfil_empresa/{{$company->id}}"><button type="button" class="btn btn-warning">Regresar Perfil</button></a></center>
+        </div>
+        </div>
+        @endforeach
+      </form>
+      </div>
+
+            
           </div>
         </div>
       </div>

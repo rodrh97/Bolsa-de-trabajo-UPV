@@ -1,6 +1,6 @@
 @extends('egresado.layout')
 @section('titulo')
-    Lista de trabajos
+    Vacante
 @endsection
 @section('menu')
               <div class="box-shadow-for-ui">

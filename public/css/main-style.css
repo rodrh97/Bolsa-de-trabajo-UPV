@@ -15843,7 +15843,7 @@ a:hover, a:focus, a:active, a.active {
 .listing.listing-1 .listing-ver-3 .listing-tabs ul li {
 	position: relative;
 	float: left;
-	width: 25%;
+	width: 50%;
 }
 @media (max-width: 768px) {
 .listing.listing-1 .listing-ver-3 .listing-tabs ul li {

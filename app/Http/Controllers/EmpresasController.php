@@ -196,9 +196,10 @@ class EmpresasController extends Controller
     public function perfil_empresa($id){
         $companies=company::findOrFail($id);
 
-        $sectors=DB::table('sectors')
+        /*dd($sectors=DB::table('companies')
+        ->join('sectors','sectors.id','=','companies.id_sector')
         ->select('sectors.*')
-        ->get();
+        ->get());*/
         $companies=DB::table('companies')
         ->select('companies.*')
         ->where('companies.id','=',$id)
@@ -218,7 +219,28 @@ class EmpresasController extends Controller
         ->latest()
         ->get();
 
-        return view('empresa.perfil', compact('sectors','companies','jobs','contacts'));
+        return view('empresa.perfil', compact('companies','jobs','contacts'));
+    }
+
+    //Función para mostrar la vista de editar perfil
+    public function editprofile($id){
+        $companies=DB::table('companies')
+        ->where('companies.id',$id)
+        ->get();
+        return view('empresa.editprofile',compact('companies'));
+    }
+
+    public function update_proofile($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $jobs=job::find($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $jobs=DB::table('jobs')
+        ->select('jobs.*')
+        ->where('jobs.id',$id)
+        ->update(['salary' => request('salary'),'description' => request('description')]);
+        alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
+        return back();
     }
     
     //Pagina para ver la vista de agregar contactos
