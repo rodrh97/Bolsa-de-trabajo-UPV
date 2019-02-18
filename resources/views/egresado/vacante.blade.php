@@ -5,7 +5,7 @@
 @section('menu')
               <div class="box-shadow-for-ui">
                 <div class="uou-block-2b">
-                  <div class="container"> <a href="/inicio_egresado" class="logo"><img src="assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+                  <div class="container"> <a href="/inicio_egresado" class="logo"><img src="/assets/images/logoupv.png" alt=""></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
                     <nav class="nav">
                       <ul class="sf-menu">
                           <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
@@ -26,10 +26,11 @@
 @endsection
 @section('contenido')
 <!-- SUB Banner -->
+@foreach ($jobs as $job)
 <div class="profile-bnr sub-bnr user-profile-bnr">
   <div class="position-center-center">
     <div class="container">
-      <h2>Our Blog</h2>
+      <h2>{{$job->name}}</h2>
     </div>
   </div>
 </div>
@@ -40,11 +41,11 @@
     <div class="row">
       <div class="col-md-9">
         <article class="uou-block-7f blog-post-content">
-          <img src="img/b-post-image.jpg" alt="">
+          <img src="../images/vacante.jpeg" alt="">
 
           <div class="meta">
-            <span class="time-ago"><a href="/egresado_perfil_empresa">Nombre Empresa</a></span>
-            <span class="time-ago">3 days ago</span>
+          <span class="time-ago"><a href="/egresado_perfil_empresa">Nombre Empresa: {{$job->company_name}}</a></span>
+            <span class="time-ago">{{$job->created_at}}</span>
             <span class="category">Posted in: <a href="#">Design</a></span>
             <a href="#" class="comments">12 Comments</a>
           </div>
@@ -105,7 +106,7 @@
             <ul>
               <li>
                 <article class="comment">
-                  <img src="img/p-post-1.png" alt="">
+                  <img src="/img/p-post-1.png" alt="">
 
                   <div>
                     <header>
@@ -123,7 +124,7 @@
 
               <li>
                 <article class="comment">
-                  <img src="img/p-post-1.png" alt="">
+                  <img src="/img/p-post-1.png" alt="">
 
                   <div>
                     <header>
@@ -226,7 +227,7 @@
 
           <div class="latest-post-widget">
             <div class="post-single">
-              <img src="img/p-post-1.png" alt="">
+              <img src="/img/p-post-1.png" alt="">
               <p class="meta">January 12, 2015</p>
               <p class="meta">Design</p>
               <h6 class="post-title"><a href="#">Pariatur Vellit Corrupti Goes Into 2 Lines</a></h6>
@@ -234,7 +235,7 @@
             </div>
 
             <div class="post-single">
-              <img src="img/p-post-2.png" alt="">
+              <img src="/img/p-post-2.png" alt="">
               <p class="meta">January 12, 2015</p>
               <p class="meta">Design</p>
               <h6 class="post-title"><a href="#">Pariatur Vellit Corrupti Goes Into 2 Lines</a></h6>
@@ -242,7 +243,7 @@
             </div>
 
             <div class="post-single">
-              <img src="img/p-post-3.png" alt="">
+              <img src="/img/p-post-3.png" alt="">
               <p class="meta">January 12, 2015</p>
               <p class="meta">Design</p>
               <h6 class="post-title"><a href="#">Pariatur Vellit Corrupti Goes Into 2 Lines</a></h6>
@@ -290,6 +291,7 @@
   </div> <!-- edn cotainer -->
 
 </div> <!-- end blog-content -->
+@endforeach
 @endsection
 @section('pie_pagina')
         <!-- Footer -->

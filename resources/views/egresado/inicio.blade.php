@@ -41,11 +41,11 @@
           <div class="col-md-9">
             @foreach ($jobs as $job)
             @if ($job->deleted==0)
-            <article class="uou-block-7f"> <img src="img/blog-image-1.jpg" alt="" class="thumb">
+            <article class="uou-block-7f"> <img src="{{$job->image_url}}" alt="" class="thumb">
               <div class="meta"> <span class="time-ago">{{$job->created_at}}</span> <span class="category">{{$job->company_name}}</span> <a href="#" class="comments">{{$job->sector_name}}</a> </div>
             <h1><a href="#">{{$job->name}}</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
+            <p>{{$job->description}}</p>
+              <a href="/vacante/{{$job->id}}" class="btn btn-small btn-primary">Ver Detalles</a> </article>
               @endif
               @endforeach
             <!-- end .uou-block-7f -->

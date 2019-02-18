@@ -15,6 +15,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\users;
 use App\students;
 use App\careers;
+use App\job;
 
 class EgresadosController extends Controller
 {
@@ -116,8 +117,14 @@ class EgresadosController extends Controller
     }
 
     //Pagina para ver las vacantes
-    public function vacante(){
-        return view('egresado.vacante');
+    public function vacante($id){
+        $jobs=job::find($id);
+        $jobs=DB::table('jobs')
+        ->join('companies as c', 'c.id','=','jobs.id_company')
+        ->select('jobs.*','c.name as company_name')
+        ->where('jobs.id',$id)
+        ->get();
+        return view('egresado.vacante', compact('jobs'));
     }
     
     //Pagina para ver el perfil de la empresa
