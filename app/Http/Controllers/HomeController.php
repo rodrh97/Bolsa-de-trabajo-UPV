@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $jobs=DB::table('jobs')
         ->join('companies as c','c.id','=','jobs.id_company')
-        ->join('sectors as s','s.id','=','jobs.id_company')
+        ->join('sectors as s','s.id','=','jobs.id_sector')
         ->select('c.name as company_name','jobs.*','s.name as sector_name')
         ->latest()
         ->get();
