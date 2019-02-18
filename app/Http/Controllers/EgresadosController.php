@@ -84,6 +84,7 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*')
         ->where('students.user_id',$id)
         ->update(['phone' => request('phone')]);
+        alert()->success('Se ha actualizado tu perfil','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
 

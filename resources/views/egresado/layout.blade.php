@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="/css/owl.carousel.css">
 <link rel="stylesheet" href="/css/main-style.css">
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/sweetalert/sweetalert.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,5 +52,7 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+<script src="/sweetalert/sweetalert.min.js"></script>
+@include('sweet::alert')
 </body>
 </html>
