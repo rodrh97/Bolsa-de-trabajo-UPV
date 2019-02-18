@@ -168,7 +168,7 @@
       </div>
 
       @foreach($companies as $company)
-      <form method="POST"  action="/editar_vacante/{{$company->id}}" >
+      <form method="POST"  action="/editar_perfil/{{$company->id}}" >
         {{method_field('PATCH')}}  
         {{ csrf_field() }}
         <div class="form-row">
@@ -187,16 +187,16 @@
 
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                <input class="form-control" type="text" placeholder="Telefono de la empresa" style="color:black" name="phone" value="{{$company->phone}}">
+                <input class="form-control" type="text" placeholder="Telefono de la empresa" style="color:black" name="phone" value="{{$company->phone}}" required>
                 </div>
                 <div class="form-group col-md-6">
-                <input class="form-control" type="text" placeholder="Correo empresarial" style="color:black" name="email" value="{{$company->email}}">
+                <input class="form-control" type="email" placeholder="Correo empresarial" style="color:black" name="email" value="{{$company->email}}" required>
                 </div>
                 </div>
         
         <div class="form-row">
         <div class="form-group col-md-12">
-        <center><button type="submit" class="btn btn-primary">Editar Vacante</button></center>
+        <center><button type="submit" class="btn btn-primary">Actualizar Perfil</button></center>
         </div>
         </div>
 

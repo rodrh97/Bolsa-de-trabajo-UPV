@@ -230,16 +230,16 @@ class EmpresasController extends Controller
         return view('empresa.editprofile',compact('companies'));
     }
 
-    public function update_proofile($id){
+    public function update_profile($id){
         //Mostrar un perfil de usuario con el id correspondiente
-        $jobs=job::find($id);
+        $companies=company::find($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $jobs=DB::table('jobs')
-        ->select('jobs.*')
-        ->where('jobs.id',$id)
-        ->update(['salary' => request('salary'),'description' => request('description')]);
-        alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
+        $companies=DB::table('companies')
+        ->select('companies.*')
+        ->where('companies.id',$id)
+        ->update(['description' => request('description'),'schedule' => request('schedule'),'phone' => request('phone'),'email' => request('email')]);
+        alert()->success('Tu perfil ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
     
