@@ -91,9 +91,9 @@
             </form>
           @else
             <form method="POST"  action="/vacante/{{$job->id}}">
-              {{method_field('PATCH')}}  
+              {{method_field('DELETE')}}  
               {{ csrf_field() }}
-              <center><button type="submit" class="btn btn-warning" value="No Aceptado" name="status" >Cancelar</a></center>
+              <center><button type="submit" class="btn btn-warning" name="status" >Cancelar Solicitud</a></center>
             </form>
           @endif 
         </article> <!-- end .uou-block-7f -->

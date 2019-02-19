@@ -150,6 +150,20 @@ class EgresadosController extends Controller
         alert()->success('La solicitud se ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
+
+    public function destroy_sendjob($id){
+        $id_student=students::all()
+        ->where('user_id',auth()->user()->id)
+        ->first();
+
+        $query=DB::table('status_job')
+        ->where('id_job',$id)
+        ->where('id_student','=',$id_student->user_id)
+        ->delete();
+
+        alert()->success('Tu solicitud ha sido cancelada','Bien Hecho!!!')->autoclose(4000);
+        return back();
+    }
     
     //Pagina para ver el perfil de la empresa
     public function egresado_perfil_empresa(){

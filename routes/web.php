@@ -42,7 +42,7 @@ Route::get('/vacante/{jobs}','EgresadosController@vacante');
 
 Route::post('/vacante/{jobs}','EgresadosController@sendjob');
 
-Route::PATCH('/vacante/{jobs}','EgresadosController@update_sendjob');
+Route::DELETE('/vacante/{jobs}','EgresadosController@destroy_sendjob');
 
 //------------------------------------------
 //RUTAS DE EMPRESA
