@@ -125,7 +125,30 @@ class EgresadosController extends Controller
         ->select('jobs.*','c.name as company_name','s.name as sector_name')
         ->where('jobs.id',$id)
         ->get();
-        return view('egresado.vacante', compact('jobs'));
+        
+        $id_student=students::all()
+        ->where('user_id',auth()->user()->id)
+        ->first();
+
+        $status=DB::table('status_job')
+        ->where('id_job','=',$id)
+        ->where('id_student','=',$id_student->user_id)
+        ->count();
+
+        return view('egresado.vacante', compact('jobs','status'));
+    }
+
+    public function sendjob(){
+        $id_job=request('id_job');
+        $id_student=request('id_student');
+        $status=request('status');
+
+        $query=DB::table('status_job')
+        ->insert(
+            array('id_student' => $id_student, 'id_job' => $id_job, 'status' => $status)
+        );
+        alert()->success('La solicitud se ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
+        return back();
     }
     
     //Pagina para ver el perfil de la empresa

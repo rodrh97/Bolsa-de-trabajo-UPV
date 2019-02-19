@@ -40,6 +40,10 @@ Route::get('/conexiones_egresado/{users}','EgresadosController@conexiones_egresa
 
 Route::get('/vacante/{jobs}','EgresadosController@vacante');
 
+Route::post('/vacante/{jobs}','EgresadosController@sendjob');
+
+Route::PATCH('/vacante/{jobs}','EgresadosController@update_sendjob');
+
 //------------------------------------------
 //RUTAS DE EMPRESA
 Route::get('/inicio_empresa','EmpresasController@inicio_empresa');
