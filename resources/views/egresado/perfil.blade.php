@@ -299,7 +299,7 @@
                       </ul>
                     </div>
                     <div class="listing-heading">
-                      <h5>* Pendientes</h5>
+                    <h5><i class="fas fa-asterisk"></i> Pendientes ({{$contador_pendientes}})</h5>
                     </div>
                     
                     <div class="listing listing-1">
@@ -336,6 +336,29 @@
                         </div>
                       </div>
                     </div>
+
+
+                    <div class="listing-heading">
+                      <h5><i class="fas fa-check"></i> Aceptados ({{$contador_aceptados}})</h5>
+                    </div>
+                    @if ($contador_aceptados==0)
+                    <div class="listing listing-1">
+                        <div class="listing-section">
+                          <div class="listing-ver-3">
+                             <center><h6>No tienes ninguna vacante aceptada</h6></center>
+                          </div>
+                        </div>
+                      </div>
+                    @else
+                        
+                    @endif
+              
+
+                    <div class="listing-heading">
+                      <h5><i class="fas fa-times"></i> Rechazados ({{$contador_rechazados}})</h5>
+                    </div>
+
+
                   </div>
                   
                   <!-- Contact -->
