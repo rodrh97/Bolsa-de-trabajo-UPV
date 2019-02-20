@@ -157,7 +157,9 @@ class EmpresasController extends Controller
     public function inicio_empresa(){
         $job_requests=DB::table('status_job as status')
         ->join('jobs as j','j.id','=','status.id_job')
+        ->join('companies as c','c.id','=','j.id_company')
         ->join('students as s','s.user_id','=','status.id_student')
+        ->join('users as u','u.id','=','s.user_id')
         ->get();
 
         return view('empresa.inicio', compact('job_requests'));

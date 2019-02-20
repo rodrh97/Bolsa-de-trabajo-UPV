@@ -37,10 +37,11 @@
           <div class="col-md-9">
             @foreach ($job_requests as $job_request)
             <article class="uou-block-7f"> <img src="img/blog-image-1.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
+            <div class="meta"> <span class="time-ago">{{$job_request->first_name}}</span> <span class="category">{{$job_request->status}}</span> <a href="#" class="comments">12 Comments</a> </div>
               <h1><a href="#">{{$job_request->name}}</a></h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
+              <button class="btn btn-medium btn-success">Aceptar</button> 
+              <button class="btn btn-medium btn-error">Rechazar</button></article>
             <!-- end .uou-block-7f -->
             @endforeach
             <div class="text-center pt20">

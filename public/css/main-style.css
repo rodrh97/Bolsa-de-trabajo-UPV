@@ -3426,8 +3426,8 @@ address {
 	border-color: #dbdbdb;
 }
 .btn-primary {
-	background-color: #0099ff;
-	border: 2px solid #0099ff;
+	background-color: #0063A9;
+	border: 2px solid #0063A9;
 }
 .btn-primary:hover, .btn-primary.hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active {
 	background-color: #008fef;
@@ -3442,15 +3442,15 @@ address {
 	border-color: #2c7fbf;
 }
 .btn-secondary {
-	background-color: #333333;
-	border: 2px solid #333333;
+	background-color: #B40404;
+	border: 2px solid #B40404;
 }
 .btn-secondary:hover, .btn-secondary.hover, .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active {
-	background-color: #1a1a1a;
-	border-color: #1a1a1a;
+	background-color: #FE2E2E;
+	border-color: #FE2E2E;
 }
 .btn-success {
-	background-color: #33cc5b;
+	background-color: #088A29;
 }
 .btn-success:hover, .btn-success.hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active {
 	background-color: #29a349;

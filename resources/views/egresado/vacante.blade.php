@@ -93,7 +93,7 @@
             <form method="POST"  action="/vacante/{{$job->id}}">
               {{method_field('DELETE')}}  
               {{ csrf_field() }}
-              <center><button type="submit" class="btn btn-warning" name="status" >Cancelar Solicitud</a></center>
+              <center><button type="submit" class="btn btn-secondary" name="status" >Cancelar Solicitud</a></center>
             </form>
           @endif 
         </article> <!-- end .uou-block-7f -->
