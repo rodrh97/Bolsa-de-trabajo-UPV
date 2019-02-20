@@ -92,9 +92,14 @@ class EgresadosController extends Controller
         ->where('status','Rechazado')
         ->count();
         
-        $send_jobs=DB::table('status_job')
+        $trabajos_pendientes=DB::table('status_job')
+        ->join('jobs as j','j.id','=','id_job')
+        ->join('companies as c','c.id','=','j.id_company')
+        ->where('id_student',auth()->user()->id)
+        ->where('status','Pendiente')
+        ->select('j.*','status_job.*','c.name as company_name')
         ->get();
-        return view('egresado.perfil', compact('users','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados'));
+        return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados'));
     }
 
     public function update_perfil_egresado($id){
