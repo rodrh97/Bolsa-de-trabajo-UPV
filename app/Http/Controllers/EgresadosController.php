@@ -72,7 +72,14 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*','careers.*')
         ->where('students.user_id','=',$id)
         ->get();
-        return view('egresado.perfil', compact('users'));
+
+        $count_jobs=DB::table('status_job')
+        ->where('id_student',auth()->user()->id)
+        ->count();
+
+        $send_jobs=DB::table('status_job')
+        ->get();
+        return view('egresado.perfil', compact('users','count_jobs'));
     }
 
     public function update_perfil_egresado($id){
