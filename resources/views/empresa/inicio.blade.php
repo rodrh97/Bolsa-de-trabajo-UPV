@@ -35,48 +35,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-9">
+            @foreach ($job_requests as $job_request)
             <article class="uou-block-7f"> <img src="img/blog-image-1.jpg" alt="" class="thumb">
               <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
+              <h1><a href="#">{{$job_request->name}}</a></h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
               <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
             <!-- end .uou-block-7f -->
-            
-            <article class="uou-block-7f"> <img src="img/blog-image-2.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
-            <!-- end .uou-block-7f -->
-            
-            <article class="uou-block-7f"> <img src="img/blog-image-3.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
-            <!-- end .uou-block-7f -->
-            
-            <article class="uou-block-7f"> <img src="img/blog-image-3.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
-            <!-- end .uou-block-7f -->
-            
-            <article class="uou-block-7f"> <img src="img/blog-image-4.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
-            <!-- end .uou-block-7f -->
-            
-            <article class="uou-block-7f"> <img src="img/blog-image-5.jpg" alt="" class="thumb">
-              <div class="meta"> <span class="time-ago">3 days ago</span> <span class="category">Posted in: <a href="#">Design</a></span> <a href="#" class="comments">12 Comments</a> </div>
-              <h1><a href="#">Perspiciatis Sint Pariatur Velit Corrupti</a></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.</p>
-              <a href="#" class="btn btn-small btn-primary">Read More</a> </article>
-            <!-- end .uou-block-7f -->
-            
+            @endforeach
             <div class="text-center pt20">
               <ul class="uou-paginatin list-unstyled">
                 <li class="active"><a href="#">1</a></li>

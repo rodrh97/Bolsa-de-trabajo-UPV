@@ -155,7 +155,12 @@ class EmpresasController extends Controller
 
     //Pagina de inicio
     public function inicio_empresa(){
-        return view('empresa.inicio');
+        $job_requests=DB::table('status_job as status')
+        ->join('jobs as j','j.id','=','status.id_job')
+        ->join('students as s','s.user_id','=','status.id_student')
+        ->get();
+
+        return view('empresa.inicio', compact('job_requests'));
     }
 
     //Pagina para que la empresa vea sus trabajos que ha publicado
