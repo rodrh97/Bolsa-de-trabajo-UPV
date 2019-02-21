@@ -105,8 +105,8 @@
                                  <form method="POST" action="/agregar_competencias/{{auth()->user()->id}}">
                                  {{ csrf_field() }} 
                                 @foreach ($competences as $competence)
-                              <h3><input type="checkbox" name="competences[]" value="{{$competence->id}}"> {{$competence->name}}</h3>
-                                @endforeach
+                                    <h3><input type="checkbox" name="competences[]" value="{{$competence->id}}"> {{$competence->name}}</h3>
+                                @endforeach  
                               </div>
                               <input type="hidden" name="id_student" value="{{auth()->user()->id}}">
                               <div class="form-row">

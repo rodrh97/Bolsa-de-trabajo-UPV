@@ -214,7 +214,16 @@ class EgresadosController extends Controller
         ->select('competences.*')
         ->get();
 
-        return view('egresado.addcompetence', compact('users','competences'));
+        $count_competences=DB::table('students_competences')
+        ->where('student_id',$id)
+        ->count();
+
+        $students_competences=DB::table('students_competences')
+        ->join('competences as c','c.id','=','competence_id')
+        ->select('students_competences.status')
+        ->get();
+
+        return view('egresado.addcompetence', compact('users','competences','count_competences','students_competences'));
     }
 
     public function store_addcompetences(Request $request){
