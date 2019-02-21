@@ -218,7 +218,17 @@ class EgresadosController extends Controller
     }
 
     public function store_addcompetences(Request $request){
-        
+        $id_student=students::all()
+        ->where('user_id',auth()->user()->id)
+        ->first();
+        $competences_ids=$request->competences;
+        foreach($competences_ids as $id){
+            $students_competences=new students_competences();
+            $students_competences->student_id=$id_student->user_id;
+            $students_competences->competence_id=$id;
+            $students_competences->save();
+        }
+
         alert()->success('La solicitud se ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
