@@ -102,8 +102,26 @@
                           <div class="listing listing-1">
                             <div class="listing-section">
                               <div class="listing-ver-3">
-                                 <center><h6>Aun no tienes competencias</h6></center>
+                                 <form method="POST" action="/agregar_competencias/{{auth()->user()->id}}">
+                                 {{ csrf_field() }} 
+                                @foreach ($competences as $competence)
+                              <h3><input type="checkbox" name="competence" value="{{$competence->id}}"> {{$competence->name}}</h3>
+                                @endforeach
                               </div>
+                              <input type="hidden" name="id_student" value="{{auth()->user()->id}}">
+                              <div class="form-row">
+                              <div class="form-group col-md-12">
+                              <center><button type="submit" class="btn btn-primary">Agregar Competencias</button></center>
+                              </div>
+                              </div>
+                              <br>
+                              <div class="form-row">
+                              <div class="form-group col-md-1">
+                              <center><a href="/perfil_egresado/{{auth()->user()->id}}"><button type="button" class="btn btn-secondary">Regresar Perfil</button></a></center>
+                              </div>
+                              </div>
+                            </form>
+                
                             </div>
                           </div>
                           

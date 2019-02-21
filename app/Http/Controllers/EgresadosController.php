@@ -16,6 +16,7 @@ use App\users;
 use App\students;
 use App\careers;
 use App\job;
+use App\students_competences;
 
 class EgresadosController extends Controller
 {
@@ -208,9 +209,20 @@ class EgresadosController extends Controller
         ->select('students.*', 'users.*','careers.*')
         ->where('students.user_id','=',$id)
         ->get();
-        
-        return view('egresado.addcompetence', compact('users'));
+
+        $competences=DB::table('competences')
+        ->select('competences.*')
+        ->get();
+
+        return view('egresado.addcompetence', compact('users','competences'));
     }
+
+    public function store_addcompetences(Request $request){
+        
+        alert()->success('La solicitud se ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
+        return back();
+    }
+
     
     //Pagina para ver el perfil de la empresa
     public function egresado_perfil_empresa(){
