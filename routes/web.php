@@ -44,6 +44,8 @@ Route::post('/vacante/{jobs}','EgresadosController@sendjob');
 
 Route::DELETE('/vacante/{jobs}','EgresadosController@destroy_sendjob');
 
+Route::get('/agregar_competencias/{users}','EgresadosController@addcompetence');
+
 //------------------------------------------
 //RUTAS DE EMPRESA
 Route::get('/inicio_empresa','EmpresasController@inicio_empresa');

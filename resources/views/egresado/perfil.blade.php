@@ -181,9 +181,18 @@
                         
                         <!-- Professional Details -->
                         <div class="sidebar">
-                          <h5 class="main-title">Conexiones Similares</h5>
-                          
-                          <!-- Similar -->
+                          <h5 class="main-title">Competencias</h5>
+                          @if ($contador_competencias==0)
+                          <div class="listing listing-1">
+                            <div class="listing-section">
+                              <div class="listing-ver-3">
+                                 <center><h6>Aun no tienes competencias</h6></center>
+                              </div>
+                              <center><a href="/agregar_competencias/{{auth()->user()->id}}"><i class="fas fa-plus"></i> Agregar Competencias</a></center>
+                            </div>
+                          </div>
+                          @else
+                             <!-- Similar -->
                           <div class="similar">
                             <div class="media">
                               <div class="media-left">
@@ -200,41 +209,9 @@
                                 <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
                               </div>
                             </div>
-                            
-                            <!-- Similar -->
-                            <div class="media">
-                              <div class="media-left">
-                                <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
-                              </div>
-                              <div class="media-body">
-                                <h5>Denise Walsh</h5>
-                                <p>SEO Specialist - New York, USA</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                                  voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                                  accusantium deleniti neque architecto vitae.</p>
-                                
-                                <!-- Share -->
-                                <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
-                              </div>
-                            </div>
-                            
-                            <!-- Similar -->
-                            <div class="media">
-                              <div class="media-left">
-                                <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
-                              </div>
-                              <div class="media-body">
-                                <h5>Denise Walsh</h5>
-                                <p>SEO Specialist - New York, USA</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                                  voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                                  accusantium deleniti neque architecto vitae.</p>
-                                
-                                <!-- Share -->
-                                <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
-                              </div>
-                            </div>
-                          </div>
+                          </div> 
+                          @endif
+                          
                         </div>
                       </div>
                       

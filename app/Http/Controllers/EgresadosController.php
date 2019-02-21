@@ -91,6 +91,11 @@ class EgresadosController extends Controller
         ->where('id_student',auth()->user()->id)
         ->where('status','Rechazado')
         ->count();
+
+        $contador_competencias=DB::table('students_competences as sc')
+        ->join('students as s', 's.user_id','=','student_id')
+        ->where('student_id',auth()->user()->id)
+        ->count();
         
         $trabajos_pendientes=DB::table('status_job')
         ->join('jobs as j','j.id','=','id_job')
@@ -99,7 +104,7 @@ class EgresadosController extends Controller
         ->where('status','Pendiente')
         ->select('j.*','status_job.*','c.name as company_name')
         ->get();
-        return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados'));
+        return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados','contador_competencias'));
     }
 
     public function update_perfil_egresado($id){
@@ -190,6 +195,21 @@ class EgresadosController extends Controller
 
         alert()->success('Tu solicitud ha sido cancelada','Bien Hecho!!!')->autoclose(4000);
         return back();
+    }
+
+    public function addcompetence($id){
+        //Mostrar un perfil de usuario con el id correspondiente
+        $users=users::findOrFail($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $users=DB::table('students')
+        ->join('users','students.user_id','=','users.id')
+        ->join('careers','careers.id','=','students.career_id')
+        ->select('students.*', 'users.*','careers.*')
+        ->where('students.user_id','=',$id)
+        ->get();
+        
+        return view('egresado.addcompetence', compact('users'));
     }
     
     //Pagina para ver el perfil de la empresa
