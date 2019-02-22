@@ -225,25 +225,25 @@ class EgresadosController extends Controller
         ->where('students.user_id','=',$id)
         ->get();
 
-        $search_id=students::join('users','users.id','=','user_id')
+        /*$search_id=students::join('users','users.id','=','user_id')
         ->where('user_id',auth()->user()->id)
-        ->first();
+        ->first();*/
 
-        $id_student=(int)$search_id->university_id;
-
-        $competences=DB::table('competences')
+        //$id_student=(int)$search_id->university_id;
+       $id_student=auth()->user()->id;
+       $competences=DB::table('competences')
         ->join('students_competences','competences.id','=','students_competences.competence_id')
         ->where('students_competences.student_id',$id_student)
         ->get();
 
-        dd($competences_not_asigned=DB::table('competences')
+        $competences_not_asigned=DB::table('competences')
         ->whereNotExists(function ($query) use ($id_student){
             $query->select(DB::raw(1))
             ->from('students_competences')
             ->whereRaw('competences.id = students_competences.competence_id')
             ->where('students_competences.student_id',$id_student);
         })
-        ->first());
+        ->get();
 
         $count_competences=DB::table('students_competences')
         ->where('student_id',$id)
@@ -254,17 +254,15 @@ class EgresadosController extends Controller
         ->select('students_competences.status')
         ->get();
 
-        return view('egresado.addcompetence', compact('users','competences','count_competences','students_competences'));
+        return view('egresado.addcompetence', compact('users','competences','count_competences','students_competences','competences_not_asigned','id_student'));
     }
 
     public function store_addcompetences(Request $request){
-        $id_student=students::all()
-        ->where('user_id',auth()->user()->id)
-        ->first();
+       
         $competences_ids=$request->competences;
         foreach($competences_ids as $id){
             $students_competences=new students_competences();
-            $students_competences->student_id=$id_student->user_id;
+            $students_competences->student_id=auth()->user()->id;
             $students_competences->competence_id=$id;
             $students_competences->save();
         }
