@@ -192,26 +192,57 @@
                             </div>
                           </div>
                           @else
-                             <!-- Similar -->
-                          <div class="similar">
-                            <div class="media">
-                              <div class="media-left">
-                                <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
+                          <div class="listing-ver-3">
+                            <center><h5>* Competencias Pendientes</h5></center>
+                          </div>
+                          @if ($competencias_pendientes==0)
+                            <div class="listing listing-1">
+                              <div class="listing-section">
+                                <div class="listing-ver-3">
+                                  <center><h6>No tienes competencias pendientes</h6></center>
+                                </div>
                               </div>
-                              <div class="media-body">
-                                <h5>Media heading</h5>
-                                <p>SEO Specialist - New York, USA</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                                  voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                                  accusantium deleniti neque architecto vitae.</p>
-                                
-                                <!-- Share -->
-                                <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+                            </div>   
+                          @endif
+                          @foreach ($competences as $competence)
+                           @if ($competence->status==0 )
+                            <div class="similar">
+                              <div class="media">
+                                <div class="media-body">
+                                <h6>{{$competence->name}}</h6>
+                                  <p>Estado: Pendiente</p>
+                                </div>
                               </div>
                             </div>
-                          </div> 
                           @endif
-                          
+                          @endforeach
+                          <div class="listing-ver-3">
+                            <center><h5>* Competencias Aceptadas</h5></center>
+                          </div>
+                          @if ($competencias_aceptadas==0)
+                            <div class="listing listing-1">
+                              <div class="listing-section">
+                                <div class="listing-ver-3">
+                                   <center><h6>No tienes competencias aceptadas</h6></center>
+                                </div>
+                              </div>
+                            </div>   
+                          @endif
+                          @foreach ($competences as $competence) 
+                          @if( $competence->status==1 )
+                            <div class="similar">
+                              <div class="media">
+                                <div class="media-body">
+                                <h6>{{$competence->name}}</h6>
+                                  <p>Estado: Aceptado</p>
+                                </div>
+                              </div>
+                            </div>
+                          @endif
+                          @endforeach
+                          <center><a href="/agregar_competencias/{{auth()->user()->id}}"><i class="fas fa-plus"></i> Agregar Competencias</a></center>
+                          @endif
+                             
                         </div>
                       </div>
                       

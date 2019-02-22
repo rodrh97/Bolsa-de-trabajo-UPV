@@ -97,6 +97,20 @@ class EgresadosController extends Controller
         ->join('students as s', 's.user_id','=','student_id')
         ->where('student_id',auth()->user()->id)
         ->count();
+
+        $competences=DB::table('students_competences as sc')
+        ->join('students as s', 's.user_id','=','student_id')
+        ->join('competences as c', 'c.id','=','competence_id')
+        ->select('c.id as id_competence','c.name','sc.*','s.*')
+        ->get();
+
+        $competencias_pendientes=DB::table('students_competences')
+        ->where('status',0)
+        ->count();
+
+        $competencias_aceptadas=DB::table('students_competences')
+        ->where('status',1)
+        ->count();
         
         $trabajos_pendientes=DB::table('status_job')
         ->join('jobs as j','j.id','=','id_job')
@@ -105,7 +119,7 @@ class EgresadosController extends Controller
         ->where('status','Pendiente')
         ->select('j.*','status_job.*','c.name as company_name')
         ->get();
-        return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados','contador_competencias'));
+        return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados','contador_competencias','competences','competencias_pendientes','competencias_aceptadas'));
     }
 
     public function update_perfil_egresado($id){
@@ -238,7 +252,7 @@ class EgresadosController extends Controller
             $students_competences->save();
         }
 
-        alert()->success('La solicitud se ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
+        alert()->success('La solicitud de competencias de ha enviado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
 
