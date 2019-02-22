@@ -102,13 +102,16 @@
                           <div class="listing listing-1">
                             <div class="listing-section">
                               <div class="listing-ver-3">
+                                  
                                  <form method="POST" action="/agregar_competencias/{{auth()->user()->id}}">
                                  {{ csrf_field() }} 
-                                @foreach ($competences as $competence)
-                                    <h3><input type="checkbox" name="competences[]" value="{{$competence->id}}"> {{$competence->name}}</h3>
-                                @endforeach  
+                                 @foreach ($competences as $competence)
+                                 <h3><input type="checkbox" name="competences[]" value="{{$competence->id}}"> {{$competence->name}}</h3>
+                                 @endforeach  
                               </div>
-                              <input type="hidden" name="id_student" value="{{auth()->user()->id}}">
+                              
+                              <input type="hidden" name="id_student" value="">
+                              
                               <div class="form-row">
                               <div class="form-group col-md-12">
                               <center><button type="submit" class="btn btn-primary">Agregar Competencias</button></center>

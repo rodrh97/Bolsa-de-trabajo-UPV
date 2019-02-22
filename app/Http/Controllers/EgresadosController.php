@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\competence;
 use App\users;
 use App\students;
 use App\careers;
@@ -224,9 +225,25 @@ class EgresadosController extends Controller
         ->where('students.user_id','=',$id)
         ->get();
 
+        $search_id=students::join('users','users.id','=','user_id')
+        ->where('user_id',auth()->user()->id)
+        ->first();
+
+        $id_student=(int)$search_id->university_id;
+
         $competences=DB::table('competences')
-        ->select('competences.*')
+        ->join('students_competences','competences.id','=','students_competences.competence_id')
+        ->where('students_competences.student_id',$id_student)
         ->get();
+
+        dd($competences_not_asigned=DB::table('competences')
+        ->whereNotExists(function ($query) use ($id_student){
+            $query->select(DB::raw(1))
+            ->from('students_competences')
+            ->whereRaw('competences.id = students_competences.competence_id')
+            ->where('students_competences.student_id',$id_student);
+        })
+        ->first());
 
         $count_competences=DB::table('students_competences')
         ->where('student_id',$id)
