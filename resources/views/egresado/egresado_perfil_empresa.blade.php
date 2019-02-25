@@ -33,10 +33,11 @@
         
         <!-- User Iinfo -->
         <div class="user-info">
-          <h1>Empresa: Honda Motor Co. Ltd. <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="images/icon-ver.png" alt="" ></a> </h1>
-          <h6>Sector: Automotriz</h6>
-          <p>Dirección: 7979 Leary Way Northeast
-            Redmond, WA 98052  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
+            @foreach ($companies as $company)
+            <h1><i class="fas fa-building"></i> {{$company->name}} <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="/images/icon-ver.png" alt="" ></a> </h1>
+              <h6>Sector: Automotriz</h6>
+              <p>Dirección: {{$company->street}}, {{$company->state}} {{$company->zip}}  <!--a href="#.">map</a> / <a href="#.">street</a>)</p-->
+              @endforeach
           
           <!-- Social Icon -->
           <!--div class="social-links"> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div-->
@@ -66,7 +67,7 @@
         
         <!-- Top Riht Button -->
         <div class="right-top-bnr">
-          <div class="connect"> <a href="#." class="btn mb20 btn-large btn-inverse" data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
+          <div class="connect"> <a href="#." class="btn mb20 btn-large btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Conectar</a> <!--a href="#."><i class="fa fa-share-alt"></i> Share</a-->
             <div class="bt-ns"> <!--a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a--> </div>
           </div>
         </div>
@@ -116,9 +117,9 @@
           <!-- Nav Tabs -->
           <div class="col-md-12 ">
             <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile">Perfil</a></li>
-              <li><a data-toggle="tab" href="#jobs">Vacantes</a></li>
-              <li><a data-toggle="tab" href="#contact">Contactos</a></li>
+              <li class="active"><a data-toggle="tab" href="#profile"><i class="fas fa-building"></i> Perfil</a></li>
+              <li><a data-toggle="tab" href="#jobs"><i class="fas fa-clipboard-list"></i> Vacantes</a></li>
+              <li><a data-toggle="tab" href="#contact"><i class="fas fa-address-book"></i> Contactos</a></li>
             </ul>
           </div>
           
@@ -134,23 +135,25 @@
                   <li class="row">
                     <h6 class="title col-xs-6">Sector</h6>
                     <span class="subtitle col-xs-6">Automotriz</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Localización</h6>
-                    <span class="subtitle col-xs-6">Tokio, Japón</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">RFC</h6>
-                    <span class="subtitle col-xs-6">HSD7589</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Horario</h6>
-                    <span class="subtitle col-xs-6">10:00 AM - 5:00 PM</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Telefono</h6>
-                    <span class="subtitle col-xs-6">(834) 1234567</span> </li>
-                  </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Correo Electrónico</h6>
-                    <span class="subtitle col-xs-6">honda@contact.com</span> </li>
-                  </li>
+                    @foreach ($companies as $company)
+                    <li class="row">
+                      <h6 class="title col-xs-6">Localización</h6>
+                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li><br>
+                    <li class="row">
+                      <h6 class="title col-xs-6">RFC</h6>
+                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li><br>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Horario</h6>
+                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li><br>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Telefono</h6>
+                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li><br>
+                    </li>
+                    <li class="row">
+                      <h6 class="title col-xs-6">Correo Electrónico</h6>
+                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li><br>
+                    </li>
+                    @endforeach
                 </ul>
               </div>
             </div>
@@ -166,15 +169,11 @@
                 <div class="profile-main">
                   <h3>Descripción general</h3>
                   <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus 
-                      similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque. </p>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat 
-                      accusamus nemoitate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid 
-                      laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum
-                      assumenda.</p>
-                    
+                      @foreach ($companies as $company)
+                      <p>{{$company->description}}</p>
+                      @endforeach
                     <!-- Video -->
-                    <iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>
+                    <!--<iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>-->
                   </div>
                 </div>
                 

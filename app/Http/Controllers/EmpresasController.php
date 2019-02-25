@@ -140,17 +140,52 @@ class EmpresasController extends Controller
         alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
-    public function update_status_job($id){
-        //Mostrar un perfil de usuario con el id correspondiente
-        $jobs=job::find($id);
 
+    public function update_status_job(Request $request,$id){
+        if ($request->has('job1')){
+             //Mostrar un perfil de usuario con el id correspondiente
+            $id=request('id_job');
+
+            //Mostrar la carrera del alumno correspondiente
+            $jobs=DB::table('jobs')
+            ->select('jobs.*')
+            ->where('jobs.id',$id)
+            ->update(['deleted' => request('job1')]);
+            alert()->success('Tu vacante ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
+            return back();
+        }
+        if ($request->has('job2')){
+            //Mostrar un perfil de usuario con el id correspondiente
+           $id=request('id_job');
+
+           //Mostrar la carrera del alumno correspondiente
+           $jobs=DB::table('jobs')
+           ->select('jobs.*')
+           ->where('jobs.id',$id)
+           ->update(['deleted' => request('job2')]);
+           alert()->success('Tu vacante ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
+           return back();
+       }
+       if ($request->has('contact1')){
+        $id=request('id_contact');
         //Mostrar la carrera del alumno correspondiente
-        $jobs=DB::table('jobs')
-        ->select('jobs.*')
-        ->where('jobs.id',$id)
-        ->update(['deleted' => request('post')]);
-        alert()->success('Tu vacante ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
+        $contacts=DB::table('contacts')
+        ->select('contacts.*')
+        ->where('contacts.id',$id)
+        ->update(['deleted' => request('contact1')]);
+        alert()->success('Tu contacto ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
         return back();
+        }
+        if ($request->has('contact2')){
+            $id=request('id_contact');
+            //Mostrar la carrera del alumno correspondiente
+            $contacts=DB::table('contacts')
+            ->select('contacts.*')
+            ->where('contacts.id',$id)
+            ->update(['deleted' => request('contact2')]);
+            alert()->success('Tu contacto ha cambiado su estado','Bien Hecho!!!')->autoclose(4000);
+            return back();
+        }
     }
 
     //Pagina de inicio

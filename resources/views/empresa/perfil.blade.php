@@ -140,20 +140,20 @@
                     @foreach ($companies as $company)
                     <li class="row">
                       <h6 class="title col-xs-6">Localización</h6>
-                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">RFC</h6>
-                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">Horario</h6>
-                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">Telefono</h6>
-                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li><br>
                     </li>
                     <li class="row">
                       <h6 class="title col-xs-6">Correo Electrónico</h6>
-                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li><br>
                     </li>
                     @endforeach
                 </ul>
@@ -207,15 +207,23 @@
                       <div class="listing-heading">
                       <h5>{{$job->name}}</h5>
                         <ul class="bookmark list-inline">
-                        <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
-                          {{method_field('PATCH')}}  
-                          {{ csrf_field() }}
+                        
                           @if ($job->deleted==0)
-                            <li><a href="#"><button type="submit" class="btn" name="post" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Estado Publicado</button></a></li>
+                            <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
+                            {{method_field('PATCH')}}  
+                            {{ csrf_field() }}
+                            <li><a href="#"><button type="submit" class="btn" name="job1" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Estado Publicado</button></a></li>
+                            <input type="hidden" name="id_job" value="{{$job->id}}">
+                            </form>
                           @else
-                            <li><a href="#"><button type="submit" class="btn" name="post" value="0" style="background-color:red;"><i class="fas fa-eye"></i> Estado No Publicado</button></a></li>
+                            <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
+                            {{method_field('PATCH')}}  
+                            {{ csrf_field() }}
+                            <li><a href="#"><button type="submit" class="btn" name="job2" value="0" style="background-color:red;"><i class="fas fa-eye"></i> Estado No Publicado</button></a></li>
+                            <input type="hidden" name="id_job" value="{{$job->id}}">
+                            </form>
                           @endif
-                        </form> 
+                          
                         </ul>
                       </div>
                       <div class="listing-inner">
@@ -265,13 +273,37 @@
                 </div>
                 <div class="listing listing-1">
                   <div class="listing-section">
-
+                      
+                      <div class="listing listing-1">
+                          <div class="listing-section">
+                            <div class="listing-ver-3">
+                               <center><h6>Contactos Disponibles</h6></center>
+                            </div>
+                          </div>
+                      </div> 
                     @foreach ($contacts as $contact)
                     <div class="listing-ver-3">
                       <div class="listing-heading">
                       <h5>{{$contact->first_name}} {{$contact->last_name}} {{$contact->second_last_name}}</h5>
                         <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fas fa-trash"></i></a></li>
+                            
+                              @if ($contact->deleted==0)
+                                <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
+                                {{method_field('PATCH')}}  
+                                {{ csrf_field() }}
+                                <li><button title="Eliminar" type="submit" name="contact1" value="1" class="btn btn-error"><i class="fas fa-trash"></i></button></li>
+                                <input type="hidden" name="id_contact" value="{{$contact->id}}">
+                                </form>
+                              @else
+                                <form method="POST"  action="/perfil_empresa/{{$job->id}}" >
+                                {{method_field('PATCH')}}  
+                                {{ csrf_field() }}
+                                <li><button title="Restaurar" type="submit" name="contact1" value="0" class="btn btn-success"><i class="fas fa-undo-alt"></i></button></li>
+                                <input type="hidden" name="id_contact" value="{{$contact->id}}">
+                                </form>
+                              @endif
+                              
+                            </form>
                         </ul>
                       </div>
                       <div class="listing-inner">
