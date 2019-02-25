@@ -261,7 +261,12 @@ class EmpresasController extends Controller
         ->latest()
         ->get();
 
-        return view('empresa.perfil', compact('companies','jobs','contacts'));
+        $count_contacts=DB::table('contacts')
+        ->join('companies as c', 'c.id','=','company_id')
+        ->where('company_id',$id)
+        ->count();
+
+        return view('empresa.perfil', compact('companies','jobs','contacts','count_contacts'));
     }
 
     //Función para mostrar la vista de editar perfil
