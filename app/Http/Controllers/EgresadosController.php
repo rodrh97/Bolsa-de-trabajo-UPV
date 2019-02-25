@@ -30,6 +30,8 @@ class EgresadosController extends Controller
     
     //Pagina de ofertas de trabajo
     public function ofertas_trabajo(){
+        dd($companies=DB::table('companies')
+        ->get());
         return view('egresado.lista_trabajo');
     }
     
@@ -39,24 +41,24 @@ class EgresadosController extends Controller
         $university_id  = $request->get('university_id');
         $abbreviation = $request->get('abbreviation');
         
-        $students_upv=DB::table('users')
-        ->join('students','users.id','=','students.user_id')
-        ->join('careers','students.career_id','=','careers.id')
-        ->select('users.*','students.*','careers.*')
-        ->where('university_id','LIKE',"%$university_id%")
-        ->where('abbreviation','LIKE',"%$abbreviation%")
-        ->orderBy('university_id')
+        $students_upv=DB::table('siita_db.users')
+        ->join('siita_db.students','siita_db.users.id','=','siita_db.students.user_id')
+        ->join('siita_db.careers','siita_db.students.career_id','=','siita_db.careers.id')
+        ->select('siita_db.users.*','siita_db.students.*','siita_db.careers.*')
+        ->where('siita_db.users.university_id','LIKE',"%$university_id%")
+        ->where('siita_db.careers.abbreviation','LIKE',"%$abbreviation%")
+        ->orderBy('siita_db.users.university_id')
         ->paginate(12);
         
         //Obtener la lista de carreras para su busqueda
-        $careers=DB::table('careers')
-        ->select('careers.*')
+        $careers=DB::table('siita_db.careers')
+        ->select('siita_db.careers.*')
         ->get();
 
         //Obtener la lista de los alumnos para su busqueda
-        $students=DB::table('students')
-        ->join('users','students.user_id','=','users.id')
-        ->select('students.*', 'users.*')
+        $students=DB::table('siita_db.users')
+        ->select('siita_db.users.*')
+        ->where('siita_db.users.type',3)
         ->get();        
 
         return view('egresado.lista_egresados', compact('students_upv','careers','students'))->render();

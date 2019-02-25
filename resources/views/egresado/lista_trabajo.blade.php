@@ -72,56 +72,6 @@
                 <p><i class="fa fa-map-marker"></i> New York, USA</p>
               </div>
               <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-2.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-2.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-3.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-2.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-2.png" alt="">
-                <h6>Jessica Walsh <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
-              </div>
-              <!-- end .uou-block-6a --> 
-            </div>
           </div>
         </div>
       </section>
