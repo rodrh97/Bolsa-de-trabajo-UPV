@@ -34,7 +34,7 @@ Route::PATCH('/perfil_egresado/{users}','EgresadosController@update_perfil_egres
 
 Route::get('/perfil_usuario/{users}','EgresadosController@perfil_usuario');
 
-Route::get('/egresado_perfil_empresa','EgresadosController@egresado_perfil_empresa');
+Route::get('/egresado_perfil_empresa/{comapnies}','EgresadosController@egresado_perfil_empresa');
 
 Route::get('/conexiones_egresado/{users}','EgresadosController@conexiones_egresado');
 

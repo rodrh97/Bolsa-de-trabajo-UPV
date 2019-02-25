@@ -5,7 +5,7 @@
 @section('menu')      
       <div class="box-shadow-for-ui">
         <div class="uou-block-2b">
-          <div class="container"> <a href="/inicio_empresa"><img src="assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+          <div class="container"> <a href="/inicio_empresa"><img src="/assets/images/logoupv.png" alt="" width="200px" height="100px"></a> <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
             <nav class="nav">
               <ul class="sf-menu">
                   <li><a href="/inicio_egresado" style="color:white;"><i class="fa  fa-home"></i></a></li>
@@ -117,8 +117,8 @@
           <div class="col-md-12 ">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#profile">Perfil</a></li>
-              <li><a data-toggle="tab" href="#jobs">Trabajos</a></li>
-              <li><a data-toggle="tab" href="#contact">Contacto</a></li>
+              <li><a data-toggle="tab" href="#jobs">Vacantes</a></li>
+              <li><a data-toggle="tab" href="#contact">Contactos</a></li>
             </ul>
           </div>
           
@@ -128,7 +128,7 @@
             <!-- Company Information -->
             <div class="sidebar">
               <h5 class="main-title">Información de la Empresa</h5>
-              <div class="sidebar-thumbnail"> <img src="images/honda.jpg" alt=""> </div>
+              <div class="sidebar-thumbnail"> <img src="/images/honda.jpg" alt=""> </div>
               <div class="sidebar-information">
                 <ul class="single-category">
                   <li class="row">

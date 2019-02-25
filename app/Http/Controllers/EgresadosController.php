@@ -17,6 +17,7 @@ use App\users;
 use App\students;
 use App\careers;
 use App\job;
+use App\company;
 use App\students_competences;
 
 class EgresadosController extends Controller
@@ -275,8 +276,33 @@ class EgresadosController extends Controller
 
     
     //Pagina para ver el perfil de la empresa
-    public function egresado_perfil_empresa(){
-        return view('egresado.egresado_perfil_empresa');
+    public function egresado_perfil_empresa($id){
+        $companies=company::findOrFail($id);
+
+        /*dd($sectors=DB::table('companies')
+        ->join('sectors','sectors.id','=','companies.id_sector')
+        ->select('sectors.*')
+        ->get());*/
+        $companies=DB::table('companies')
+        ->select('companies.*')
+        ->where('companies.id','=',$id)
+        ->get();
+        $jobs=DB::table('jobs as j')
+        ->join('companies as c', 'c.id','=','j.id_company')
+        ->join('sectors as s', 's.id','=','j.id_sector')
+        ->select('c.name as company_name', 'c.phone as company_phone','c.email as company_email','j.*','s.name as sector_name')
+        ->where('j.id_company',$id)
+        ->latest()
+        ->get();
+        
+        $contacts=DB::table('contacts as con')
+        ->join('companies as c', 'c.id','=','con.company_id')
+        ->select('c.name','con.*')
+        ->where('con.company_id',$id)
+        ->latest()
+        ->get();
+
+        return view('egresado.egresado_perfil_empresa', compact('companies','jobs','contacts'));
     }
 
    
