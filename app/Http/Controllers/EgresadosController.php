@@ -30,9 +30,9 @@ class EgresadosController extends Controller
     
     //Pagina de ofertas de trabajo
     public function ofertas_trabajo(){
-        dd($companies=DB::table('companies')
-        ->get());
-        return view('egresado.lista_trabajo');
+        $companies=DB::table('companies')
+        ->get();
+        return view('egresado.lista_trabajo', compact('companies'));
     }
     
     //Pagina para ver otros egresados

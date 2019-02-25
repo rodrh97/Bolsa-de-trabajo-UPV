@@ -66,12 +66,15 @@
         <div class="container pb30">
           <h3>Lista de Empresas</h3>
           <div class="row">
-            <div class="col-sm-3">
-              <div class="uou-block-6a"> <img src="images/member-1.png" alt="">
-                <a href="/vacante"><h6>Jessica Walsh</a> <span>Founder &amp; Web Designer</span></h6>
-                <p><i class="fa fa-map-marker"></i> New York, USA</p>
+            @foreach ($companies as $company)
+              <div class="col-sm-3">
+                <div class="uou-block-6a"> <img src="{{ asset($company->image_url)}}" alt="{{$company->name}}" style="width:100%;max-width:175px;height:100%;max-height:175px">
+                <a href="/egresado_perfil_empresa/{{$company->id}}"><h6><i class="fas fa-building"></i> {{$company->name}}</a></h6>
+                <p><i class="fa fa-map-marker"></i> {{$company->city}}, {{$company->country}}</p>
+                </div>
+                <!-- end .uou-block-6a --> 
               </div>
-              <!-- end .uou-block-6a --> 
+            @endforeach
           </div>
         </div>
       </section>
