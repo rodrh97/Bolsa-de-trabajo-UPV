@@ -126,26 +126,24 @@
                 <ul class="single-category">
                   <li class="row">
                     <h6 class="title col-xs-6">Sector</h6>
-                    @foreach ($sectors as $sector)
-                      <span class="subtitle col-xs-6">{{$sector->name}}</span> </li>
-                    @endforeach
+
                     @foreach ($companies as $company)
                     <li class="row">
                       <h6 class="title col-xs-6">Localización</h6>
-                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->city}}, {{$company->country}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">RFC</h6>
-                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->rfc}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">Horario</h6>
-                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->schedule}}</span> </li><br>
                     <li class="row">
                       <h6 class="title col-xs-6">Telefono</h6>
-                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->phone}}</span> </li><br>
                     </li>
                     <li class="row">
                       <h6 class="title col-xs-6">Correo Electrónico</h6>
-                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li>
+                      <span class="subtitle col-xs-6">{{$company->email}}</span> </li><br>
                     </li>
                     @endforeach
                 </ul>
@@ -160,7 +158,7 @@
 <div  class="tab-pane fade">
   <div class="form-row">
     <div class="form-group col-md-6">
-    <h3>Añadir Contactos</h3>
+    <h3>Añadir Contacto</h3>
     </div>
     </div>
 

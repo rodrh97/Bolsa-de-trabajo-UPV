@@ -266,7 +266,18 @@ class EmpresasController extends Controller
         ->where('company_id',$id)
         ->count();
 
-        return view('empresa.perfil', compact('companies','jobs','contacts','count_contacts'));
+        $count_jobs=DB::table('jobs')
+        ->join('companies as c', 'c.id','=','id_company')
+        ->where('id_company',$id)
+        ->count();
+
+        $count_jobs_post=DB::table('jobs')
+        ->join('companies as c', 'c.id','=','id_company')
+        ->where('id_company',$id)
+        ->where('deleted',0)
+        ->count();
+
+        return view('empresa.perfil', compact('companies','jobs','contacts','count_contacts','count_jobs','count_jobs_post'));
     }
 
     //Función para mostrar la vista de editar perfil

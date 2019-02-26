@@ -203,7 +203,7 @@
 
         <div class="form-row">
         <div class="form-group col-md-1">
-        <center><a href="/perfil_empresa/{{$company->id}}"><button type="button" class="btn btn-warning">Regresar Perfil</button></a></center>
+        <center><a href="/perfil_empresa/{{$company->id}}"><button type="button" class="btn btn-error">Regresar Perfil</button></a></center>
         </div>
         </div>
         @endforeach
