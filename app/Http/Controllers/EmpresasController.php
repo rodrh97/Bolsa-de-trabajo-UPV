@@ -136,7 +136,7 @@ class EmpresasController extends Controller
         $jobs=DB::table('jobs')
         ->select('jobs.*')
         ->where('jobs.id',$id)
-        ->update(['salary' => request('salary'),'description' => request('description')]);
+        ->update(['salary' => request('salary'),'description' => request('description'),'deleted' => request('status')]);
         alert()->success('Tu vacante ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
@@ -237,7 +237,28 @@ class EmpresasController extends Controller
     //Pagina para que la empresa vea su perfil
     public function perfil_empresa($id){
         $companies=company::findOrFail($id);
+        
+        /*$email='rodri5@live.com.mx';
 
+        dd($array_email=company::join('contacts as c', 'c.company_id','=','id')
+        
+        ->get());
+
+        
+        $count_email=DB::table('contacts as con')
+        ->join('companies as c', 'c.id','=','con.company_id')
+        ->select('con.email')
+        ->where('c.id',$id)
+        ->count();
+
+        for ($i=0; $i <$count_email ; $i++) {
+            
+            if($array_email[$i]==$email){
+                dd('Si existe');
+            }else{
+                dd('No existe');
+            }
+        }*/
         /*dd($sectors=DB::table('companies')
         ->join('sectors','sectors.id','=','companies.id_sector')
         ->select('sectors.*')

@@ -173,15 +173,18 @@
         {{ csrf_field() }}
         <div class="form-row">
         <div class="form-group col-md-6">
+        <label>* Correo actual del contacto</label>
         <input class="form-control" type="email" placeholder="Correo Electrónico" style="color:black" name="email"  value="{{$contact->email}}" required>
         </div>
         <div class="form-group col-md-6">
+        <label>* Telefono actual del contacto</label>
         <input class="form-control" type="text" placeholder="Telefono" style="color:black" name="phone"  value="{{$contact->phone}}" required>
         </div>
         </div>
 
         <div class="form-row">
         <div class="form-group col-md-12">
+        <label>* Horario actual del contacto</label>
         <textarea class="form-control" type="text" placeholder="Horario del contacto" maxlength="500" style="color:black" name="schedule" required>{{$contact->schedule}}</textarea>
         </div>
         </div>

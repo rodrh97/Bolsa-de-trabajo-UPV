@@ -175,15 +175,36 @@
                 
                 <div class="form-row">
                 <div class="form-group col-md-12">
+                <label>* Descripción actual de la vacante</label>
                 <textarea rows="15" cols="50" class="form-control" placeholder="Descripción de la vacante" maxlength="1000" style="color:black" name="description" required>{{$job->description}}</textarea>
                 </div>
                 </div>
                 
                 <div class="form-row">
                 <div class="form-group col-md-6">
+                <label>* Salario actual de la vacante</label>
                 <input class="form-control" type="text" placeholder="Salario" style="color:black" name="salary" value="{{$job->salary}}">
                 </div>
-        
+                </div>
+
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                @if ($job->deleted==0)
+                <label>* Estado actual de la vacante</label>
+                <select name="status">
+                  <option value="{{$job->deleted}}" selected>Publicado</option>
+                  <option value="1">No Publicado</option>
+                </select>
+                @else
+                <label>* Estado actual de la vacante:</label>
+                <select name="status">
+                  <option value="0" >Publicado</option>
+                  <option value="{{$job->deleted}}" selected>No Publicado</option>
+                </select>
+                @endif
+                </div>
+                </div>
+
         <div class="form-row">
         <div class="form-group col-md-12">
         <center><button type="submit" class="btn btn-primary">Editar Vacante</button></center>
