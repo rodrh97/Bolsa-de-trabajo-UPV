@@ -200,54 +200,116 @@
                       <div class="listing-ver-3">
                           <center><h5>Total de vacantes ({{$count_jobs}})</h5></center>
                       </div>
-                    @foreach ($jobs as $job)
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                      <h5>{{$job->name}}</h5>
-                        <ul class="bookmark list-inline">
-                        
-                          @if ($job->deleted==0)
-                            <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
-                            {{method_field('PATCH')}}  
-                            {{ csrf_field() }}
-                            <li><a href="#"><button type="submit" class="btn" name="job1" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Estado Publicado</button></a></li>
-                            <input type="hidden" name="id_job" value="{{$job->id}}">
-                            </form>
-                          @else
-                            <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
-                            {{method_field('PATCH')}}  
-                            {{ csrf_field() }}
-                            <li><a href="#"><button type="submit" class="btn" name="job2" value="0" style="background-color:red;"><i class="fas fa-eye"></i> Estado No Publicado</button></a></li>
-                            <input type="hidden" name="id_job" value="{{$job->id}}">
-                            </form>
-                          @endif
-                          
-                        </ul>
+                      <div class="listing-ver-3">
+                          <center><h5>Vacantes Publicadas ({{$count_jobs_post}})</h5></center>
                       </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                        <h6 class="title-company">{{$job->company_name}}</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
-                        <p>Descripción: {{$job->description}}</p>
-                        <p>Salario: {{$job->salary}}</p>
-                        <p><a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
-                          <!--<h6 class="title-tags">Habilidades requeridas:</h6>
-                          <ul class="tags list-inline">
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Presta</a></li>
-                            <li><a href="#">Sass</a></li>
-                          </ul>-->
+                      @if ($count_jobs_post==0)
+                      <div class="listing listing-1">
+                          <div class="listing-section">
+                            <div class="listing-ver-3">
+                               <center><h6>No tienes vacantes en estado Publicado</h6></center>
+                            </div>
+                          </div>
+                        </div>  
+                      @else
+
+                      @foreach ($jobs as $job)
+                      @if ($job->deleted==0)
+                      <div class="listing-ver-3">
+                        <div class="listing-heading">
+                        <h5>{{$job->name}}</h5>
+                          <ul class="bookmark list-inline">
+                              <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
+                              {{method_field('PATCH')}}  
+                              {{ csrf_field() }}
+                              <li><a href="#"><button type="submit" class="btn" name="job1" value="1" style="background-color:royalblue;"><i class="fas fa-eye"></i> Publicado</button></a></li>
+                              <input type="hidden" name="id_job" value="{{$job->id}}">
+                              </form>
+                          </ul>
+                        </div>
+                        <div class="listing-inner">
+                          <div class="listing-content">
+                          <h6 class="title-company">{{$job->company_name}}</h6>
+                            <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
+                          <p>Descripción: {{$job->description}}</p>
+                          <p>Salario: {{$job->salary}}</p>
+                          <p><a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
+                            <!--<h6 class="title-tags">Habilidades requeridas:</h6>
+                            <ul class="tags list-inline">
+                              <li><a href="#">Javascript</a></li>
+                              <li><a href="#">Wordpress</a></li>
+                              <li><a href="#">Presta</a></li>
+                              <li><a href="#">Sass</a></li>
+                            </ul>-->
+                          </div>
+                        </div>
+                        <div class="listing-tabs">
+                          <ul>
+                            <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
+                          </ul>
                         </div>
                       </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                        </ul>
+                      @endif
+                      @endforeach
+
+                      @endif
+                    <div class="listing-ver-3">
+                        <center><h5>Vacantes No Publicadas ({{$count_jobs_no_post}})</h5></center>
+                    </div>
+                  
+                  @if ($count_jobs_no_post==0)
+                  <div class="listing listing-1">
+                      <div class="listing-section">
+                        <div class="listing-ver-3">
+                           <center><h6>No tienes vacantes en estado No Publicado</h6></center>
+                        </div>
+                      </div>
+                    </div>  
+                  @else
+                  @foreach ($jobs as $job)
+                  @if ($job->deleted==1)
+                  <div class="listing-ver-3">
+                    <div class="listing-heading">
+                    <h5>{{$job->name}}</h5>
+                      <ul class="bookmark list-inline">
+                          <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
+                            {{method_field('PATCH')}}  
+                            {{ csrf_field() }}
+                            <li><a href="#"><button type="submit" class="btn" name="job2" value="0" style="background-color:red;"><i class="fas fa-eye"></i> No Publicado</button></a></li>
+                            <input type="hidden" name="id_job" value="{{$job->id}}">
+                          </form>
+                      </ul>
+                    </div>
+                    <div class="listing-inner">
+                      <div class="listing-content">
+                      <h6 class="title-company">{{$job->company_name}}</h6>
+                        <span class="location"> <i class="fa fa-map-marker"></i> {{$job->city}}, {{$job->state}}, {{$job->country}} </span> <span class="type-work full-time"> Full Time </span>
+                      <p>Descripción: {{$job->description}}</p>
+                      <p>Salario: {{$job->salary}}</p>
+                      <p>Fecha Publicación: {{$job->updated_at}}</p>
+                      <p><a href="/editar_vacante/{{$job->id}}"><i class="fas fa-edit"></i> Editar</a></p>
+                        <!--<h6 class="title-tags">Habilidades requeridas:</h6>
+                        <ul class="tags list-inline">
+                          <li><a href="#">Javascript</a></li>
+                          <li><a href="#">Wordpress</a></li>
+                          <li><a href="#">Presta</a></li>
+                          <li><a href="#">Sass</a></li>
+                        </ul>-->
                       </div>
                     </div>
-                    @endforeach
+                    <div class="listing-tabs">
+                      <ul>
+                        <li><a href="#"><i class="fa fa-envelope"></i> honda@contact.com</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  @endif
+                  @endforeach
+
+                  @endif
+                    
                   </div>
                 </div>
               </div>
