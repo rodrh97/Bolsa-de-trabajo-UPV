@@ -238,11 +238,13 @@ class EmpresasController extends Controller
     public function perfil_empresa($id){
         $companies=company::findOrFail($id);
         
-        /*$email='rodri5@live.com.mx';
+        /*$email=['rodri5@live.com.mx'];
 
-        dd($array_email=company::join('contacts as c', 'c.company_id','=','id')
-        
-        ->get());
+        $array_email=DB::table('contacts as con')
+        ->join('companies as c', 'c.id','=','con.company_id')
+        ->select('con.email')
+        ->where('c.id',$id)
+        ->get();
 
         
         $count_email=DB::table('contacts as con')
@@ -285,6 +287,18 @@ class EmpresasController extends Controller
         $count_contacts=DB::table('contacts')
         ->join('companies as c', 'c.id','=','company_id')
         ->where('company_id',$id)
+        ->count();
+
+        $count_contacts_no_avialable=DB::table('contacts')
+        ->join('companies as c', 'c.id','=','company_id')
+        ->where('company_id',$id)
+        ->where('deleted',1)
+        ->count();
+        
+        $count_contacts_avialable=DB::table('contacts')
+        ->join('companies as c', 'c.id','=','company_id')
+        ->where('company_id',$id)
+        ->where('deleted',0)
         ->count();
 
         $count_jobs=DB::table('jobs')
