@@ -318,7 +318,7 @@ class EmpresasController extends Controller
         ->where('deleted',0)
         ->count();
 
-        return view('empresa.perfil', compact('companies','jobs','contacts','count_contacts','count_jobs','count_jobs_no_post','count_jobs_post'));
+        return view('empresa.perfil', compact('companies','jobs','contacts','count_contacts','count_jobs','count_jobs_no_post','count_jobs_post','count_contacts_avialable','count_contacts_no_avialable'));
     }
 
     //Función para mostrar la vista de editar perfil

@@ -336,52 +336,84 @@
                       <div class="listing-ver-3">
                           <center><h5>Total de contactos ({{$count_contacts}})</h5></center>
                       </div>
-                      @if ($count_contacts==0)
-                        <center><h6>No tienes ningún contacto</h6></center>
+                      <div class="listing-ver-3">
+                        <center><h5>Contactos Disponibles ({{$count_contacts_avialable}})</h5></center>
+                    </div>
+                      @if ($count_contacts_avialable==0)
+                        <center><h6>No tienes ningún contacto Disponible</h6></center>
                       @else
                       @foreach ($contacts as $contact)
-                      <div class="listing-ver-3">
-                        <div class="listing-heading">
-                        <h5>{{$contact->first_name}} {{$contact->last_name}} {{$contact->second_last_name}}</h5>
+                        @if ($contact->deleted==0)
+                          <div class="listing-ver-3">
+                          <div class="listing-heading">
+                          <h5>{{$contact->first_name}} {{$contact->last_name}} {{$contact->second_last_name}}</h5>
                           <ul class="bookmark list-inline">
-                              
-                                @if ($contact->deleted==0)
-                                  <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
-                                  {{method_field('PATCH')}}  
-                                  {{ csrf_field() }}
-                                  <li><button title="Eliminar" type="submit" name="contact1" value="1" class="btn btn-error"><i class="fas fa-trash"></i></button></li>
-                                  <input type="hidden" name="id_contact" value="{{$contact->id}}">
-                                  </form>
-                                @else
-                                  <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
-                                  {{method_field('PATCH')}}  
-                                  {{ csrf_field() }}
-                                  <li><button title="Restaurar" type="submit" name="contact1" value="0" class="btn btn-success"><i class="fas fa-undo-alt"></i></button></li>
-                                  <input type="hidden" name="id_contact" value="{{$contact->id}}">
-                                  </form>
-                                @endif
-                                
-                              </form>
-                          </ul>
-                        </div>
-                        <div class="listing-inner">
-                          <div class="listing-content">
-                          <h6 class="title-company">{{$contact->position}}</h6>
-                            <span>Horario: {{$contact->schedule}} </span>
-                            <p><a href="/editar_contacto/{{$contact->id}}"><i class="fas fa-edit"></i> Editar</a></p>
-                            
-                          </div>
-                        </div>
-                        <div class="listing-tabs">
-                          <ul>
-                            <li><a href="#"><i class="fa fa-envelope"></i> {{$contact->email}}</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> {{$contact->phone}}</a></li>
-                          </ul>
+                          <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
+                          {{method_field('PATCH')}}  
+                          {{ csrf_field() }}
+                          <li><button title="Eliminar" type="submit" name="contact1" value="1" class="btn btn-error"><i class="fas fa-trash"></i></button></li>
+                          <input type="hidden" name="id_contact" value="{{$contact->id}}">
+                          </form>
+                        </ul>
+                      </div>
+                      <div class="listing-inner">
+                        <div class="listing-content">
+                        <h6 class="title-company">{{$contact->position}}</h6>
+                          <span>Horario: {{$contact->schedule}} </span>
+                          <p><a href="/editar_contacto/{{$contact->id}}"><i class="fas fa-edit"></i> Editar</a></p>
+                          
                         </div>
                       </div>
+                      <div class="listing-tabs">
+                        <ul>
+                          <li><a href="#"><i class="fa fa-envelope"></i> {{$contact->email}}</a></li>
+                          <li><a href="#"><i class="fa fa-phone"></i> {{$contact->phone}}</a></li>
+                        </ul>
+                      </div>
+                    </div>  
+                        @endif
                       @endforeach
-
                       @endif
+
+                      <div class="listing-ver-3">
+                        <center><h5>Contactos No Disponibles ({{$count_contacts_no_avialable}})</h5></center>
+                    </div>
+                      @if ($count_contacts_no_avialable==0)
+                        <center><h6>No tienes ningún contacto No Disponible</h6></center>
+                      @else
+                      @foreach ($contacts as $contact)
+                        @if ($contact->deleted==1)
+                        <div class="listing-ver-3">
+                          <div class="listing-heading">
+                          <h5>{{$contact->first_name}} {{$contact->last_name}} {{$contact->second_last_name}}</h5>
+                          <ul class="bookmark list-inline">
+                          <form method="POST"  action="/perfil_empresa/{{$company->id}}" >
+                          {{method_field('PATCH')}}  
+                          {{ csrf_field() }}
+                          <li><button title="Restaurar" type="submit" name="contact2" value="0" class="btn btn-success"><i class="fas fa-undo-alt"></i></button></li>
+                          <input type="hidden" name="id_contact" value="{{$contact->id}}">
+                          </form>
+                        </ul>
+                      </div>
+                      <div class="listing-inner">
+                        <div class="listing-content">
+                        <h6 class="title-company">{{$contact->position}}</h6>
+                          <span>Horario: {{$contact->schedule}} </span>
+                          <p><a href="/editar_contacto/{{$contact->id}}"><i class="fas fa-edit"></i> Editar</a></p>
+                          
+                        </div>
+                      </div>
+                      <div class="listing-tabs">
+                        <ul>
+                          <li><a href="#"><i class="fa fa-envelope"></i> {{$contact->email}}</a></li>
+                          <li><a href="#"><i class="fa fa-phone"></i> {{$contact->phone}}</a></li>
+                        </ul>
+                      </div>
+                    </div>  
+                        @endif
+                      @endforeach
+                      @endif
+
                   </div>
                 </div>
               </div>
