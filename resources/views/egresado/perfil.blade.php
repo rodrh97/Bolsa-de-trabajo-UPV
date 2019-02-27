@@ -106,7 +106,7 @@
                           <h3>Experiencia Laboral</h3>
                           <div class="profile-in">
                             <div class="media-left">
-                              <div class="img-profile"> <img class="media-object" src="{{ asset($user->image_url)}}" alt="" width="245px" height="220px"> </div>
+                              <div class="img-profile"> <img class="media-object" src="{{ asset($user->image_url)}}" alt="" style="width:100%;max-width:245px;height:100%;max-height:220px"> </div>
                             </div>
                             <div class="media-body">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem 
@@ -1153,6 +1153,7 @@
                           {{method_field('PATCH')}}  
                           {{ csrf_field() }}
                           @foreach($users as $user)
+                            <img class="media-object" src="{{ URL::to($user->image_url) }}" alt="" style="width:100%;max-width:245px;height:100%;max-height:220px"> </div>
                             <div class="row pt15">
                               <div class="col-xs-4">
                               <label>Telefono </label><input name='phone' type="text" style="color:black" value="{{$user->phone}}" maxlength="10">

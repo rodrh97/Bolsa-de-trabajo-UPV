@@ -126,7 +126,7 @@
             <div class="sidebar">
               <h5 class="main-title">Información de la Empresa</h5>
               
-              <div class="sidebar-thumbnail"> <img src="{{asset($company->image_url)}}" alt=""  width="251px" height="181px"> </div>
+              <div class="sidebar-thumbnail"> <img src="{{ URL::to($company->image_url) }}" alt="" style="width:100%;max-width:251px;height:100%;max-height:181px"> </div>
               @endforeach
               <div class="sidebar-information">
                 <ul class="single-category">

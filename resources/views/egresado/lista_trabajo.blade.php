@@ -68,7 +68,7 @@
           <div class="row">
             @foreach ($companies as $company)
               <div class="col-sm-3">
-                <div class="uou-block-6a"> <img src="{{ asset($company->image_url)}}" alt="{{$company->name}}" style="width:100%;max-width:175px;height:100%;max-height:175px">
+                <div class="uou-block-6a"> <img src="{{ asset($company->image_url)}}" alt="{{$company->name}}" style="width:100%;max-width:175px;height:100%;max-height:175px;">
                 <a href="/egresado_perfil_empresa/{{$company->id}}"><h6><i class="fas fa-building"></i> {{$company->name}}</a></h6>
                 <p><i class="fa fa-map-marker"></i> {{$company->city}}, {{$company->country}}</p>
                 </div>
