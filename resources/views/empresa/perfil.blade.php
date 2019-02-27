@@ -374,7 +374,6 @@
                         @endif
                       @endforeach
                       @endif
-
                       <div class="listing-ver-3">
                         <center><h5>Contactos No Disponibles ({{$count_contacts_no_avialable}})</h5></center>
                     </div>

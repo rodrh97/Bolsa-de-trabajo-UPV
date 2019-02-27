@@ -73,7 +73,7 @@ class EmpresasController extends Controller
         $contacts=DB::table('contacts')
         ->select('contacts.*')
         ->where('contacts.id',$id)
-        ->update(['phone' => request('phone'),'email' => request('email'),'schedule' => request('schedule')]);
+        ->update(['phone' => request('phone'),'email' => request('email'),'schedule' => request('schedule'),'deleted' => request('status')]);
         alert()->success('Tu contacto ha sido actualizado correctamente','Bien Hecho!!!')->autoclose(4000);
         return back();
     }

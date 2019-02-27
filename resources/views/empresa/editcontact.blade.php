@@ -188,6 +188,24 @@
         <textarea class="form-control" type="text" placeholder="Horario del contacto" maxlength="500" style="color:black" name="schedule" required>{{$contact->schedule}}</textarea>
         </div>
         </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+          @if ($contact->deleted==0)
+          <label>* Estado actual del contacto</label>
+          <select name="status">
+            <option value="{{$contact->deleted}}" selected>Disponible</option>
+            <option value="1">No Disponible</option>
+          </select>
+          @else
+          <label>* Estado actual del contacto:</label>
+          <select name="status">
+            <option value="0" >Disponible</option>
+            <option value="{{$contact->deleted}}" selected>No Disponible</option>
+          </select>
+          @endif
+          </div>
+          </div>
                             
                 
         <div class="form-row">
