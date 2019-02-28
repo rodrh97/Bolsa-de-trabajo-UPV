@@ -71,11 +71,11 @@ class EgresadosController extends Controller
         $users=users::findOrFail($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $users=DB::table('students')
-        ->join('users','students.user_id','=','users.id')
-        ->join('careers','careers.id','=','students.career_id')
-        ->select('students.*', 'users.*','careers.*')
-        ->where('students.user_id','=',$id)
+        $users=DB::table('siita_db.students')
+        ->join('siita_db.users','siita_db.students.user_id','=','siita_db.users.id')
+        ->join('siita_db.careers','siita_db.careers.id','=','siita_db.students.career_id')
+        ->select('siita_db.students.*', 'siita_db.users.*','siita_db.careers.*')
+        ->where('siita_db.students.user_id','=',$id)
         ->get();
 
         $count_jobs=DB::table('status_job')
@@ -106,6 +106,7 @@ class EgresadosController extends Controller
         ->join('students as s', 's.user_id','=','student_id')
         ->join('competences as c', 'c.id','=','competence_id')
         ->select('c.id as id_competence','c.name','sc.*','s.*')
+        ->where('sc.student_id',auth()->user()->id)
         ->get();
 
         $competencias_pendientes=DB::table('students_competences')
@@ -131,11 +132,11 @@ class EgresadosController extends Controller
         $users=users::find($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $users=DB::table('students')
-        ->join('users','students.user_id','=','users.id')
-        ->select('students.*', 'users.*')
-        ->where('students.user_id',$id)
-        ->update(['phone' => request('phone')]);
+        $users=DB::table('siita_db.students')
+        ->join('siita_db.users','siita_db.students.user_id','=','siita_db.users.id')
+        ->select('siita_db.students.*', 'siita_db.users.*')
+        ->where('siita_db.students.user_id',$id)
+        ->update(['siita_db.students.phone' => request('phone')]);
         alert()->success('Se ha actualizado tu perfil','Bien Hecho!!!')->autoclose(4000);
         return back();
     }
@@ -249,7 +250,7 @@ class EgresadosController extends Controller
         ->get();
 
         $count_competences=DB::table('students_competences')
-        ->where('student_id',$id)
+        ->where('student_id',$id_student)
         ->count();
 
         $students_competences=DB::table('students_competences')
