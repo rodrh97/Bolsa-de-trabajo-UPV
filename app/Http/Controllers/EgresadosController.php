@@ -127,10 +127,24 @@ class EgresadosController extends Controller
         return view('egresado.perfil', compact('users','trabajos_pendientes','count_jobs','contador_pendientes','contador_aceptados','contador_rechazados','contador_competencias','competences','competencias_pendientes','competencias_aceptadas'));
     }
 
-    public function update_perfil_egresado($id){
+    public function editprofile($id){
+        $users=users::findOrFail($id);
+
+        //Mostrar la carrera del alumno correspondiente
+        $users=DB::table('siita_db.students')
+        ->join('siita_db.users','siita_db.students.user_id','=','siita_db.users.id')
+        ->join('siita_db.careers','siita_db.careers.id','=','siita_db.students.career_id')
+        ->select('siita_db.students.*', 'siita_db.users.*','siita_db.careers.*')
+        ->where('siita_db.students.user_id','=',$id)
+        ->get();
+
+        return view('egresado.editprofile',compact('users'));
+    }
+
+    public function update_profile($id){
         //Mostrar un perfil de usuario con el id correspondiente
         $users=users::find($id);
-
+        
         //Mostrar la carrera del alumno correspondiente
         $users=DB::table('siita_db.students')
         ->join('siita_db.users','siita_db.students.user_id','=','siita_db.users.id')

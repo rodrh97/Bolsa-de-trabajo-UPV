@@ -90,7 +90,7 @@
                   <li><a data-toggle="tab" href="#Con-tab">Sus conexiones</a></li>
                   <li><a data-toggle="tab" href="#flowrs-tabs">Sus Seguidores (241)</a></li>
                   <li><a data-toggle="tab" href="#foll-tabs">Siguiendo</a></li>
-                  <li><a data-toggle="tab" href="#editar"><i class="fas fa-edit"></i></a></li>
+                <li><a href="/editar_egresado/{{auth()->user()->id}}"><i class="fas fa-edit"></i></a></li>
                 </ul>
               </div>
               
@@ -1138,41 +1138,6 @@
                               </div>
                             </li>
                           </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- EDITAR-->
-                  <div id="editar" class="tab-pane fade">
-                    <div class="profile-main">
-                      <h3>Editar Perfil</h3>
-                      <div class="profile-in">
-                        <div class="folow-persons">
-                        <form method="post" action="/perfil_egresado/@foreach($users as $user){{$user->user_id}}@endforeach" files="true" enctype="multipart/form-data">
-                          {{method_field('PATCH')}}  
-                          {{ csrf_field() }}
-                          @foreach($users as $user)
-                            <img class="media-object" src="{{ URL::to($user->image_url) }}" alt="" style="width:100%;max-width:245px;height:100%;max-height:220px"> </div>
-                            <div class="row pt15">
-                              <div class="col-xs-4">
-                              <label>Telefono </label><input name='phone' type="text" style="color:black" value="{{$user->phone}}" maxlength="10">
-                              </div>
-                            </div>
-                            <!--<div class="row pt16">
-                                <div class="col-xs-4">
-                                <label>Imagen Actual </label> <img src="{{ asset($user->image_url)}}" alt="" width="245px" height="220px" >
-                                <input type="file" name="imagen" id="imagen" class="btn btn-warning" onchange="readURL(this);">
-                                <img class="file-upload-image" src="#" alt="your image" />
-                              </div>
-                              </div>-->
-                            <div class="row pt16">
-                                <div class="col-xs-4">
-                                    <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
-                                </div>
-                            </div>
-                          @endforeach
-                          </form>
                         </div>
                       </div>
                     </div>
