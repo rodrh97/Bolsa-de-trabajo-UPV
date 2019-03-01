@@ -82,11 +82,11 @@
       <section class="pro-mem">
         <div class="container pb30">
           <h3>Lista de Egresados</h3>
-          {!! $students_upv->links()!!}
           <div class="row">
+              {!! $students_upv->links()!!}
               @foreach ($students_upv as $student_upv)
               <div class="col-sm-3">
-                <div class="uou-block-6a"> <img src="{{ asset($student_upv->image_url)}}" alt="{{$student_upv->first_name}}"  style="width:100%;max-width:175px;height:100%;max-height:175px">
+                <div class="uou-block-6a"> <img src="{{ asset($student_upv->image_url)}}" alt="{{$student_upv->first_name}}"  style="width:100%;max-width:275px;height:100%;max-height:200px;">
                   @if (auth()->user()->id != $student_upv->user_id)
                     <a href="/perfil_usuario/{{$student_upv->user_id}}"><h6>{{$student_upv->first_name}}</a> <span>Matrícula: {{$student_upv->university_id}}</span><span>Carrera: {{$student_upv->abbreviation}}</span></h6>
                   @else
@@ -97,6 +97,8 @@
                 <!-- end .uou-block-6a --> 
               </div> 
               @endforeach
+              
+              <div class="row"></div>
           </div>
         </div>
       </section>
@@ -132,4 +134,18 @@
           </ul>
         </nav>
         <hr>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript">
+          $(document).on("click",".pagination a", function(e){
+            e.preventDefault();
+            var url =$(this).attr('href').split('page=')[1];
+            $.ajax({
+              url:'lista_egresados/ajax?page='+url
+
+            }).done(function(data){
+              $('.col-sm-3').html(data);
+
+            });
+          });
+        </script>-->
 @endsection

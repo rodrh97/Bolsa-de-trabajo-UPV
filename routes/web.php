@@ -28,6 +28,8 @@ Route::get('/ofertas_trabajo','EgresadosController@ofertas_trabajo');
 
 Route::get('/lista_egresados','EgresadosController@lista_egresados')->name('students_upv');
 
+Route::get('/lista_egresados/ajax','EgresadosController@lista_egresados_ajax');//
+
 Route::get('/perfil_egresado/{users}','EgresadosController@perfil_egresado');
 
 //Route::PATCH('/perfil_egresado/{users}','EgresadosController@update_perfil_egresado');

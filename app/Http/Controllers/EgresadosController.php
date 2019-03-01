@@ -49,8 +49,8 @@ class EgresadosController extends Controller
         ->where('siita_db.users.university_id','LIKE',"%$university_id%")
         ->where('siita_db.careers.abbreviation','LIKE',"%$abbreviation%")
         ->orderBy('siita_db.users.university_id')
-        ->paginate(12);
-        
+        ->paginate(8);
+
         //Obtener la lista de carreras para su busqueda
         $careers=DB::table('siita_db.careers')
         ->select('siita_db.careers.*')
@@ -60,9 +60,38 @@ class EgresadosController extends Controller
         $students=DB::table('siita_db.users')
         ->select('siita_db.users.*')
         ->where('siita_db.users.type',3)
-        ->get();        
+        ->get();    
 
-        return view('egresado.lista_egresados', compact('students_upv','careers','students'))->render();
+        return view('egresado.lista_egresados', compact('students_upv','careers','students'));
+    }
+
+    //Pagina para ver otros egresados con ajax
+    public function lista_egresados_ajax(Request $request){
+        //Declarar variables para poder realizar la consulta correspondiente
+        $university_id  = $request->get('university_id');
+        $abbreviation = $request->get('abbreviation');
+        
+        $students_upv=DB::table('siita_db.users')
+        ->join('siita_db.students','siita_db.users.id','=','siita_db.students.user_id')
+        ->join('siita_db.careers','siita_db.students.career_id','=','siita_db.careers.id')
+        ->select('siita_db.users.*','siita_db.students.*','siita_db.careers.*')
+        ->where('siita_db.users.university_id','LIKE',"%$university_id%")
+        ->where('siita_db.careers.abbreviation','LIKE',"%$abbreviation%")
+        ->orderBy('siita_db.users.university_id')
+        ->paginate(8);
+
+        //Obtener la lista de carreras para su busqueda
+        $careers=DB::table('siita_db.careers')
+        ->select('siita_db.careers.*')
+        ->get();
+
+        //Obtener la lista de los alumnos para su busqueda
+        $students=DB::table('siita_db.users')
+        ->select('siita_db.users.*')
+        ->where('siita_db.users.type',3)
+        ->get();    
+
+        return view('egresado.lista_egresados_ajax', compact('students_upv','careers','students'));
     }
 
     //Pagina para ver el perfil del egresado
@@ -248,11 +277,11 @@ class EgresadosController extends Controller
         $users=users::findOrFail($id);
 
         //Mostrar la carrera del alumno correspondiente
-        $users=DB::table('students')
-        ->join('users','students.user_id','=','users.id')
-        ->join('careers','careers.id','=','students.career_id')
-        ->select('students.*', 'users.*','careers.*')
-        ->where('students.user_id','=',$id)
+        $users=DB::table('siita_db.students')
+        ->join('siita_db.users','siita_db.students.user_id','=','siita_db.users.id')
+        ->join('siita_db.careers','siita_db.careers.id','=','siita_db.students.career_id')
+        ->select('siita_db.students.*', 'siita_db.users.*','siita_db.careers.*')
+        ->where('siita_db.students.user_id','=',$id)
         ->get();
 
         /*$search_id=students::join('users','users.id','=','user_id')
