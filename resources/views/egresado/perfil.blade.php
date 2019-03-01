@@ -90,7 +90,7 @@
                   <li><a data-toggle="tab" href="#Con-tab">Sus conexiones</a></li>
                   <li><a data-toggle="tab" href="#flowrs-tabs">Sus Seguidores (241)</a></li>
                   <li><a data-toggle="tab" href="#foll-tabs">Siguiendo</a></li>
-                <li><a href="/editar_egresado/{{auth()->user()->id}}"><i class="fas fa-edit"></i></a></li>
+                <li><a href="/editar_egresado/{{auth()->user()->id}}"><i class="fas fa-edit"></i> Editar Perfil</a></li>
                 </ul>
               </div>
               

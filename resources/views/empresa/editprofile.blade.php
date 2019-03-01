@@ -168,10 +168,22 @@
       </div>
 
       @foreach($companies as $company)
-      <form method="POST"  action="/editar_perfil/{{$company->id}}" >
+      <form method="POST"  action="/editar_perfil/{{$company->id}}" files="true" enctype="multipart/form-data" >
         {{method_field('PATCH')}}  
         {{ csrf_field() }}
         <div class="form-row">
+
+                <div class="form-row">
+                <div class="form-group col-md-4">
+                <label>* Imagen actual del egresado</label>
+                <img class="media-object" src="{{ URL::to($company->image_url) }}" alt="" style="width:100%;max-width:245px;height:100%;max-height:220px">
+                <input type="text" name="image_2" hidden value="{{ $company->image_url }}" style="color:black;" readonly>
+                </div>
+                <div class="form-group col-md-8">
+                <label>* Imagen nueva</label>
+                <input type='file' name="image" onchange="readURL(this);" accept="image/*" />
+                </div>
+                </div>
                 
                 <div class="form-row">
                 <div class="form-group col-md-12">

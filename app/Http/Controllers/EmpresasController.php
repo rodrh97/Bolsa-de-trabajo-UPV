@@ -332,6 +332,18 @@ class EmpresasController extends Controller
     public function update_profile($id){
         //Mostrar un perfil de usuario con el id correspondiente
         $companies=company::find($id);
+        $image = Input::file('image');
+        $image2 = Input::get('image_2');
+
+        //Actualizar foto, elimina la anterior
+        if ($image!=null) {
+            if ($image2!='storage/no_image.png') {
+                unlink(public_path()."/".$image2);
+            }
+            $path=Input::file('image')->store('/public/companies');
+            $image_url = 'storage/companies/'.Input::file('image')->hashName();
+            DB::update('UPDATE companies SET image_url = ? WHERE id = ?', [$image_url, $id]);
+        }
 
         //Mostrar la carrera del alumno correspondiente
         $companies=DB::table('companies')
